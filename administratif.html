@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -7,23 +8,24 @@
     <title>Démarches Administratives | BS GESTION</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <div class="container navbar">
         <a href="index.html" class="logo">BS <span>GESTION</span></a>
+        <div class="menu" onclick="toggleMenu()">☰</div>
 
-        <nav id="mainNav">
-            <a href="index.html">Accueil</a>
-            <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création de société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+```
+    <nav id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="sejour.html">Séjour</a>
+        <a href="creation-societe.html">Création de société</a>
+        <a href="administratif.html">Administratif</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
+```
 
-        <div class="menu" id="menuBtn">☰</div>
-    </div>
 </header>
 
 <main>
@@ -31,209 +33,236 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
+            <div class="badge">GESTION ADMINISTRATIVE</div>
 
-            <div class="badge">ASSISTANCE ADMINISTRATIVE</div>
+```
+        <h1>Simplifiez vos<br><span>démarches.</span></h1>
 
-            <h1>
-                Vos démarches<br>
-                en toute <span>sérénité.</span>
-            </h1>
+        <p>Un accompagnement administratif clair et organisé.</p>
 
-            <p>
-                Nous vous aidons à organiser vos démarches et vos documents
-                administratifs.
-            </p>
+        <p>
+            BS GESTION vous aide à préparer vos dossiers, courriers et
+            démarches administratives avec méthode.
+        </p>
 
-            <p>
-                Un accompagnement pratique, clair et personnalisé.
-            </p>
-
-            <div class="buttons">
-                <a href="contact.html" class="btn btn-red">
-                    Demander de l'aide
-                </a>
-            </div>
-
+        <div class="buttons">
+            <a href="contact.html" class="btn btn-red">Présenter ma demande</a>
+            <a href="index.html" class="btn btn-outline">Retour à l'accueil</a>
         </div>
     </div>
+</div>
+```
+
 </section>
 
-
-<section class="documents">
+<section class="services">
     <div class="container">
 
-        <div class="section-title">
-            <div class="section-label">NOS SERVICES</div>
-            <h2>Assistance administrative</h2>
+```
+    <div class="section-title">
+        <div class="section-label">Nos services</div>
+        <h2>Assistance administrative</h2>
+        <p>
+            Une aide pratique pour organiser vos démarches et vos documents.
+        </p>
+    </div>
+
+    <div class="documents-grid">
+
+        <div class="document">
+            <h3>Courriers administratifs</h3>
             <p>
-                BS GESTION vous accompagne dans la préparation et
-                l'organisation de vos démarches.
+                Aide à la rédaction et à la présentation de courriers
+                administratifs selon votre situation.
             </p>
         </div>
 
-        <div class="documents-grid">
-
-            <div class="document">
-                <h3>Courriers administratifs</h3>
-                <p>
-                    Aide à la préparation de courriers et documents
-                    explicatifs adaptés à votre situation.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Formulaires</h3>
-                <p>
-                    Assistance pour comprendre et préparer les informations
-                    nécessaires à vos formulaires.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Classement</h3>
-                <p>
-                    Organisation de vos documents afin de constituer
-                    des dossiers clairs.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Suivi</h3>
-                <p>
-                    Organisation des étapes et des échéances de vos
-                    différentes démarches.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Dossiers professionnels</h3>
-                <p>
-                    Préparation de documents administratifs liés à
-                    votre activité professionnelle.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Accompagnement personnalisé</h3>
-                <p>
-                    Une assistance adaptée à vos besoins et à votre
-                    situation.
-                </p>
-            </div>
-
+        <div class="document">
+            <h3>Constitution de dossiers</h3>
+            <p>
+                Organisation des documents et des pièces nécessaires
+                à votre démarche.
+            </p>
         </div>
+
+        <div class="document">
+            <h3>Formulaires</h3>
+            <p>
+                Assistance pour comprendre et préparer les informations
+                nécessaires aux formulaires administratifs.
+            </p>
+        </div>
+
+        <div class="document">
+            <h3>Suivi administratif</h3>
+            <p>
+                Organisation du suivi de vos demandes et des différentes
+                étapes de votre dossier.
+            </p>
+        </div>
+
+        <div class="document">
+            <h3>Démarches professionnelles</h3>
+            <p>
+                Assistance administrative pour les entrepreneurs
+                et les entreprises.
+            </p>
+        </div>
+
+        <div class="document">
+            <h3>Accompagnement personnalisé</h3>
+            <p>
+                Une solution adaptée à la nature et à la complexité
+                de votre demande.
+            </p>
+        </div>
+
     </div>
+</div>
+```
+
 </section>
 
+<section class="about">
+    <div class="container">
+        <div class="about-grid">
+
+```
+        <div>
+            <div class="section-label">Notre engagement</div>
+            <h2>Des démarches mieux organisées.</h2>
+        </div>
+
+        <div>
+            <p>
+                Certaines démarches administratives peuvent être longues
+                et nécessiter de nombreux documents.
+            </p>
+
+            <p>
+                Notre rôle est de vous aider à organiser les informations,
+                préparer les documents et suivre les différentes étapes.
+            </p>
+
+            <div class="checks">
+                <div><span>✓</span> Écoute de votre demande</div>
+                <div><span>✓</span> Analyse des documents</div>
+                <div><span>✓</span> Préparation du dossier</div>
+                <div><span>✓</span> Suivi administratif</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+```
+
+</section>
 
 <section class="method">
     <div class="container">
 
-        <div class="section-title">
-            <div class="section-label">COMMENT ÇA MARCHE ?</div>
-            <h2>Notre méthode</h2>
-        </div>
-
-        <div class="method-grid">
-
-            <div class="step">
-                <div class="step-number">01</div>
-                <h3>Votre demande</h3>
-                <p>
-                    Vous nous expliquez votre besoin.
-                </p>
-            </div>
-
-            <div class="step">
-                <div class="step-number">02</div>
-                <h3>Analyse</h3>
-                <p>
-                    Nous identifions les documents et étapes nécessaires.
-                </p>
-            </div>
-
-            <div class="step">
-                <div class="step-number">03</div>
-                <h3>Préparation</h3>
-                <p>
-                    Nous organisons votre dossier.
-                </p>
-            </div>
-
-            <div class="step">
-                <div class="step-number">04</div>
-                <h3>Suivi</h3>
-                <p>
-                    Vous disposez d'une vision claire des prochaines étapes.
-                </p>
-            </div>
-
-        </div>
+```
+    <div class="section-title">
+        <div class="section-label">Notre méthode</div>
+        <h2>Un accompagnement étape par étape</h2>
     </div>
+
+    <div class="method-grid">
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <h3>Demande</h3>
+            <p>
+                Vous nous présentez votre besoin et votre situation.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <h3>Analyse</h3>
+            <p>
+                Nous identifions les documents et démarches nécessaires.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <h3>Préparation</h3>
+            <p>
+                Nous organisons les éléments de votre dossier.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">04</div>
+            <h3>Suivi</h3>
+            <p>
+                Vous bénéficiez d'un suivi de votre démarche.
+            </p>
+        </div>
+
+    </div>
+</div>
+```
+
 </section>
 
-
-<section class="cta">
+<section class="devis">
     <div class="container">
-
-        <h2>Une démarche administrative vous pose problème ?</h2>
-
-        <p>
-            Contactez BS GESTION pour présenter votre situation.
-        </p>
-
-        <a href="contact.html" class="btn btn-red">
-            Nous contacter
-        </a>
-
+        <div class="devis-box">
+            <h2>Une démarche vous pose problème ?</h2>
+            <p>
+                Contactez BS GESTION et présentez-nous votre situation.
+                Nous étudierons votre demande.
+            </p>
+            <div class="no-price">ÉTUDE SUR DEMANDE</div>
+            <a href="contact.html" class="btn btn-red">Nous contacter</a>
+        </div>
     </div>
 </section>
 
 </main>
 
-
 <footer>
     <div class="container footer-main">
 
-        <div>
-            <h3>BS GESTION</h3>
-            <p>
-                Assistance et accompagnement administratif.
-            </p>
-            <p>📧 bs.gestion.31@gmail.com</p>
-        </div>
-
-        <div>
-            <h3>Navigation</h3>
-            <a href="index.html">Accueil</a>
-            <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création de société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <div>
-            <h3>Contact</h3>
-            <a href="mailto:bs.gestion.31@gmail.com">
-                bs.gestion.31@gmail.com
-            </a>
-        </div>
-
+```
+    <div>
+        <h3>BS GESTION</h3>
+        <p>
+            Assistance administrative et accompagnement professionnel.
+        </p>
+        <p>📧 bs.gestion.31@gmail.com</p>
     </div>
 
-    <div class="footer-bottom">
-        © 2026 BS GESTION — Tous droits réservés.
+    <div>
+        <h3>Navigation</h3>
+        <a href="index.html">Accueil</a>
+        <a href="sejour.html">Séjour</a>
+        <a href="creation-societe.html">Création de société</a>
+        <a href="administratif.html">Administratif</a>
+        <a href="contact.html">Contact</a>
     </div>
+
+    <div>
+        <h3>Contact</h3>
+        <a href="mailto:bs.gestion.31@gmail.com">Envoyer un e-mail</a>
+        <a href="contact.html">Demander un devis</a>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    © 2026 BS GESTION — Tous droits réservés.
+</div>
+```
+
 </footer>
 
-
 <script>
-const menuBtn = document.getElementById("menuBtn");
-const mainNav = document.getElementById("mainNav");
-
-menuBtn.addEventListener("click", function () {
-    mainNav.classList.toggle("active");
-});
+function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("active");
+}
 </script>
 
 </body>
