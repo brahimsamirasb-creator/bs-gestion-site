@@ -19,6 +19,8 @@
     --transition: 0.3s ease;
 }
 
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -174,8 +176,17 @@ nav a:hover::after {
     overflow: hidden;
     color: var(--blanc);
     background:
-        radial-gradient(circle at 80% 20%, rgba(196, 0, 0, 0.32), transparent 30%),
-        linear-gradient(120deg, #050505, #111111 55%, #080808);
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(196, 0, 0, 0.32),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            #050505,
+            #111111 55%,
+            #080808
+        );
     border-bottom: 6px solid var(--rouge);
 }
 
@@ -205,6 +216,7 @@ nav a:hover::after {
     position: relative;
     z-index: 2;
     max-width: 850px;
+    animation: apparition 0.8s ease forwards;
 }
 
 .badge {
@@ -364,7 +376,11 @@ section {
 
 .about {
     background:
-        radial-gradient(circle at 10% 80%, rgba(196, 0, 0, 0.15), transparent 30%),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(196, 0, 0, 0.15),
+            transparent 30%
+        ),
         var(--noir);
     color: var(--blanc);
 }
@@ -518,7 +534,11 @@ section {
 
 .cta {
     background:
-        radial-gradient(circle at center, rgba(196, 0, 0, 0.24), transparent 40%),
+        radial-gradient(
+            circle at center,
+            rgba(196, 0, 0, 0.24),
+            transparent 40%
+        ),
         #050505;
     color: #ffffff;
     text-align: center;
@@ -690,12 +710,8 @@ footer {
     }
 }
 
-.hero-content {
-    animation: apparition 0.8s ease forwards;
-}
-
 /* =========================================================
-   MOBILE
+   TABLETTES
    ========================================================= */
 
 @media (max-width: 950px) {
@@ -745,7 +761,7 @@ footer {
 }
 
 /* =========================================================
-   PETITS ÉCRANS
+   PETITS ECRANS
    ========================================================= */
 
 @media (max-width: 600px) {
