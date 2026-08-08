@@ -177,7 +177,6 @@ nav a:hover::after {
     position: relative;
     overflow: hidden;
     color: var(--blanc);
-
     background:
         radial-gradient(
             circle at 80% 20%,
@@ -190,7 +189,6 @@ nav a:hover::after {
             #111111 55%,
             #080808
         );
-
     border-bottom: 6px solid var(--rouge);
 }
 
@@ -386,7 +384,6 @@ section {
             transparent 30%
         ),
         var(--noir);
-
     color: var(--blanc);
 }
 
@@ -545,7 +542,6 @@ section {
             transparent 40%
         ),
         #050505;
-
     color: #ffffff;
     text-align: center;
     border-top: 5px solid var(--rouge);
