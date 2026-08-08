@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>BS GESTION — Contact</title>
+    <title>Contact | BS GESTION</title>
 
     <meta name="description"
-          content="Contactez BS GESTION pour vos besoins en conseil, gestion, démarches administratives, création de société et accompagnement.">
+          content="Contactez BS GESTION pour vos besoins en gestion administrative, démarches de séjour, création de société et accompagnement professionnel.">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <header>
-
     <div class="container navbar">
 
         <a href="index.html" class="logo">
@@ -29,40 +24,46 @@
         <div class="menu" onclick="toggleMenu()">☰</div>
 
         <nav id="mainNav">
-
             <a href="index.html">Accueil</a>
             <a href="sejour.html">Séjour</a>
             <a href="creation-societe.html">Création Société</a>
             <a href="administratif.html">Administratif</a>
             <a href="contact.html">Contact</a>
-
         </nav>
 
     </div>
-
 </header>
-
 
 <main>
 
-<section class="page-hero">
+<section class="page-hero photo-contact">
 
-    <div class="container">
+    <div class="container page-hero-content">
 
-        <div class="page-hero-content">
+        <div class="badge">
+            BS GESTION
+        </div>
 
-            <div class="badge">
-                BS GESTION
-            </div>
+        <h1>
+            Parlons de votre <span>projet</span>
+        </h1>
 
-            <h1>
-                Parlons de votre <span>projet</span>
-            </h1>
+        <p>
+            Une question, une démarche administrative ou un projet
+            professionnel ? Présentez-nous votre situation.
+        </p>
 
-            <p>
-                Une question, une démarche ou un projet professionnel ?
-                Notre équipe est à votre écoute.
-            </p>
+        <div class="buttons">
+
+            <a href="mailto:bs.gestion.31@gmail.com"
+               class="btn btn-red">
+                Envoyer un e-mail
+            </a>
+
+            <a href="index.html"
+               class="btn btn-outline">
+                Retour à l'accueil
+            </a>
 
         </div>
 
@@ -70,11 +71,9 @@
 
 </section>
 
-
 <section class="contact">
 
     <div class="container contact-grid">
-
 
         <div>
 
@@ -83,15 +82,14 @@
             </div>
 
             <h2>
-                Comment pouvons-nous vous aider ?
+                Votre contact BS GESTION
             </h2>
 
             <p class="contact-intro">
-                Présentez-nous votre situation, votre projet ou votre besoin.
-                Nous vous répondrons avec les informations nécessaires
-                pour définir la prochaine étape.
+                Expliquez-nous votre besoin. Nous prendrons connaissance
+                de votre demande afin de vous orienter vers l'accompagnement
+                administratif le plus adapté.
             </p>
-
 
             <div class="contact-details">
 
@@ -101,158 +99,151 @@
 
             </div>
 
+            <div class="checks">
 
-            <div class="card">
-
-                <div class="card-number">
-                    CONSEIL
+                <div>
+                    <span>✓</span>
+                    Réponse à votre demande
                 </div>
 
-                <h3>
-                    Un premier échange pour comprendre votre besoin
-                </h3>
+                <div>
+                    <span>✓</span>
+                    Étude de votre situation
+                </div>
 
-                <p>
-                    Chaque dossier est différent. C'est pourquoi nous
-                    privilégions un premier échange afin de comprendre
-                    votre situation avant de vous orienter.
-                </p>
+                <div>
+                    <span>✓</span>
+                    Organisation de votre besoin
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Confidentialité des informations
+                </div>
 
             </div>
 
         </div>
 
+        <form action="mailto:bs.gestion.31@gmail.com"
+              method="post"
+              enctype="text/plain">
 
-        <div>
+            <div class="form-group">
 
-            <form id="contactForm">
+                <label for="nom">
+                    Nom / Prénom
+                </label>
 
-                <div class="form-group">
+                <input
+                    type="text"
+                    id="nom"
+                    name="Nom"
+                    placeholder="Votre nom et prénom"
+                    required
+                >
 
-                    <label for="nom">
-                        Nom et prénom
-                    </label>
+            </div>
 
-                    <input
-                        type="text"
-                        id="nom"
-                        name="nom"
-                        placeholder="Votre nom et prénom"
-                        required
-                    >
+            <div class="form-group">
 
-                </div>
+                <label for="email">
+                    Votre e-mail
+                </label>
 
+                <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="votre@email.com"
+                    required
+                >
 
-                <div class="form-group">
+            </div>
 
-                    <label for="email">
-                        Adresse e-mail
-                    </label>
+            <div class="form-group">
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="votre@email.com"
-                        required
-                    >
+                <label for="telephone">
+                    Téléphone
+                </label>
 
-                </div>
+                <input
+                    type="tel"
+                    id="telephone"
+                    name="Téléphone"
+                    placeholder="Votre numéro de téléphone"
+                >
 
+            </div>
 
-                <div class="form-group">
+            <div class="form-group">
 
-                    <label for="telephone">
-                        Téléphone
-                    </label>
+                <label for="service">
+                    Votre besoin
+                </label>
 
-                    <input
-                        type="tel"
-                        id="telephone"
-                        name="telephone"
-                        placeholder="Votre numéro de téléphone"
-                    >
+                <select id="service" name="Service">
 
-                </div>
+                    <option value="">
+                        Sélectionnez une prestation
+                    </option>
 
+                    <option value="Gestion administrative">
+                        Gestion administrative
+                    </option>
 
-                <div class="form-group">
+                    <option value="Démarches de séjour">
+                        Démarches de séjour
+                    </option>
 
-                    <label for="service">
-                        Votre besoin
-                    </label>
+                    <option value="Création de société">
+                        Création de société
+                    </option>
 
-                    <select id="service" name="service">
+                    <option value="Accompagnement professionnel">
+                        Accompagnement professionnel
+                    </option>
 
-                        <option value="">
-                            Sélectionnez une prestation
-                        </option>
+                    <option value="Autre">
+                        Autre demande
+                    </option>
 
-                        <option value="sejour">
-                            Démarches de séjour
-                        </option>
+                </select>
 
-                        <option value="creation">
-                            Création de société
-                        </option>
+            </div>
 
-                        <option value="administratif">
-                            Gestion administrative
-                        </option>
+            <div class="form-group">
 
-                        <option value="conseil">
-                            Conseil / Gestion
-                        </option>
+                <label for="message">
+                    Votre message
+                </label>
 
-                        <option value="autre">
-                            Autre demande
-                        </option>
+                <textarea
+                    id="message"
+                    name="Message"
+                    placeholder="Expliquez-nous votre situation..."
+                    required
+                ></textarea>
 
-                    </select>
+            </div>
 
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Votre message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Expliquez-nous votre demande..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <button
-                    type="submit"
+            <button type="submit"
                     class="btn btn-red">
-                    Envoyer ma demande
-                </button>
+                Envoyer ma demande
+            </button>
 
+            <p class="form-note">
+                Le bouton ouvre votre logiciel de messagerie
+                avec les informations de votre demande.
+            </p>
 
-                <p class="form-note">
-                    En cliquant sur « Envoyer ma demande », votre
-                    logiciel de messagerie pourra s'ouvrir afin
-                    d'envoyer votre demande à BS GESTION.
-                </p>
-
-            </form>
-
-        </div>
+        </form>
 
     </div>
 
 </section>
 
-
-<section class="documents">
+<section class="method">
 
     <div class="container">
 
@@ -263,71 +254,44 @@
             </div>
 
             <h2>
-                Vous pouvez nous contacter pour
+                Comment pouvons-nous vous aider ?
             </h2>
 
         </div>
 
+        <div class="method-grid">
 
-        <div class="documents-grid">
-
-
-            <div class="document">
-
-                <h3>
-                    🇫🇷 Démarches de séjour
-                </h3>
-
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Administratif</h3>
                 <p>
-                    Préparation et organisation de vos démarches
-                    administratives liées au séjour.
+                    Organisation et préparation de vos dossiers.
                 </p>
-
-                <a href="sejour.html"
-                   class="btn btn-red">
-                    Voir le service
-                </a>
-
             </div>
 
-
-            <div class="document">
-
-                <h3>
-                    🏢 Création de société
-                </h3>
-
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Séjour</h3>
                 <p>
-                    Accompagnement dans votre projet entrepreneurial
-                    et vos démarches de création.
+                    Organisation des documents liés à vos démarches.
                 </p>
-
-                <a href="creation-societe.html"
-                   class="btn btn-red">
-                    Voir le service
-                </a>
-
             </div>
 
-
-            <div class="document">
-
-                <h3>
-                    📁 Gestion administrative
-                </h3>
-
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Entreprise</h3>
                 <p>
-                    Organisation et préparation de vos dossiers
-                    et documents administratifs.
+                    Accompagnement administratif de votre projet.
                 </p>
-
-                <a href="administratif.html"
-                   class="btn btn-red">
-                    Voir le service
-                </a>
-
             </div>
 
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Conseil</h3>
+                <p>
+                    Une organisation adaptée à votre situation.
+                </p>
+            </div>
 
         </div>
 
@@ -335,25 +299,21 @@
 
 </section>
 
-
 <section class="cta">
 
     <div class="container">
 
         <h2>
-            Une question ?
+            Écrivez-nous directement
         </h2>
 
         <p>
-            Écrivez directement à BS GESTION.
+            Nous sommes à votre écoute pour étudier votre demande.
         </p>
 
-        <a
-            href="mailto:bs.gestion.31@gmail.com"
-            class="btn btn-red">
-
+        <a href="mailto:bs.gestion.31@gmail.com"
+           class="btn btn-red">
             bs.gestion.31@gmail.com
-
         </a>
 
     </div>
@@ -362,149 +322,60 @@
 
 </main>
 
-
 <footer>
 
     <div class="container footer-main">
 
-
         <div>
-
-            <h3>
-                BS GESTION
-            </h3>
+            <h3>BS GESTION</h3>
 
             <p>
-                Conseil, gestion et accompagnement
-                administratif.
+                Gestion administrative, conseil et accompagnement
+                pour particuliers et professionnels.
             </p>
 
             <p>
-                📧 bs.gestion.31@gmail.com
+                📧
+                <a href="mailto:bs.gestion.31@gmail.com">
+                    bs.gestion.31@gmail.com
+                </a>
             </p>
-
         </div>
 
-
         <div>
+            <h3>Navigation</h3>
 
-            <h3>
-                Navigation
-            </h3>
-
-            <a href="index.html">
-                Accueil
-            </a>
-
-            <a href="sejour.html">
-                Séjour
-            </a>
-
-            <a href="creation-societe.html">
-                Création Société
-            </a>
-
-            <a href="administratif.html">
-                Administratif
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
+            <a href="index.html">Accueil</a>
+            <a href="sejour.html">Séjour</a>
+            <a href="creation-societe.html">Création Société</a>
+            <a href="administratif.html">Administratif</a>
+            <a href="contact.html">Contact</a>
         </div>
 
-
         <div>
-
-            <h3>
-                Contact
-            </h3>
+            <h3>Nous contacter</h3>
 
             <a href="mailto:bs.gestion.31@gmail.com">
                 bs.gestion.31@gmail.com
             </a>
 
+            <a href="contact.html">
+                Formulaire de contact
+            </a>
         </div>
-
 
     </div>
 
-
     <div class="footer-bottom">
-
         © 2026 BS GESTION — Tous droits réservés.
-
     </div>
 
 </footer>
 
-
 <script>
-
 function toggleMenu() {
-
-    document
-        .getElementById("mainNav")
-        .classList.toggle("active");
-
+    document.getElementById("mainNav").classList.toggle("active");
 }
-
-
-document
-    .getElementById("contactForm")
-    .addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-        const nom =
-            document.getElementById("nom").value;
-
-        const email =
-            document.getElementById("email").value;
-
-        const telephone =
-            document.getElementById("telephone").value;
-
-        const service =
-            document.getElementById("service").value;
-
-        const message =
-            document.getElementById("message").value;
-
-
-        const subject =
-            "Demande de contact - BS GESTION";
-
-
-        const body =
-            "Nom et prénom : " + nom +
-            "\n\n" +
-
-            "E-mail : " + email +
-            "\n\n" +
-
-            "Téléphone : " + telephone +
-            "\n\n" +
-
-            "Service demandé : " + service +
-            "\n\n" +
-
-            "Message :\n" + message;
-
-
-        const mailto =
-            "mailto:bs.gestion.31@gmail.com" +
-            "?subject=" +
-            encodeURIComponent(subject) +
-            "&body=" +
-            encodeURIComponent(body);
-
-
-        window.location.href = mailto;
-
-    });
-
 </script>
 
 </body>
