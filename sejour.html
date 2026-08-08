@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Régularisation & Titre de séjour | BS GESTION</title>
+
+    <meta name="description"
+          content="BS GESTION vous accompagne dans vos démarches administratives liées au séjour, à la régularisation et aux titres de séjour en France.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    rgba(5, 5, 5, 0.82),
+                    rgba(5, 5, 5, 0.88)
+                ),
+                url("images/sejour.jpg") center/cover no-repeat;
+            color: #fff;
+            border-bottom: 6px solid var(--rouge);
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .page-hero h1 span {
+            color: var(--rouge);
+        }
+
+        .page-hero p {
+            font-size: 19px;
+            color: #ddd;
+            max-width: 760px;
+        }
+
+        .breadcrumb {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #fff;
+            border: 1px solid var(--rouge);
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-image {
+            min-height: 400px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.15),
+                    rgba(0,0,0,0.15)
+                ),
+                url("images/sejour-accompagnement.jpg") center/cover no-repeat;
+            border-left: 6px solid var(--rouge);
+            box-shadow: var(--ombre);
+        }
+
+        .content-text h2 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .content-text p {
+            color: var(--gris);
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f7f7f7;
+            border-left: 5px solid var(--rouge);
+        }
+
+        .highlight strong {
+            color: var(--rouge);
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .service-item {
+            background: #fff;
+            border: 1px solid var(--gris-border);
+            border-top: 4px solid #111;
+            padding: 30px;
+            transition: var(--transition);
+        }
+
+        .service-item:hover {
+            transform: translateY(-6px);
+            border-top-color: var(--rouge);
+            box-shadow: var(--ombre);
+        }
+
+        .service-item .number {
+            color: var(--rouge);
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .service-item h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-item p {
+            color: var(--gris);
+            font-size: 15px;
+        }
+
+        .documents-section {
+            background: #f5f5f5;
+        }
+
+        .documents-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .document-box {
+            background: #fff;
+            padding: 28px;
+            border-left: 4px solid var(--rouge);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .document-box h3 {
+            margin-bottom: 12px;
+        }
+
+        .document-box p {
+            color: var(--gris);
+            font-size: 14px;
+        }
+
+        .process {
+            background: #080808;
+            color: #fff;
+        }
+
+        .process .section-title h2 {
+            color: #fff;
+        }
+
+        .process .section-title p {
+            color: #bbb;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            padding: 30px;
+            border: 1px solid #333;
+            background: #111;
+        }
+
+        .process-card span {
+            display: block;
+            color: var(--rouge);
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .process-card p {
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        .warning {
+            margin-top: 40px;
+            padding: 25px;
+            border: 1px solid #333;
+            background: #151515;
+            color: #ccc;
+        }
+
+        .warning strong {
+            color: var(--rouge);
+        }
+
+        .page-cta {
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(196,0,0,0.22),
+                    transparent 45%
+                ),
+                #050505;
+            color: #fff;
+            border-top: 5px solid var(--rouge);
+        }
+
+        .page-cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .page-cta p {
+            color: #ccc;
+            max-width: 720px;
+            margin: 0 auto 30px;
+        }
+
+        @media (max-width: 950px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .documents-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-hero {
+                min-height: 480px;
+            }
+
+            .service-list,
+            .documents-list,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image {
+                min-height: 300px;
+            }
+
+            .content-text h2 {
+                font-size: 32px;
+            }
+
+            .page-cta h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            BS <span>GESTION</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="sejour.html">Séjour</a>
+            <a href="creation-societe.html">Création de société</a>
+            <a href="administratif.html">Administratif</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="menu">☰</div>
+
+    </div>
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container page-hero-content">
+
+        <div class="breadcrumb">
+            BS GESTION • ACCOMPAGNEMENT ADMINISTRATIF
+        </div>
+
+        <h1>
+            Régularisation &
+            <span>Titre de séjour</span>
+        </h1>
+
+        <p>
+            Un accompagnement structuré pour vous aider à préparer
+            votre dossier administratif et à comprendre les différentes
+            étapes de vos démarches liées au séjour en France.
+        </p>
+
+        <div class="buttons">
+
+            <a href="contact.html" class="btn btn-red">
+                Demander un accompagnement
+            </a>
+
+            <a href="#prestations" class="btn btn-outline">
+                Découvrir nos prestations
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+     ===================================================== -->
+
+<section>
+
+    <div class="container intro-grid">
+
+        <div class="content-text">
+
+            <div class="section-label">
+                NOTRE ACCOMPAGNEMENT
+            </div>
+
+            <h2>
+                Votre dossier mérite une préparation
+                <span style="color:#c40000;">rigoureuse</span>
+            </h2>
+
+            <p>
+                Les démarches administratives liées au séjour peuvent
+                nécessiter la préparation de nombreux justificatifs,
+                formulaires et documents.
+            </p>
+
+            <p>
+                BS GESTION vous accompagne dans l'organisation de votre
+                dossier afin de vous permettre de présenter une demande
+                claire, structurée et adaptée à votre situation.
+            </p>
+
+            <p>
+                Notre rôle consiste notamment à vous aider à identifier
+                les documents nécessaires, organiser les pièces et
+                préparer les éléments utiles à votre démarche.
+            </p>
+
+            <div class="highlight">
+                <strong>Important :</strong>
+                BS GESTION propose un accompagnement administratif.
+                Nous ne garantissons pas la décision de l'administration
+                et ne nous substituons pas aux autorités compétentes.
+            </div>
+
+        </div>
+
+        <div class="intro-image"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRESTATIONS
+     ===================================================== -->
+
+<section id="prestations" class="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="section-label">
+                NOS SERVICES
+            </div>
+
+            <h2>
+                Un accompagnement adapté
+            </h2>
+
+            <p>
+                Nous vous aidons à structurer votre démarche selon
+                votre situation et les documents disponibles.
+            </p>
+
+        </div>
+
+
+        <div class="service-list">
+
+            <div class="service-item">
+                <div class="number">01</div>
+                <h3>Analyse de situation</h3>
+                <p>
+                    Étude des informations communiquées afin d'identifier
+                    les éléments importants de votre dossier administratif.
+                </p>
+            </div>
+
+
+            <div class="service-item">
+                <div class="number">02</div>
+                <h3>Préparation du dossier</h3>
+                <p>
+                    Organisation des justificatifs et préparation d'une
+                    présentation claire et structurée des documents.
+                </p>
+            </div>
+
+
+            <div class="service-item">
+                <div class="number">03</div>
+                <h3>Régularisation</h3>
+                <p>
+                    Accompagnement administratif dans la constitution
+                    des éléments nécessaires à une demande de régularisation.
+                </p>
+            </div>
+
+
+            <div class="service-item">
+                <div class="number">04</div>
+                <h3>Titre de séjour</h3>
+                <p>
+                    Assistance dans la préparation des documents relatifs
+                    aux démarches administratives concernant le séjour.
+                </p>
+            </div>
+
+
+            <div class="service-item">
+                <div class="number">05</div>
+                <h3>Changement de statut</h3>
+                <p>
+                    Aide à l'organisation des documents et informations
+                    nécessaires à une démarche de changement de statut.
+                </p>
+            </div>
+
+
+            <div class="service-item">
+                <div class="number">06</div>
+                <h3>Suivi administratif</h3>
+                <p>
+                    Organisation du suivi des démarches et classement
+                    des échanges et documents liés au dossier.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DOCUMENTS
+     ===================================================== -->
+
+<section class="documents-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="section-label">
+                DOCUMENTS
+            </div>
+
+            <h2>
+                Préparer son dossier
+            </h2>
+
+            <p>
+                Les pièces demandées peuvent varier selon la situation
+                de chaque personne et la nature de la démarche.
+            </p>
+
+        </div>
+
+
+        <div class="documents-list">
+
+            <div class="document-box">
+                <h3>Pièce d'identité</h3>
+                <p>
+                    Passeport, document d'identité et documents
+                    permettant de justifier votre situation.
+                </p>
+            </div>
+
+            <div class="document-box">
+                <h3>Justificatif de domicile</h3>
+                <p>
+                    Documents permettant de justifier votre résidence
+                    et votre adresse actuelle.
+                </p>
+            </div>
+
+            <div class="document-box">
+                <h3>Situation professionnelle</h3>
+                <p>
+                    Contrat de travail, bulletins de salaire ou autres
+                    justificatifs selon votre situation.
+                </p>
+            </div>
+
+            <div class="document-box">
+                <h3>Situation familiale</h3>
+                <p>
+                    Documents permettant de présenter votre situation
+                    familiale lorsque ceux-ci sont nécessaires.
+                </p>
+            </div>
+
+            <div class="document-box">
+                <h3>Justificatifs de présence</h3>
+                <p>
+                    Documents permettant de retracer les éléments utiles
+                    à l'étude administrative du dossier.
+                </p>
+            </div>
+
+            <div class="document-box">
+                <h3>Documents complémentaires</h3>
+                <p>
+                    Toute pièce supplémentaire pouvant être nécessaire
+                    selon votre situation particulière.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESSUS
+     ===================================================== -->
+
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="section-label">
+                NOTRE MÉTHODE
+            </div>
+
+            <h2>
+                4 étapes pour avancer sereinement
+            </h2>
+
+            <p>
+                Une méthode simple et structurée pour faciliter
+                la préparation de votre dossier.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <span>01</span>
+                <h3>Premier échange</h3>
+                <p>
+                    Présentation de votre situation et de votre
+                    demande administrative.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <span>02</span>
+                <h3>Analyse</h3>
+                <p>
+                    Identification des documents disponibles
+                    et des éléments à compléter.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <span>03</span>
+                <h3>Préparation</h3>
+                <p>
+                    Organisation des pièces et préparation
+                    administrative du dossier.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <span>04</span>
+                <h3>Suivi</h3>
+                <p>
+                    Conservation et organisation des éléments
+                    relatifs au suivi de votre démarche.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="warning">
+
+            <strong>À savoir :</strong>
+            les délais, conditions et documents exigés peuvent évoluer
+            et dépendent de la situation de chaque demandeur ainsi que
+            des règles applicables au moment du dépôt.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section class="page-cta">
+
+    <div class="container">
+
+        <h2>
+            Besoin d'aide pour votre dossier ?
+        </h2>
+
+        <p>
+            Contactez BS GESTION afin de présenter votre situation
+            et déterminer ensemble les éléments à préparer.
+        </p>
+
+        <a href="contact.html" class="btn btn-red">
+            Prendre contact
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <div class="container footer-main">
+
+        <div>
+            <h3>BS GESTION</h3>
+
+            <p>
+                Accompagnement administratif,
+                gestion et conseil pour particuliers
+                et professionnels.
+            </p>
+        </div>
+
+
+        <div>
+
+            <h3>Navigation</h3>
+
+            <a href="index.html">Accueil</a>
+            <a href="sejour.html">Séjour</a>
+            <a href="creation-societe.html">
+                Création de société
+            </a>
+            <a href="administratif.html">
+                Administratif
+            </a>
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>BS GESTION</h3>
+
+            <p>
+                Conseil • Gestion •
+                Accompagnement administratif
+            </p>
+
+            <a href="contact.html">
+                Demander un devis
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 BS GESTION — Tous droits réservés.
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     MENU MOBILE
+     ===================================================== -->
+
+<script>
+
+    const menu = document.querySelector(".menu");
+    const nav = document.querySelector("nav");
+
+    if (menu) {
+        menu.addEventListener("click", function () {
+            nav.classList.toggle("active");
+        });
+    }
+
+</script>
+
+</body>
+</html>
