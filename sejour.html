@@ -1,29 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BS GESTION - Accompagnement dans les démarches de séjour et la préparation des dossiers administratifs.">
-    <title>Régularisation & Séjour | BS GESTION</title>
+    <meta name="description" content="BS GESTION - Accompagnement dans les démarches liées au séjour en France.">
+    <title>Démarches Séjour | BS GESTION</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <div class="container navbar">
         <a href="index.html" class="logo">BS <span>GESTION</span></a>
+        <div class="menu" onclick="toggleMenu()">☰</div>
 
-        <nav id="mainNav">
-            <a href="index.html">Accueil</a>
-            <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création de société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+```
+    <nav id="mainNav">
+        <a href="index.html">Accueil</a>
+        <a href="sejour.html">Séjour</a>
+        <a href="creation-societe.html">Création de société</a>
+        <a href="administratif.html">Administratif</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
+```
 
-        <div class="menu" id="menuBtn">☰</div>
-    </div>
 </header>
 
 <main>
@@ -31,215 +33,224 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
+            <div class="badge">ACCOMPAGNEMENT ADMINISTRATIF</div>
 
-            <div class="badge">DÉMARCHES DE SÉJOUR</div>
+```
+        <h1>Démarches<br><span>de séjour.</span></h1>
 
-            <h1>
-                Régularisation<br>
-                <span>de séjour</span>
-            </h1>
+        <p>Un accompagnement structuré pour préparer votre dossier.</p>
 
-            <p>
-                Préparez votre dossier avec méthode et organisation.
-            </p>
+        <p>
+            BS GESTION vous accompagne dans la préparation et l'organisation
+            de vos démarches administratives liées au séjour en France.
+        </p>
 
-            <p>
-                BS GESTION vous accompagne dans la constitution et
-                l'organisation de vos documents administratifs.
-            </p>
-
-            <div class="buttons">
-                <a href="contact.html" class="btn btn-red">
-                    Étudier mon dossier
-                </a>
-
-                <a href="index.html" class="btn btn-outline">
-                    Retour à l'accueil
-                </a>
-            </div>
-
+        <div class="buttons">
+            <a href="contact.html" class="btn btn-red">Étudier mon dossier</a>
+            <a href="index.html" class="btn btn-outline">Retour à l'accueil</a>
         </div>
     </div>
+</div>
+```
+
 </section>
 
-
-<section class="documents">
+<section class="services">
     <div class="container">
 
-        <div class="section-title">
-            <div class="section-label">ACCOMPAGNEMENT</div>
-            <h2>Préparation de votre dossier</h2>
+```
+    <div class="section-title">
+        <div class="section-label">Séjour</div>
+        <h2>Un dossier préparé avec méthode</h2>
+        <p>
+            Chaque situation étant différente, nous commençons par analyser
+            votre besoin avant de définir les éléments à préparer.
+        </p>
+    </div>
+
+    <div class="documents-grid">
+
+        <div class="document">
+            <h3>Analyse de situation</h3>
             <p>
-                Nous vous aidons à identifier les documents nécessaires
-                et à organiser votre dossier selon votre situation.
+                Identification de votre situation administrative et des
+                démarches susceptibles de correspondre à votre demande.
             </p>
         </div>
 
-        <div class="documents-grid">
-
-            <div class="document">
-                <h3>Analyse de situation</h3>
-                <p>
-                    Identification de votre situation administrative et
-                    des éléments nécessaires à votre dossier.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Liste des documents</h3>
-                <p>
-                    Organisation des justificatifs et documents
-                    à réunir.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Classement du dossier</h3>
-                <p>
-                    Présentation structurée et claire des pièces
-                    de votre dossier.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Courriers administratifs</h3>
-                <p>
-                    Assistance dans la préparation de courriers et
-                    documents explicatifs.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Suivi des démarches</h3>
-                <p>
-                    Organisation des étapes et suivi des éléments
-                    de votre dossier.
-                </p>
-            </div>
-
-            <div class="document">
-                <h3>Accompagnement personnalisé</h3>
-                <p>
-                    Une approche adaptée aux particularités de
-                    chaque situation.
-                </p>
-            </div>
-
+        <div class="document">
+            <h3>Préparation du dossier</h3>
+            <p>
+                Organisation des pièces et préparation des documents
+                nécessaires à votre démarche.
+            </p>
         </div>
+
+        <div class="document">
+            <h3>Vérification</h3>
+            <p>
+                Vérification de la cohérence et de la complétude des éléments
+                avant le dépôt du dossier.
+            </p>
+        </div>
+
+        <div class="document">
+            <h3>Courriers administratifs</h3>
+            <p>
+                Aide à la rédaction de courriers et documents explicatifs
+                adaptés à votre situation.
+            </p>
+        </div>
+
+        <div class="document">
+            <h3>Suivi de démarche</h3>
+            <p>
+                Organisation du suivi des différentes étapes de votre dossier.
+            </p>
+        </div>
+
+        <div class="document">
+            <h3>Accompagnement personnalisé</h3>
+            <p>
+                Un accompagnement adapté à votre situation et à la nature
+                de votre demande.
+            </p>
+        </div>
+
     </div>
+</div>
+```
+
 </section>
 
-
 <section class="about">
-    <div class="container about-grid">
+    <div class="container">
+        <div class="about-grid">
+
+```
+        <div>
+            <div class="section-label">Notre accompagnement</div>
+            <h2>Votre dossier mérite une préparation rigoureuse.</h2>
+        </div>
 
         <div>
-            <div class="section-label">NOTRE APPROCHE</div>
-
-            <h2>
-                Un dossier clair
-                et bien organisé.
-            </h2>
-
             <p>
-                Les démarches administratives peuvent être complexes.
-                Notre rôle est de vous aider à préparer vos documents
-                et à structurer votre dossier.
+                Une démarche administrative peut nécessiter de nombreux
+                documents et informations. Une bonne organisation permet
+                de limiter les oublis et les erreurs.
             </p>
 
             <div class="checks">
-                <div><span>✓</span> Vérification des pièces</div>
-                <div><span>✓</span> Classement des documents</div>
-                <div><span>✓</span> Préparation des courriers</div>
-                <div><span>✓</span> Accompagnement personnalisé</div>
+                <div><span>✓</span> Analyse de votre demande</div>
+                <div><span>✓</span> Liste personnalisée des pièces</div>
+                <div><span>✓</span> Préparation des documents</div>
+                <div><span>✓</span> Vérification du dossier</div>
             </div>
-        </div>
-
-        <div>
-            <h2>Besoin d'aide pour votre dossier ?</h2>
-
-            <p>
-                Contactez BS GESTION pour présenter votre situation
-                et déterminer l'accompagnement adapté.
-            </p>
-
-            <a href="mailto:bs.gestion.31@gmail.com" class="btn btn-red">
-                bs.gestion.31@gmail.com
-            </a>
         </div>
 
     </div>
+</div>
+```
+
 </section>
 
+<section class="method">
+    <div class="container">
+
+```
+    <div class="section-title">
+        <div class="section-label">Comment ça fonctionne ?</div>
+        <h2>4 étapes pour avancer sereinement</h2>
+    </div>
+
+    <div class="method-grid">
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <h3>Premier échange</h3>
+            <p>Présentation de votre situation et de votre demande.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <h3>Étude</h3>
+            <p>Analyse des informations et des documents disponibles.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <h3>Préparation</h3>
+            <p>Organisation des pièces et préparation du dossier.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">04</div>
+            <h3>Suivi</h3>
+            <p>Accompagnement dans le suivi de la démarche.</p>
+        </div>
+
+    </div>
+</div>
+```
+
+</section>
 
 <section class="devis">
     <div class="container">
-
         <div class="devis-box">
-            <h2>Étudions votre situation</h2>
-
+            <h2>Vous souhaitez faire étudier votre situation ?</h2>
             <p>
-                Chaque dossier étant différent, contactez-nous afin
-                d'obtenir un accompagnement adapté à vos besoins.
+                Contactez-nous afin de présenter votre situation et connaître
+                les modalités d'accompagnement.
             </p>
-
-            <div class="no-price">
-                ÉTUDE PERSONNALISÉE
-            </div>
-
-            <a href="contact.html" class="btn btn-red">
-                Demander un accompagnement
-            </a>
+            <div class="no-price">ÉTUDE PERSONNALISÉE</div>
+            <a href="contact.html" class="btn btn-red">Prendre contact</a>
         </div>
-
     </div>
 </section>
 
 </main>
 
-
 <footer>
     <div class="container footer-main">
 
-        <div>
-            <h3>BS GESTION</h3>
-            <p>
-                Accompagnement administratif et préparation de dossiers.
-            </p>
-            <p>📧 bs.gestion.31@gmail.com</p>
-        </div>
-
-        <div>
-            <h3>Navigation</h3>
-            <a href="index.html">Accueil</a>
-            <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création de société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <div>
-            <h3>Contact</h3>
-            <a href="mailto:bs.gestion.31@gmail.com">
-                bs.gestion.31@gmail.com
-            </a>
-        </div>
-
+```
+    <div>
+        <h3>BS GESTION</h3>
+        <p>
+            Accompagnement administratif et conseil pour vos projets.
+        </p>
+        <p>📧 bs.gestion.31@gmail.com</p>
     </div>
 
-    <div class="footer-bottom">
-        © 2026 BS GESTION — Tous droits réservés.
+    <div>
+        <h3>Navigation</h3>
+        <a href="index.html">Accueil</a>
+        <a href="sejour.html">Séjour</a>
+        <a href="creation-societe.html">Création de société</a>
+        <a href="administratif.html">Administratif</a>
+        <a href="contact.html">Contact</a>
     </div>
+
+    <div>
+        <h3>Contact</h3>
+        <a href="mailto:bs.gestion.31@gmail.com">Envoyer un e-mail</a>
+        <a href="contact.html">Demander un devis</a>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    © 2026 BS GESTION — Tous droits réservés.
+</div>
+```
+
 </footer>
 
-
 <script>
-const menuBtn = document.getElementById("menuBtn");
-const mainNav = document.getElementById("mainNav");
-
-menuBtn.addEventListener("click", function () {
-    mainNav.classList.toggle("active");
-});
+function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("active");
+}
 </script>
 
 </body>
