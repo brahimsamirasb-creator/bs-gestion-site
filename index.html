@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,30 +6,19 @@
 
 <title>BS GESTION | Cabinet d'accompagnement administratif</title>
 
-<meta name="description" content="BS GESTION - Cabinet d'accompagnement administratif à Toulouse. Régularisation et titre de séjour, création de société, démarches administratives, conseil et gestion.">
-
-<meta name="theme-color" content="#080808">
+<meta name="description" content="BS GESTION accompagne particuliers et professionnels dans leurs démarches administratives, séjour, régularisation, création de société et gestion de dossiers.">
 
 <style>
-
-/* =========================================================
-   BS GESTION — SITE OFFICIEL
-   ROUGE • NOIR • BLANC
-   Moderne • Élégant • Professionnel
-========================================================= */
-
 :root{
     --rouge:#c40000;
     --rouge-fonce:#8f0000;
-    --rouge-clair:#e00000;
     --noir:#080808;
-    --noir-2:#111111;
-    --noir-3:#1b1b1b;
+    --noir2:#121212;
     --blanc:#ffffff;
-    --gris:#666666;
+    --gris:#666;
     --gris-clair:#f5f5f5;
-    --bordure:#dddddd;
-    --ombre:0 15px 45px rgba(0,0,0,.10);
+    --bordure:#e4e4e4;
+    --ombre:0 18px 50px rgba(0,0,0,.10);
     --transition:.3s ease;
 }
 
@@ -46,18 +34,19 @@ html{
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#fff;
     color:#171717;
+    background:#fff;
     line-height:1.7;
 }
 
-img{
-    width:100%;
-    display:block;
+a{
+    text-decoration:none;
+    transition:var(--transition);
 }
 
-a{
-    transition:var(--transition);
+img{
+    max-width:100%;
+    display:block;
 }
 
 .container{
@@ -66,15 +55,15 @@ a{
     margin:auto;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* =========================
+HEADER
+========================= */
 
 header{
     position:sticky;
     top:0;
     z-index:9999;
-    background:rgba(8,8,8,.97);
+    background:rgba(8,8,8,.98);
     border-bottom:3px solid var(--rouge);
     box-shadow:0 5px 25px rgba(0,0,0,.2);
 }
@@ -88,9 +77,8 @@ header{
 
 .logo{
     color:#fff;
-    text-decoration:none;
-    font-size:25px;
-    font-weight:800;
+    font-size:26px;
+    font-weight:900;
     letter-spacing:2px;
 }
 
@@ -101,19 +89,18 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:23px;
+    gap:25px;
 }
 
 nav a{
-    position:relative;
     color:#fff;
-    text-decoration:none;
     font-size:14px;
     font-weight:700;
     padding:10px 0;
+    position:relative;
 }
 
-nav a::after{
+nav a:after{
     content:"";
     position:absolute;
     left:0;
@@ -121,14 +108,14 @@ nav a::after{
     width:0;
     height:2px;
     background:var(--rouge);
-    transition:var(--transition);
+    transition:.3s;
 }
 
 nav a:hover{
     color:#fff;
 }
 
-nav a:hover::after{
+nav a:hover:after{
     width:100%;
 }
 
@@ -139,25 +126,22 @@ nav a:hover::after{
     cursor:pointer;
 }
 
-/* =========================================================
-   BOUTONS
-========================================================= */
+/* =========================
+BUTTONS
+========================= */
 
 .btn{
     display:inline-block;
-    padding:14px 25px;
+    padding:15px 26px;
     border-radius:4px;
-    text-decoration:none;
     font-weight:700;
-    border:none;
     cursor:pointer;
-    transition:var(--transition);
 }
 
 .btn-red{
     background:var(--rouge);
     color:#fff;
-    box-shadow:0 8px 20px rgba(196,0,0,.22);
+    box-shadow:0 8px 22px rgba(196,0,0,.22);
 }
 
 .btn-red:hover{
@@ -166,19 +150,18 @@ nav a:hover::after{
 }
 
 .btn-outline{
-    color:#fff;
     border:1px solid var(--rouge);
+    color:#fff;
     background:transparent;
 }
 
 .btn-outline:hover{
     background:var(--rouge);
-    transform:translateY(-2px);
 }
 
-/* =========================================================
-   HERO
-========================================================= */
+/* =========================
+HERO
+========================= */
 
 .hero{
     min-height:720px;
@@ -187,30 +170,32 @@ nav a:hover::after{
     position:relative;
     overflow:hidden;
     color:#fff;
+
     background:
-        radial-gradient(circle at 82% 20%,rgba(196,0,0,.32),transparent 30%),
-        linear-gradient(120deg,#050505,#111 55%,#080808);
+    radial-gradient(circle at 82% 20%,rgba(196,0,0,.32),transparent 30%),
+    linear-gradient(120deg,#050505,#111 55%,#080808);
+
     border-bottom:6px solid var(--rouge);
 }
 
-.hero::before{
+.hero:before{
     content:"";
     position:absolute;
     width:520px;
     height:520px;
     right:-220px;
-    top:80px;
+    top:70px;
     border:1px solid rgba(196,0,0,.35);
     border-radius:50%;
 }
 
-.hero::after{
+.hero:after{
     content:"";
     position:absolute;
     width:360px;
     height:360px;
-    right:-110px;
-    top:160px;
+    right:-120px;
+    top:150px;
     border:1px solid rgba(196,0,0,.25);
     border-radius:50%;
 }
@@ -222,19 +207,30 @@ nav a:hover::after{
     animation:apparition .8s ease forwards;
 }
 
+@keyframes apparition{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 .badge{
     display:inline-block;
     padding:8px 16px;
-    margin-bottom:25px;
     border:1px solid var(--rouge);
     color:#fff;
     font-size:12px;
     font-weight:700;
     letter-spacing:2px;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:clamp(48px,8vw,82px);
+    font-size:clamp(50px,8vw,84px);
     line-height:1;
     margin-bottom:25px;
     letter-spacing:-2px;
@@ -244,11 +240,11 @@ nav a:hover::after{
     color:var(--rouge);
 }
 
-.hero .slogan{
+.hero .intro{
     font-size:25px;
     font-weight:700;
     color:#fff;
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .hero p{
@@ -270,9 +266,9 @@ nav a:hover::after{
     font-size:14px;
 }
 
-/* =========================================================
-   SECTIONS
-========================================================= */
+/* =========================
+SECTIONS
+========================= */
 
 section{
     padding:95px 0;
@@ -295,7 +291,6 @@ section{
 .section-title h2{
     font-size:43px;
     line-height:1.2;
-    color:#111;
 }
 
 .section-title p{
@@ -304,59 +299,12 @@ section{
     color:var(--gris);
 }
 
-/* =========================================================
-   INTRO
-========================================================= */
-
-.intro{
-    background:#fff;
-}
-
-.intro-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:60px;
-    align-items:center;
-}
-
-.intro-text h2{
-    font-size:42px;
-    line-height:1.2;
-    margin-bottom:20px;
-}
-
-.intro-text p{
-    color:var(--gris);
-    margin-bottom:18px;
-}
-
-.intro-box{
-    background:var(--noir);
-    color:#fff;
-    padding:45px;
-    border-left:6px solid var(--rouge);
-    box-shadow:var(--ombre);
-}
-
-.intro-box h3{
-    font-size:25px;
-    margin-bottom:15px;
-}
-
-.intro-box p{
-    color:#ccc;
-}
-
-.intro-box strong{
-    color:var(--rouge);
-}
-
-/* =========================================================
-   SERVICES
-========================================================= */
+/* =========================
+SERVICES
+========================= */
 
 .services{
-    background:var(--gris-clair);
+    background:#fff;
 }
 
 .services-grid{
@@ -366,13 +314,24 @@ section{
 }
 
 .card{
-    position:relative;
     padding:35px 28px;
     background:#fff;
     border:1px solid var(--bordure);
     border-top:4px solid #111;
-    transition:var(--transition);
+    position:relative;
     overflow:hidden;
+    transition:var(--transition);
+}
+
+.card:after{
+    content:"";
+    position:absolute;
+    width:110px;
+    height:110px;
+    right:-55px;
+    bottom:-55px;
+    border-radius:50%;
+    background:rgba(196,0,0,.06);
 }
 
 .card:hover{
@@ -403,124 +362,20 @@ section{
     margin-top:20px;
     color:var(--rouge);
     font-weight:700;
-    text-decoration:none;
 }
 
 .card a:hover{
     color:var(--rouge-fonce);
 }
 
-/* =========================================================
-   SERVICE DETAIL
-========================================================= */
-
-.service-detail{
-    background:#fff;
-}
-
-.detail-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-    margin-bottom:45px;
-}
-
-.detail-card{
-    padding:40px;
-    background:#fafafa;
-    border:1px solid var(--bordure);
-    border-left:5px solid var(--rouge);
-}
-
-.detail-card h3{
-    font-size:27px;
-    margin-bottom:15px;
-}
-
-.detail-card p{
-    color:var(--gris);
-    margin-bottom:15px;
-}
-
-.detail-card ul{
-    padding-left:20px;
-    color:#555;
-}
-
-.detail-card li{
-    margin-bottom:9px;
-}
-
-/* =========================================================
-   PHOTOS
-========================================================= */
-
-.photo-section{
-    background:var(--noir);
-    color:#fff;
-}
-
-.photo-section .section-title h2{
-    color:#fff;
-}
-
-.photo-section .section-title p{
-    color:#bbb;
-}
-
-.photo-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.photo-card{
-    position:relative;
-    min-height:330px;
-    overflow:hidden;
-    background:#171717;
-    border:1px solid #333;
-}
-
-.photo-card img{
-    height:330px;
-    object-fit:cover;
-    opacity:.75;
-    transition:.5s ease;
-}
-
-.photo-card:hover img{
-    transform:scale(1.05);
-    opacity:.9;
-}
-
-.photo-overlay{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    padding:25px;
-    background:linear-gradient(transparent,rgba(0,0,0,.95));
-}
-
-.photo-overlay h3{
-    font-size:21px;
-    margin-bottom:5px;
-}
-
-.photo-overlay p{
-    color:#ccc;
-    font-size:14px;
-}
-
-/* =========================================================
-   A PROPOS
-========================================================= */
+/* =========================
+A PROPOS
+========================= */
 
 .about{
     background:
-        radial-gradient(circle at 10% 80%,rgba(196,0,0,.15),transparent 30%),
-        var(--noir);
+    radial-gradient(circle at 10% 80%,rgba(196,0,0,.15),transparent 30%),
+    var(--noir);
     color:#fff;
 }
 
@@ -534,7 +389,6 @@ section{
 .about h2{
     font-size:45px;
     line-height:1.15;
-    color:#fff;
 }
 
 .about p{
@@ -544,7 +398,6 @@ section{
 
 .checks div{
     margin-bottom:14px;
-    color:#eee;
 }
 
 .checks span{
@@ -553,12 +406,53 @@ section{
     margin-right:8px;
 }
 
-/* =========================================================
-   METHODE
-========================================================= */
+/* =========================
+POURQUOI NOUS
+========================= */
+
+.advantages{
+    background:#f5f5f5;
+}
+
+.advantages-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.advantage{
+    background:#fff;
+    padding:35px;
+    border-left:4px solid #111;
+    transition:var(--transition);
+}
+
+.advantage:hover{
+    border-left-color:var(--rouge);
+    transform:translateY(-6px);
+    box-shadow:var(--ombre);
+}
+
+.advantage-number{
+    font-size:34px;
+    font-weight:900;
+    color:var(--rouge);
+}
+
+.advantage h3{
+    margin:10px 0;
+}
+
+.advantage p{
+    color:var(--gris);
+}
+
+/* =========================
+METHODE
+========================= */
 
 .method{
-    background:var(--gris-clair);
+    background:#fff;
 }
 
 .method-grid{
@@ -568,10 +462,9 @@ section{
 }
 
 .step{
-    background:#fff;
     padding:30px;
+    background:#fafafa;
     border-top:4px solid var(--rouge);
-    box-shadow:0 5px 20px rgba(0,0,0,.04);
     transition:var(--transition);
 }
 
@@ -594,12 +487,12 @@ section{
     color:var(--gris);
 }
 
-/* =========================================================
-   DOCUMENTS
-========================================================= */
+/* =========================
+DOCUMENTS
+========================= */
 
 .documents{
-    background:#fff;
+    background:#f5f5f5;
 }
 
 .documents-grid{
@@ -609,8 +502,8 @@ section{
 }
 
 .document{
-    padding:30px;
-    background:#fafafa;
+    padding:32px;
+    background:#fff;
     border:1px solid var(--bordure);
     border-left:4px solid #111;
     transition:var(--transition);
@@ -618,7 +511,7 @@ section{
 
 .document:hover{
     border-left-color:var(--rouge);
-    transform:translateY(-5px);
+    transform:translateY(-6px);
     box-shadow:var(--ombre);
 }
 
@@ -628,20 +521,19 @@ section{
 
 .document p{
     color:var(--gris);
-    font-size:15px;
     margin-bottom:20px;
 }
 
-/* =========================================================
-   DEVIS
-========================================================= */
+/* =========================
+DEVIS
+========================= */
 
 .devis{
-    background:var(--gris-clair);
+    background:#f5f5f5;
 }
 
 .devis-box{
-    max-width:900px;
+    max-width:850px;
     margin:auto;
     padding:55px;
     background:#fff;
@@ -661,23 +553,19 @@ section{
 }
 
 .no-price{
-    display:inline-block;
-    font-weight:800;
     color:var(--rouge);
+    font-weight:800;
     margin-bottom:25px;
-    letter-spacing:1px;
-    border:1px solid #eee;
-    padding:12px 18px;
 }
 
-/* =========================================================
-   CTA
-========================================================= */
+/* =========================
+CTA
+========================= */
 
 .cta{
     background:
-        radial-gradient(circle at center,rgba(196,0,0,.24),transparent 40%),
-        #050505;
+    radial-gradient(circle at center,rgba(196,0,0,.25),transparent 40%),
+    #050505;
     color:#fff;
     text-align:center;
     border-top:5px solid var(--rouge);
@@ -694,113 +582,46 @@ section{
     margin-bottom:30px;
 }
 
-/* =========================================================
-   CONTACT
-========================================================= */
+/* =========================
+CONTACT RAPIDE
+========================= */
 
-.contact{
-    background:#f7f7f7;
+.quick-contact{
+    background:#fff;
+    text-align:center;
 }
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:start;
+.contact-box{
+    max-width:850px;
+    margin:auto;
 }
 
-.contact h2{
-    font-size:43px;
-    margin-bottom:20px;
+.contact-box h2{
+    font-size:40px;
+    margin-bottom:15px;
 }
 
-.contact-intro{
+.contact-box p{
     color:var(--gris);
+    margin-bottom:25px;
 }
 
-.contact-details{
-    margin-top:30px;
+.contact-info{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
 }
 
-.contact-item{
-    margin-bottom:20px;
-}
-
-.contact-item strong{
-    display:block;
-    color:#111;
-    margin-bottom:4px;
-}
-
-.contact-item a{
+.contact-info a{
     color:var(--rouge);
     font-weight:700;
-    font-size:18px;
-    text-decoration:none;
 }
 
-.contact-item p{
-    color:#555;
-}
-
-form{
-    background:#fff;
-    padding:35px;
-    border:1px solid #ddd;
-    border-top:5px solid var(--rouge);
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-}
-
-.form-group{
-    margin-bottom:18px;
-}
-
-label{
-    display:block;
-    font-weight:700;
-    font-size:14px;
-    margin-bottom:7px;
-}
-
-input,
-textarea,
-select{
-    width:100%;
-    padding:13px;
-    border:1px solid #ccc;
-    font-family:inherit;
-    font-size:15px;
-    outline:none;
-    transition:var(--transition);
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-    border-color:var(--rouge);
-    box-shadow:0 0 0 3px rgba(196,0,0,.08);
-}
-
-textarea{
-    min-height:140px;
-    resize:vertical;
-}
-
-button{
-    border:0;
-    cursor:pointer;
-    font-size:15px;
-}
-
-.form-note{
-    color:#777;
-    font-size:12px;
-    margin-top:10px;
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
+/* =========================
+FOOTER
+========================= */
 
 footer{
     background:#050505;
@@ -821,18 +642,22 @@ footer{
 }
 
 .footer-main p{
-    margin-top:10px;
+    margin-top:8px;
 }
 
 .footer-main a{
     display:block;
     color:#aaa;
-    text-decoration:none;
     margin-bottom:9px;
 }
 
 .footer-main a:hover{
     color:var(--rouge);
+}
+
+.footer-address{
+    color:#aaa;
+    line-height:1.8;
 }
 
 .footer-bottom{
@@ -842,24 +667,9 @@ footer{
     font-size:12px;
 }
 
-/* =========================================================
-   ANIMATION
-========================================================= */
-
-@keyframes apparition{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:950px){
 
@@ -885,29 +695,20 @@ footer{
         display:block;
     }
 
-    .services-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
+    .services-grid,
     .method-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .about-grid,
-    .contact-grid,
-    .intro-grid{
+    .advantages-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid{
         grid-template-columns:1fr;
     }
 
     .documents-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .detail-grid{
-        grid-template-columns:1fr;
-    }
-
-    .photo-grid{
         grid-template-columns:1fr 1fr;
     }
 
@@ -935,14 +736,14 @@ footer{
     }
 
     .hero h1{
-        font-size:46px;
+        font-size:48px;
     }
 
     .hero p{
         font-size:17px;
     }
 
-    .hero .slogan{
+    .hero .intro{
         font-size:21px;
     }
 
@@ -952,76 +753,62 @@ footer{
 
     .section-title h2,
     .about h2,
-    .contact h2,
-    .cta h2{
+    .cta h2,
+    .contact-box h2{
         font-size:32px;
     }
 
     .services-grid,
     .method-grid,
+    .advantages-grid,
     .documents-grid,
-    .photo-grid,
     .footer-main{
         grid-template-columns:1fr;
     }
 
     .buttons{
         flex-direction:column;
-        align-items:stretch;
     }
 
     .buttons .btn{
         text-align:center;
     }
 
-    .detail-card{
-        padding:28px;
-    }
-
     .devis-box{
         padding:30px 20px;
     }
 
-    form{
-        padding:25px;
-    }
-
-    .footer-main{
-        gap:30px;
+    .contact-info{
+        flex-direction:column;
+        gap:12px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =====================================================
-     HEADER
-====================================================== -->
+<!-- =========================
+HEADER
+========================= -->
 
 <header>
 
 <div class="container navbar">
 
-<a href="#accueil" class="logo">
+<a href="index.html" class="logo">
 <span>BS</span> GESTION
 </a>
 
-<div class="menu" onclick="toggleMenu()" aria-label="Ouvrir le menu">
-☰
-</div>
+<div class="menu" onclick="toggleMenu()">☰</div>
 
 <nav id="navigation">
 
-<a href="#accueil">Accueil</a>
-<a href="#services">Services</a>
-<a href="#sejour">Séjour</a>
-<a href="#creation">Création</a>
-<a href="#apropos">À propos</a>
-<a href="#methode">Méthode</a>
-<a href="#documents">Documents</a>
-<a href="#contact">Contact</a>
+<a href="index.html">Accueil</a>
+<a href="sejour.html">Séjour & Régularisation</a>
+<a href="creation-societe.html">Création de société</a>
+<a href="administratif.html">Administratif</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
@@ -1030,11 +817,11 @@ footer{
 </header>
 
 
-<!-- =====================================================
-     ACCUEIL
-====================================================== -->
+<!-- =========================
+HERO
+========================= -->
 
-<section class="hero" id="accueil">
+<section class="hero">
 
 <div class="container">
 
@@ -1048,7 +835,7 @@ CABINET D'ACCOMPAGNEMENT ADMINISTRATIF
 BS <span>GESTION</span>
 </h1>
 
-<p class="slogan">
+<p class="intro">
 Votre tranquillité, notre engagement.
 </p>
 
@@ -1059,11 +846,11 @@ vos projets professionnels et la constitution de vos dossiers.
 
 <div class="buttons">
 
-<a href="#contact" class="btn btn-red">
-Demander un accompagnement
+<a href="contact.html" class="btn btn-red">
+Demander un devis
 </a>
 
-<a href="#services" class="btn btn-outline">
+<a href="sejour.html" class="btn btn-outline">
 Découvrir nos services
 </a>
 
@@ -1082,70 +869,11 @@ Découvrir nos services
 </section>
 
 
-<!-- =====================================================
-     INTRODUCTION
-====================================================== -->
+<!-- =========================
+SERVICES
+========================= -->
 
-<section class="intro">
-
-<div class="container intro-grid">
-
-<div class="intro-text">
-
-<div class="section-label">
-BS GESTION
-</div>
-
-<h2>
-Un accompagnement administratif sérieux et personnalisé
-</h2>
-
-<p>
-BS GESTION accompagne les particuliers, entrepreneurs et professionnels
-dans la préparation, l'organisation et le suivi de leurs démarches
-administratives.
-</p>
-
-<p>
-Notre rôle est de vous aider à comprendre les démarches, à réunir
-les documents nécessaires et à présenter un dossier organisé et cohérent.
-</p>
-
-<a href="#contact" class="btn btn-red">
-Parler de votre situation
-</a>
-
-</div>
-
-<div class="intro-box">
-
-<h3>
-Une démarche claire et structurée
-</h3>
-
-<p>
-Chaque situation est étudiée individuellement. Nous vous accompagnons
-dans la préparation de votre dossier et dans le suivi administratif
-des démarches engagées.
-</p>
-
-<p>
-<strong>BS GESTION</strong> privilégie une méthode claire,
-organisée et transparente.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     SERVICES
-====================================================== -->
-
-<section class="services" id="services">
+<section class="services">
 
 <div class="container">
 
@@ -1156,12 +884,12 @@ NOS SERVICES
 </div>
 
 <h2>
-Des solutions adaptées à vos besoins
+Un accompagnement adapté à votre situation
 </h2>
 
 <p>
-Découvrez nos principaux domaines d'accompagnement administratif
-et professionnel.
+BS GESTION vous accompagne dans la préparation,
+l'organisation et le suivi de vos démarches.
 </p>
 
 </div>
@@ -1169,21 +897,20 @@ et professionnel.
 
 <div class="services-grid">
 
-
 <div class="card">
 
 <div class="card-number">01</div>
 
 <h3>
-Régularisation & séjour
+Séjour & Régularisation
 </h3>
 
 <p>
-Accompagnement administratif pour la préparation et le suivi
-des dossiers liés au séjour et aux démarches auprès des administrations.
+Accompagnement administratif pour la préparation
+et le suivi de vos démarches liées au séjour.
 </p>
 
-<a href="#sejour">
+<a href="sejour.html">
 Découvrir →
 </a>
 
@@ -1199,11 +926,11 @@ Création de société
 </h3>
 
 <p>
-Accompagnement dans la préparation du projet, l'organisation
-des documents et les formalités administratives de création.
+Accompagnement dans la préparation de votre projet
+et de vos formalités de création d'entreprise.
 </p>
 
-<a href="#creation">
+<a href="creation-societe.html">
 Découvrir →
 </a>
 
@@ -1219,11 +946,11 @@ Démarches administratives
 </h3>
 
 <p>
-Aide à la préparation, au classement et au suivi de différents
-dossiers administratifs.
+Organisation et accompagnement dans vos différentes
+démarches administratives.
 </p>
 
-<a href="#documents">
+<a href="administratif.html">
 Découvrir →
 </a>
 
@@ -1235,21 +962,20 @@ Découvrir →
 <div class="card-number">04</div>
 
 <h3>
-Conseil & gestion
+Conseil & Gestion
 </h3>
 
 <p>
-Accompagnement administratif pour les entrepreneurs et professionnels
-dans leurs projets et leurs besoins de gestion.
+Accompagnement administratif pour les particuliers
+et les professionnels.
 </p>
 
-<a href="#contact">
+<a href="contact.html">
 Nous contacter →
 </a>
 
 </div>
 
-
 </div>
 
 </div>
@@ -1257,307 +983,11 @@ Nous contacter →
 </section>
 
 
-<!-- =====================================================
-     SEJOUR
-====================================================== -->
-
-<section class="service-detail" id="sejour">
-
-<div class="container">
-
-<div class="section-title">
-
-<div class="section-label">
-PÔLE ÉTRANGERS & SÉJOUR
-</div>
-
-<h2>
-Régularisation & titre de séjour
-</h2>
-
-<p>
-Un accompagnement administratif pour préparer votre dossier
-et organiser vos démarches.
-</p>
-
-</div>
-
-
-<div class="detail-grid">
-
-<div class="detail-card">
-
-<h3>
-Audit & analyse
-</h3>
-
-<p>
-Nous étudions les informations et documents que vous nous transmettez
-afin d'identifier les éléments utiles à la constitution de votre dossier.
-</p>
-
-<ul>
-<li>Analyse de la situation administrative</li>
-<li>Vérification des pièces disponibles</li>
-<li>Organisation des justificatifs</li>
-<li>Identification des documents manquants</li>
-</ul>
-
-</div>
-
-
-<div class="detail-card">
-
-<h3>
-Constitution du dossier
-</h3>
-
-<p>
-Nous vous accompagnons dans l'organisation des pièces et la préparation
-administrative de votre dossier.
-</p>
-
-<ul>
-<li>Classement des documents</li>
-<li>Préparation des justificatifs</li>
-<li>Organisation chronologique des pièces</li>
-<li>Préparation des éléments explicatifs</li>
-</ul>
-
-</div>
-
-
-<div class="detail-card">
-
-<h3>
-Démarches & transmission
-</h3>
-
-<p>
-Selon la procédure concernée, nous vous accompagnons dans la préparation
-des démarches dématérialisées ou administratives.
-</p>
-
-<ul>
-<li>Préparation ANEF</li>
-<li>Organisation des documents</li>
-<li>Préparation aux rendez-vous</li>
-<li>Transmission des informations nécessaires</li>
-</ul>
-
-</div>
-
-
-<div class="detail-card">
-
-<h3>
-Suivi administratif
-</h3>
-
-<p>
-Nous vous accompagnons dans le suivi administratif de votre démarche
-et dans l'organisation des éventuelles relances.
-</p>
-
-<ul>
-<li>Suivi des démarches</li>
-<li>Organisation des réponses</li>
-<li>Préparation des pièces complémentaires</li>
-<li>Accompagnement administratif</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     CREATION SOCIETE
-====================================================== -->
-
-<section class="service-detail" id="creation">
-
-<div class="container">
-
-<div class="section-title">
-
-<div class="section-label">
-PÔLE ENTREPRISE
-</div>
-
-<h2>
-Création de société
-</h2>
-
-<p>
-Un accompagnement administratif pour structurer votre projet
-et préparer vos formalités.
-</p>
-
-</div>
-
-
-<div class="detail-grid">
-
-<div class="detail-card">
-
-<h3>
-Préparation du projet
-</h3>
-
-<p>
-Nous vous aidons à organiser les premières informations nécessaires
-à votre projet de création d'entreprise.
-</p>
-
-<ul>
-<li>Identification du projet</li>
-<li>Organisation des informations</li>
-<li>Préparation des documents</li>
-<li>Accompagnement administratif</li>
-</ul>
-
-</div>
-
-
-<div class="detail-card">
-
-<h3>
-Formalités administratives
-</h3>
-
-<p>
-Préparation et organisation des documents nécessaires aux formalités
-de création selon la situation de votre entreprise.
-</p>
-
-<ul>
-<li>Documents de constitution</li>
-<li>Organisation des pièces</li>
-<li>Préparation des informations</li>
-<li>Suivi administratif</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     PHOTOS
-====================================================== -->
-
-<section class="photo-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<div class="section-label">
-NOTRE UNIVERS
-</div>
-
-<h2>
-Un service professionnel et organisé
-</h2>
-
-<p>
-Des démarches préparées avec méthode, sérieux et confidentialité.
-</p>
-
-</div>
-
-
-<div class="photo-grid">
-
-<div class="photo-card">
-
-<img
-src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80"
-alt="Documents et travail administratif"
-loading="lazy"
->
-
-<div class="photo-overlay">
-
-<h3>
-Dossiers administratifs
-</h3>
-
-<p>
-Organisation et préparation des documents.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="photo-card">
-
-<img
-src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80"
-alt="Réunion professionnelle"
-loading="lazy"
->
-
-<div class="photo-overlay">
-
-<h3>
-Accompagnement personnalisé
-</h3>
-
-<p>
-Un échange adapté à chaque situation.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="photo-card">
-
-<img
-src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80"
-alt="Bureau professionnel"
-loading="lazy"
->
-
-<div class="photo-overlay">
-
-<h3>
-Un cadre professionnel
-</h3>
-
-<p>
-Une organisation claire et rigoureuse.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     A PROPOS
-====================================================== -->
-
-<section class="about" id="apropos">
+<!-- =========================
+A PROPOS
+========================= -->
+
+<section class="about">
 
 <div class="container about-grid">
 
@@ -1568,23 +998,22 @@ Une organisation claire et rigoureuse.
 </div>
 
 <h2>
-Votre dossier mérite une organisation claire.
+Un accompagnement clair,
+organisé et personnalisé.
 </h2>
 
 </div>
 
-
 <div>
 
 <p>
-BS GESTION est un cabinet d'accompagnement administratif qui
-intervient auprès des particuliers, entrepreneurs et professionnels
-pour les aider à organiser leurs démarches.
+BS GESTION est un cabinet d'accompagnement administratif
+destiné aux particuliers et aux professionnels.
 </p>
 
 <p>
-Notre objectif est de simplifier vos démarches grâce à une méthode
-structurée et à un accompagnement adapté à votre situation.
+Notre objectif est de vous aider à mieux comprendre,
+préparer et organiser vos démarches administratives.
 </p>
 
 <div class="checks">
@@ -1601,17 +1030,12 @@ Organisation des documents
 
 <div>
 <span>✓</span>
-Constitution méthodique des dossiers
+Constitution des dossiers
 </div>
 
 <div>
 <span>✓</span>
-Accompagnement administratif
-</div>
-
-<div>
-<span>✓</span>
-Suivi des démarches
+Accompagnement et suivi administratif
 </div>
 
 </div>
@@ -1623,11 +1047,92 @@ Suivi des démarches
 </section>
 
 
-<!-- =====================================================
-     METHODE
-====================================================== -->
+<!-- =========================
+POURQUOI BS GESTION
+========================= -->
 
-<section class="method" id="methode">
+<section class="advantages">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="section-label">
+NOTRE ENGAGEMENT
+</div>
+
+<h2>
+Pourquoi choisir BS GESTION ?
+</h2>
+
+<p>
+Une approche fondée sur la clarté, l'organisation
+et l'accompagnement personnalisé.
+</p>
+
+</div>
+
+<div class="advantages-grid">
+
+<div class="advantage">
+
+<div class="advantage-number">01</div>
+
+<h3>
+Écoute
+</h3>
+
+<p>
+Nous prenons le temps de comprendre votre situation
+et vos besoins.
+</p>
+
+</div>
+
+
+<div class="advantage">
+
+<div class="advantage-number">02</div>
+
+<h3>
+Organisation
+</h3>
+
+<p>
+Nous vous aidons à structurer vos documents et
+à préparer votre dossier méthodiquement.
+</p>
+
+</div>
+
+
+<div class="advantage">
+
+<div class="advantage-number">03</div>
+
+<h3>
+Suivi
+</h3>
+
+<p>
+Nous vous accompagnons dans le suivi administratif
+de vos démarches.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+METHODE
+========================= -->
+
+<section class="method">
 
 <div class="container">
 
@@ -1641,29 +1146,21 @@ NOTRE MÉTHODE
 Votre démarche en 4 étapes
 </h2>
 
-<p>
-Une méthode simple pour avancer avec davantage de clarté
-et d'organisation.
-</p>
-
 </div>
-
 
 <div class="method-grid">
 
-
 <div class="step">
 
-<div class="step-number">
-01
-</div>
+<div class="step-number">01</div>
 
 <h3>
 Diagnostic
 </h3>
 
 <p>
-Analyse de votre situation et des documents disponibles.
+Analyse de votre situation et des documents
+nécessaires à votre démarche.
 </p>
 
 </div>
@@ -1671,17 +1168,15 @@ Analyse de votre situation et des documents disponibles.
 
 <div class="step">
 
-<div class="step-number">
-02
-</div>
+<div class="step-number">02</div>
 
 <h3>
 Constitution
 </h3>
 
 <p>
-Organisation des pièces et préparation administrative
-de votre dossier.
+Organisation des pièces et préparation
+administrative du dossier.
 </p>
 
 </div>
@@ -1689,17 +1184,15 @@ de votre dossier.
 
 <div class="step">
 
-<div class="step-number">
-03
-</div>
+<div class="step-number">03</div>
 
 <h3>
-Transmission
+Dépôt / Transmission
 </h3>
 
 <p>
-Préparation des démarches auprès de l'administration
-ou des plateformes concernées.
+Accompagnement pour les démarches auprès
+des administrations compétentes.
 </p>
 
 </div>
@@ -1707,21 +1200,18 @@ ou des plateformes concernées.
 
 <div class="step">
 
-<div class="step-number">
-04
-</div>
+<div class="step-number">04</div>
 
 <h3>
 Suivi
 </h3>
 
 <p>
-Accompagnement administratif et organisation du suivi
-de votre démarche.
+Suivi administratif et accompagnement
+dans les démarches nécessaires.
 </p>
 
 </div>
-
 
 </div>
 
@@ -1730,11 +1220,11 @@ de votre démarche.
 </section>
 
 
-<!-- =====================================================
-     DOCUMENTS
-====================================================== -->
+<!-- =========================
+DOCUMENTS
+========================= -->
 
-<section class="documents" id="documents">
+<section class="documents">
 
 <div class="container">
 
@@ -1745,19 +1235,18 @@ NOS DOCUMENTS
 </div>
 
 <h2>
-Des supports pour mieux préparer vos démarches
+Des informations claires pour vos démarches
 </h2>
 
 <p>
-BS GESTION met à disposition différents supports d'information
-et d'accompagnement.
+Découvrez nos principales prestations et les informations
+utiles pour préparer votre projet.
 </p>
 
 </div>
 
 
 <div class="documents-grid">
-
 
 <div class="document">
 
@@ -1766,12 +1255,12 @@ Régularisation & titre de séjour
 </h3>
 
 <p>
-Informations sur les principales pièces à préparer et les étapes
-d'une démarche administrative liée au séjour.
+Présentation de notre accompagnement pour la constitution
+et le suivi des dossiers liés au séjour.
 </p>
 
-<a href="#contact" class="btn btn-red">
-Demander les informations
+<a href="sejour.html" class="btn btn-red">
+En savoir plus
 </a>
 
 </div>
@@ -1784,12 +1273,12 @@ Création de société
 </h3>
 
 <p>
-Présentation des principales étapes administratives liées
-à un projet de création d'entreprise.
+Découvrez notre accompagnement pour préparer votre
+projet de création d'entreprise.
 </p>
 
-<a href="#contact" class="btn btn-red">
-Demander les informations
+<a href="creation-societe.html" class="btn btn-red">
+En savoir plus
 </a>
 
 </div>
@@ -1798,20 +1287,19 @@ Demander les informations
 <div class="document">
 
 <h3>
-Fiche client
+Démarches administratives
 </h3>
 
 <p>
-Support permettant de recueillir les informations nécessaires
-à l'étude de votre situation.
+Découvrez les différentes démarches pour lesquelles
+BS GESTION peut vous accompagner.
 </p>
 
-<a href="#contact" class="btn btn-red">
-Nous contacter
+<a href="administratif.html" class="btn btn-red">
+En savoir plus
 </a>
 
 </div>
-
 
 </div>
 
@@ -1820,11 +1308,11 @@ Nous contacter
 </section>
 
 
-<!-- =====================================================
-     DEVIS
-====================================================== -->
+<!-- =========================
+DEVIS
+========================= -->
 
-<section class="devis" id="devis">
+<section class="devis">
 
 <div class="container">
 
@@ -1835,35 +1323,32 @@ DEVIS PERSONNALISÉ
 </div>
 
 <h2>
-Chaque situation est étudiée individuellement
+Parlons de votre besoin
 </h2>
 
 <p>
-Présentez-nous votre besoin afin que nous puissions vous orienter
-vers l'accompagnement administratif adapté.
+Chaque situation est étudiée individuellement afin de vous
+proposer un accompagnement adapté.
 </p>
 
 </div>
 
-
 <div class="devis-box">
 
 <h2>
-Parlons de votre projet
+Demandez votre devis
 </h2>
 
 <p>
-Pour connaître les modalités d'accompagnement correspondant
-à votre situation, contactez directement BS GESTION.
+Présentez-nous votre situation et votre besoin.
+Nous étudierons votre demande avant toute intervention.
 </p>
 
 <div class="no-price">
 PRESTATION SUR DEVIS PERSONNALISÉ
 </div>
 
-<br>
-
-<a href="#contact" class="btn btn-red">
+<a href="contact.html" class="btn btn-red">
 Demander un devis
 </a>
 
@@ -1874,9 +1359,9 @@ Demander un devis
 </section>
 
 
-<!-- =====================================================
-     CTA
-====================================================== -->
+<!-- =========================
+CTA
+========================= -->
 
 <section class="cta">
 
@@ -1887,15 +1372,15 @@ BS GESTION
 </div>
 
 <h2>
-Vous avez une démarche à préparer ?
+Vous avez un projet ?
 </h2>
 
 <p>
-Échangeons sur votre situation et vos besoins.
+Contactez-nous pour échanger sur votre situation.
 </p>
 
-<a href="#contact" class="btn btn-red">
-Prendre contact
+<a href="contact.html" class="btn btn-red">
+Prendre rendez-vous
 </a>
 
 </div>
@@ -1903,232 +1388,76 @@ Prendre contact
 </section>
 
 
-<!-- =====================================================
-     CONTACT
-====================================================== -->
+<!-- =========================
+CONTACT RAPIDE
+========================= -->
 
-<section class="contact" id="contact">
+<section class="quick-contact">
 
-<div class="container contact-grid">
-
-
-<div>
+<div class="container contact-box">
 
 <div class="section-label">
 CONTACT
 </div>
 
 <h2>
-Contactez BS GESTION
+Une question ? Parlons-en.
 </h2>
 
-<p class="contact-intro">
-Vous souhaitez obtenir des informations, présenter votre situation
-ou demander un devis personnalisé ? Contactez-nous.
-</p>
-
-
-<div class="contact-details">
-
-<div class="contact-item">
-
-<strong>
-📍 Adresse
-</strong>
-
 <p>
-116 ROUTE D’ESPAGNE<br>
-HELIOS V – BAL 504<br>
-31100 TOULOUSE
+Notre équipe est à votre disposition pour vous renseigner
+et étudier votre demande.
 </p>
 
-</div>
-
-
-<div class="contact-item">
-
-<strong>
-📞 Téléphone
-</strong>
+<div class="contact-info">
 
 <a href="tel:+33689744312">
-06 89 74 43 12
+📞 06 89 74 43 12
 </a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>
-✉️ Email
-</strong>
 
 <a href="mailto:bs.gestion.31@gmail.com">
-bs.gestion.31@gmail.com
+✉ bs.gestion.31@gmail.com
 </a>
 
 </div>
 
-
-<div class="contact-item">
-
-<strong>
-🕘 Horaires
-</strong>
-
-<p>
-Du lundi au vendredi<br>
-9h00 – 13h00 / 14h00 – 17h00
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<form onsubmit="envoyerEmail(event)">
-
-<div class="form-group">
-
-<label for="nom">
-Nom et prénom
-</label>
-
-<input
-type="text"
-id="nom"
-name="nom"
-placeholder="Votre nom et prénom"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="telephone">
-Téléphone
-</label>
-
-<input
-type="tel"
-id="telephone"
-name="telephone"
-placeholder="Votre numéro de téléphone"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="email">
-Email
-</label>
-
-<input
-type="email"
-id="email"
-name="email"
-placeholder="Votre adresse email"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="service">
-Votre besoin
-</label>
-
-<select id="service" name="service">
-
-<option value="Régularisation / titre de séjour">
-Régularisation / titre de séjour
-</option>
-
-<option value="Création de société">
-Création de société
-</option>
-
-<option value="Démarches administratives">
-Démarches administratives
-</option>
-
-<option value="Conseil & gestion">
-Conseil & gestion
-</option>
-
-<option value="Autre demande">
-Autre demande
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="message">
-Votre demande
-</label>
-
-<textarea
-id="message"
-name="message"
-placeholder="Présentez brièvement votre demande..."
-required
-></textarea>
-
-</div>
-
-
-<button type="submit" class="btn btn-red">
-Envoyer ma demande
-</button>
-
-<p class="form-note">
-Le bouton prépare automatiquement un email à BS GESTION.
-</p>
-
-</form>
-
+<a href="contact.html" class="btn btn-red">
+Nous contacter
+</a>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-====================================================== -->
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
 
 <div class="container footer-main">
 
-
 <div>
 
-<a href="#accueil" class="logo">
+<a href="index.html" class="logo">
 <span>BS</span> GESTION
 </a>
 
 <p>
-Cabinet d'accompagnement administratif.
+Cabinet d'accompagnement administratif
 </p>
 
 <p>
 Votre tranquillité, notre engagement.
 </p>
+
+<div class="footer-address">
+<br>
+116 ROUTE D'ESPAGNE<br>
+HELIOS V – BAL 504<br>
+31100 TOULOUSE
+</div>
 
 </div>
 
@@ -2139,14 +1468,11 @@ Votre tranquillité, notre engagement.
 Navigation
 </h3>
 
-<a href="#accueil">Accueil</a>
-<a href="#services">Services</a>
-<a href="#sejour">Régularisation & séjour</a>
-<a href="#creation">Création de société</a>
-<a href="#apropos">À propos</a>
-<a href="#methode">Notre méthode</a>
-<a href="#documents">Documents</a>
-<a href="#contact">Contact</a>
+<a href="index.html">Accueil</a>
+<a href="sejour.html">Séjour & Régularisation</a>
+<a href="creation-societe.html">Création de société</a>
+<a href="administratif.html">Administratif</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
@@ -2154,7 +1480,7 @@ Navigation
 <div>
 
 <h3>
-Nous contacter
+Contact
 </h3>
 
 <a href="tel:+33689744312">
@@ -2166,13 +1492,12 @@ bs.gestion.31@gmail.com
 </a>
 
 <p>
-116 ROUTE D’ESPAGNE<br>
-HELIOS V – BAL 504<br>
-31100 TOULOUSE
+116 Route d'Espagne<br>
+Helios V – BAL 504<br>
+31100 Toulouse
 </p>
 
 </div>
-
 
 </div>
 
@@ -2186,79 +1511,14 @@ HELIOS V – BAL 504<br>
 </footer>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-====================================================== -->
-
 <script>
 
 function toggleMenu(){
 
-    const navigation =
-    document.getElementById("navigation");
+const navigation =
+document.getElementById("navigation");
 
-    navigation.classList.toggle("active");
-
-}
-
-
-/* Fermer le menu après clic sur un lien */
-
-document.querySelectorAll("#navigation a").forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        document
-        .getElementById("navigation")
-        .classList.remove("active");
-
-    });
-
-});
-
-
-/* Formulaire email */
-
-function envoyerEmail(event){
-
-    event.preventDefault();
-
-    const nom =
-    document.getElementById("nom").value;
-
-    const telephone =
-    document.getElementById("telephone").value;
-
-    const email =
-    document.getElementById("email").value;
-
-    const service =
-    document.getElementById("service").value;
-
-    const message =
-    document.getElementById("message").value;
-
-
-    const sujet =
-    encodeURIComponent(
-        "Demande de contact - BS GESTION"
-    );
-
-
-    const corps =
-    encodeURIComponent(
-        "Nom : " + nom +
-        "\nTéléphone : " + telephone +
-        "\nEmail : " + email +
-        "\nService demandé : " + service +
-        "\n\nDemande :\n" + message
-    );
-
-
-    window.location.href =
-    "mailto:bs.gestion.31@gmail.com" +
-    "?subject=" + sujet +
-    "&body=" + corps;
+navigation.classList.toggle("active");
 
 }
 
@@ -2266,4 +1526,3 @@ function envoyerEmail(event){
 
 </body>
 </html>
-```
