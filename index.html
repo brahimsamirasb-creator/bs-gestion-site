@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BS GESTION - Conseil en gestion, création de société, démarches administratives et accompagnement au séjour.">
-    <title>BS GESTION | Conseil & Accompagnement</title>
+    <meta name="description" content="BS GESTION - Conseil, gestion administrative, régularisation de séjour et création de société.">
+    <title>BS GESTION — Conseil & Gestion</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
     <div class="container navbar">
         <a href="index.html" class="logo">BS <span>GESTION</span></a>
 
-```
-    <div class="menu" onclick="toggleMenu()">☰</div>
+        <nav id="nav">
+            <a href="index.html">Accueil</a>
+            <a href="sejour.html">Séjour</a>
+            <a href="creation-societe.html">Création société</a>
+            <a href="administratif.html">Administratif</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-    <nav id="mainNav">
-        <a href="index.html">Accueil</a>
-        <a href="sejour.html">Séjour</a>
-        <a href="creation-societe.html">Création de société</a>
-        <a href="administratif.html">Administratif</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</div>
-```
-
+        <div class="menu" onclick="toggleMenu()">☰</div>
+    </div>
 </header>
 
 <main>
@@ -34,200 +31,191 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="badge">BS GESTION • CONSEIL & ACCOMPAGNEMENT</div>
 
-```
-        <h1>Votre projet.<br><span>Notre expertise.</span></h1>
+            <div class="badge">BS GESTION — CONSEIL & ACCOMPAGNEMENT</div>
 
-        <p>Un accompagnement professionnel pour vos démarches et votre activité.</p>
+            <h1>
+                Votre gestion.<br>
+                Notre <span>expertise.</span>
+            </h1>
 
-        <p>
-            BS GESTION vous accompagne dans vos projets de création d'entreprise,
-            vos démarches administratives et vos besoins d'accompagnement.
-        </p>
+            <p>
+                Un accompagnement professionnel pour vos démarches
+                administratives, vos projets professionnels et la création
+                de votre entreprise.
+            </p>
 
-        <div class="buttons">
-            <a href="creation-societe.html" class="btn btn-red">Créer mon entreprise</a>
-            <a href="contact.html" class="btn btn-outline">Nous contacter</a>
-        </div>
+            <p>
+                BS GESTION vous accompagne avec sérieux, méthode et
+                confidentialité.
+            </p>
 
-        <div class="hero-contact">
-            📧 bs.gestion.31@gmail.com
+            <div class="buttons">
+                <a href="contact.html" class="btn btn-red">
+                    Demander un accompagnement
+                </a>
+
+                <a href="creation-societe.html" class="btn btn-outline">
+                    Créer mon entreprise
+                </a>
+            </div>
+
+            <div class="hero-contact">
+                📧 bs.gestion.31@gmail.com
+            </div>
+
         </div>
     </div>
-</div>
-```
-
 </section>
 
 <section class="services">
     <div class="container">
 
-```
-    <div class="section-title">
-        <div class="section-label">Nos services</div>
-        <h2>Une expertise à votre service</h2>
-        <p>
-            Des solutions adaptées aux particuliers, entrepreneurs et dirigeants
-            pour simplifier vos démarches et structurer vos projets.
-        </p>
+        <div class="section-title">
+            <div class="section-label">Nos expertises</div>
+            <h2>Des solutions adaptées à vos besoins</h2>
+            <p>
+                BS GESTION propose un accompagnement personnalisé pour
+                particuliers, entrepreneurs et dirigeants.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>Régularisation de séjour</h3>
+                <p>
+                    Accompagnement administratif dans la préparation,
+                    l'organisation et le suivi de votre dossier.
+                </p>
+                <a href="sejour.html">En savoir plus →</a>
+            </div>
+
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>Création de société</h3>
+                <p>
+                    Accompagnement dans votre projet de création
+                    d'entreprise et préparation des documents nécessaires.
+                </p>
+                <a href="creation-societe.html">En savoir plus →</a>
+            </div>
+
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>Gestion administrative</h3>
+                <p>
+                    Organisation, préparation et suivi de vos démarches
+                    administratives professionnelles.
+                </p>
+                <a href="administratif.html">En savoir plus →</a>
+            </div>
+
+            <div class="card">
+                <div class="card-number">04</div>
+                <h3>Conseil & accompagnement</h3>
+                <p>
+                    Un accompagnement adapté à votre situation et à vos
+                    objectifs professionnels.
+                </p>
+                <a href="contact.html">Nous contacter →</a>
+            </div>
+
+        </div>
     </div>
-
-    <div class="services-grid">
-
-        <div class="card">
-            <div class="card-number">01</div>
-            <h3>Création de société</h3>
-            <p>
-                Accompagnement dans votre projet de création d'entreprise,
-                choix de la structure et préparation des démarches.
-            </p>
-            <a href="creation-societe.html">Découvrir →</a>
-        </div>
-
-        <div class="card">
-            <div class="card-number">02</div>
-            <h3>Démarches séjour</h3>
-            <p>
-                Accompagnement administratif dans vos démarches liées au
-                séjour et à la constitution de votre dossier.
-            </p>
-            <a href="sejour.html">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-            <div class="card-number">03</div>
-            <h3>Gestion administrative</h3>
-            <p>
-                Assistance dans vos démarches, courriers, dossiers et
-                formalités administratives.
-            </p>
-            <a href="administratif.html">Découvrir →</a>
-        </div>
-
-        <div class="card">
-            <div class="card-number">04</div>
-            <h3>Conseil & gestion</h3>
-            <p>
-                Un accompagnement personnalisé pour organiser et développer
-                votre activité professionnelle.
-            </p>
-            <a href="contact.html">Nous consulter →</a>
-        </div>
-
-    </div>
-</div>
-```
-
 </section>
 
 <section class="about">
-    <div class="container">
-        <div class="about-grid">
+    <div class="container about-grid">
 
-```
         <div>
             <div class="section-label">BS GESTION</div>
-            <h2>Un accompagnement sérieux, clair et professionnel.</h2>
+
+            <h2>
+                Un accompagnement sérieux,
+                clair et professionnel.
+            </h2>
         </div>
 
         <div>
             <p>
-                Chaque situation est étudiée avec attention afin de vous
-                proposer un accompagnement adapté à votre projet.
+                BS GESTION accompagne ses clients dans leurs démarches
+                administratives et leurs projets professionnels.
             </p>
 
             <p>
-                Notre objectif est de vous faire gagner du temps, de vous
-                aider à structurer vos démarches et de vous accompagner
-                avec méthode.
+                Notre objectif est de simplifier vos démarches, organiser
+                vos documents et vous permettre d'avancer avec une vision
+                claire de votre projet.
             </p>
 
             <div class="checks">
-                <div><span>✓</span> Étude personnalisée de votre situation</div>
-                <div><span>✓</span> Accompagnement étape par étape</div>
-                <div><span>✓</span> Constitution et vérification des dossiers</div>
+                <div><span>✓</span> Accompagnement personnalisé</div>
+                <div><span>✓</span> Organisation et préparation des dossiers</div>
                 <div><span>✓</span> Suivi administratif</div>
+                <div><span>✓</span> Confidentialité des informations</div>
             </div>
         </div>
 
     </div>
-</div>
-```
-
 </section>
 
 <section class="method">
     <div class="container">
 
-```
-    <div class="section-title">
-        <div class="section-label">Notre méthode</div>
-        <h2>Simple. Claire. Efficace.</h2>
-    </div>
-
-    <div class="method-grid">
-
-        <div class="step">
-            <div class="step-number">01</div>
-            <h3>Échange</h3>
-            <p>
-                Nous échangeons sur votre situation, vos besoins et vos objectifs.
-            </p>
+        <div class="section-title">
+            <div class="section-label">Notre méthode</div>
+            <h2>Une démarche simple en 4 étapes</h2>
         </div>
 
-        <div class="step">
-            <div class="step-number">02</div>
-            <h3>Analyse</h3>
-            <p>
-                Votre demande est étudiée afin d'identifier les démarches nécessaires.
-            </p>
-        </div>
+        <div class="method-grid">
 
-        <div class="step">
-            <div class="step-number">03</div>
-            <h3>Préparation</h3>
-            <p>
-                Nous vous aidons à préparer les éléments nécessaires à votre dossier.
-            </p>
-        </div>
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Échange</h3>
+                <p>
+                    Nous analysons votre demande et votre situation.
+                </p>
+            </div>
 
-        <div class="step">
-            <div class="step-number">04</div>
-            <h3>Suivi</h3>
-            <p>
-                Nous vous accompagnons dans le suivi de votre démarche.
-            </p>
-        </div>
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Analyse</h3>
+                <p>
+                    Nous identifions les documents et démarches nécessaires.
+                </p>
+            </div>
 
-    </div>
-</div>
-```
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Préparation</h3>
+                <p>
+                    Nous organisons votre dossier de manière structurée.
+                </p>
+            </div>
 
-</section>
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Suivi</h3>
+                <p>
+                    Nous vous accompagnons dans le suivi administratif.
+                </p>
+            </div>
 
-<section class="devis">
-    <div class="container">
-        <div class="devis-box">
-            <h2>Vous avez un projet ?</h2>
-            <p>
-                Contactez BS GESTION afin d'échanger sur votre besoin et obtenir
-                une proposition adaptée.
-            </p>
-            <div class="no-price">ÉTUDE PERSONNALISÉE</div>
-            <a href="contact.html" class="btn btn-red">Demander un devis</a>
         </div>
     </div>
 </section>
 
 <section class="cta">
     <div class="container">
-        <h2>Parlons de votre projet.</h2>
+        <h2>Vous avez un projet ?</h2>
         <p>
-            Une question ? Un dossier ? Un projet de création ?
-            BS GESTION est à votre écoute.
+            Parlons ensemble de votre situation et de vos besoins.
         </p>
-        <a href="contact.html" class="btn btn-red">Contactez-nous</a>
+        <a href="contact.html" class="btn btn-red">
+            Contactez BS GESTION
+        </a>
     </div>
 </section>
 
@@ -236,45 +224,43 @@
 <footer>
     <div class="container footer-main">
 
-```
-    <div>
-        <h3>BS GESTION</h3>
-        <p>
-            Conseil, gestion et accompagnement administratif pour particuliers,
-            entrepreneurs et entreprises.
-        </p>
-        <p>📧 bs.gestion.31@gmail.com</p>
+        <div>
+            <h3>BS GESTION</h3>
+            <p>
+                Conseil, gestion administrative et accompagnement
+                professionnel.
+            </p>
+            <p>
+                📧 bs.gestion.31@gmail.com
+            </p>
+        </div>
+
+        <div>
+            <h3>Navigation</h3>
+            <a href="index.html">Accueil</a>
+            <a href="sejour.html">Régularisation de séjour</a>
+            <a href="creation-societe.html">Création de société</a>
+            <a href="administratif.html">Administratif</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <a href="mailto:bs.gestion.31@gmail.com">
+                bs.gestion.31@gmail.com
+            </a>
+        </div>
+
     </div>
 
-    <div>
-        <h3>Navigation</h3>
-        <a href="index.html">Accueil</a>
-        <a href="sejour.html">Séjour</a>
-        <a href="creation-societe.html">Création de société</a>
-        <a href="administratif.html">Administratif</a>
-        <a href="contact.html">Contact</a>
+    <div class="footer-bottom">
+        © 2026 BS GESTION — Tous droits réservés.
     </div>
-
-    <div>
-        <h3>Services</h3>
-        <a href="creation-societe.html">Création d'entreprise</a>
-        <a href="sejour.html">Démarches séjour</a>
-        <a href="administratif.html">Démarches administratives</a>
-        <a href="contact.html">Demander un devis</a>
-    </div>
-
-</div>
-
-<div class="footer-bottom">
-    © 2026 BS GESTION — Tous droits réservés.
-</div>
-```
-
 </footer>
 
 <script>
 function toggleMenu() {
-    document.getElementById("mainNav").classList.toggle("active");
+    document.getElementById("nav").classList.toggle("active");
 }
 </script>
 
