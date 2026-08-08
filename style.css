@@ -1010,3 +1010,47 @@ footer {
         font-size: 29px;
     }
 }
+```html
+<div class="contact-points">
+    <p>✓ Réponse à votre demande</p>
+    <p>✓ Étude de votre situation</p>
+    <p>✓ Organisation de votre besoin</p>
+    <p>✓ Confidentialité des informations</p>
+</div>
+```
+
+Et ajoutez ce CSS dans votre fichier CSS, de préférence à la fin :
+
+```css
+/* =========================================================
+CONTACT — TEXTE DES ENGAGEMENTS
+========================================================= */
+
+.contact-points {
+    margin-top: 25px;
+    padding: 20px 25px;
+    background: #ffffff;
+    border-left: 4px solid var(--rouge);
+}
+
+.contact-points p {
+    color: #111111 !important;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.contact-points p::first-letter {
+    color: var(--rouge);
+}
+```
+
+Le résultat sera :
+
+**✓ Réponse à votre demande**
+**✓ Étude de votre situation**
+**✓ Organisation de votre besoin**
+**✓ Confidentialité des informations**
+
+avec les caractères bien visibles en **noir sur fond blanc**, et le symbole ✓ en rouge.
