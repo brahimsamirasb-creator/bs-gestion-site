@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BS GESTION | Votre tranquillité, notre engagement</title>
+
+<meta name="description" content="BS GESTION vous accompagne dans vos démarches administratives, la création de société et vos projets professionnels.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171717;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+:root {
+    --black: #090909;
+    --black2: #151515;
+    --gold: #c9a44c;
+    --gold2: #e0c477;
+    --white: #ffffff;
+    --gray: #777777;
+    --light: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background: var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.menu {
+    display: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ACCUEIL */
+
+.hero {
+    min-height: 680px;
+    background:
+        linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.92)),
+        radial-gradient(circle at 75% 30%, #4a3b1d, #080808 45%);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.small-title {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    font-size: 20px;
+    color: #dddddd;
+    max-width: 700px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #111;
+}
+
+.btn-gold:hover {
+    background: var(--gold2);
+}
+
+.btn-outline {
+    border: 1px solid var(--gold);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+.hero-info {
+    margin-top: 35px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.section-title p {
+    color: var(--gray);
+    max-width: 700px;
+    margin: 15px auto 0;
+}
+
+/* SERVICES */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 35px 28px;
+    border: 1px solid #e4e4e4;
+    background: white;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.service-number {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #8a6b1d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* A PROPOS */
+
+.about {
+    background: var(--black2);
+    color: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 43px;
+    line-height: 1.15;
+}
+
+.about p {
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.check-list div {
+    margin-bottom: 12px;
+}
+
+.check-list span {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+/* METHODE */
+
+.steps {
+    background: var(--light);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 30px;
+    border-top: 3px solid var(--gold);
+}
+
+.step-number {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.step h3 {
+    margin: 10px 0;
+}
+
+/* TARIFS */
+
+.price-list {
+    max-width: 850px;
+    margin: auto;
+    border-top: 1px solid #ddd;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-item strong {
+    color: #8a6b1d;
+}
+
+.price-note {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* CTA */
+
+.cta {
+    background: var(--black2);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #f7f7f7;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.contact-intro {
+    color: #666;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details a {
+    display: block;
+    color: #8a6b1d;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+form {
+    background: white;
+    padding: 35px;
+    border: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d5d5d5;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 130px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-note {
+    color: #777;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--black);
+    color: #aaa;
+}
+
+.footer-main {
+    padding: 55px 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-column h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid #252525;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: #090909;
+        flex-direction: column;
+        padding: 25px;
+        gap: 18px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .services-grid,
+    .steps-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-title h2,
+    .about h2,
+    .contact h2,
+    .cta h2 {
+        font-size: 32px;
+    }
+
+    .services-grid,
+    .steps-grid,
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .price-item {
+        flex-direction: column;
+    }
+
+    form {
+        padding: 25px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<a href="#accueil" class="logo">
+<span>BS</span> GESTION
+</a>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="navigation">
+
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#apropos">À propos</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero" id="accueil">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="small-title">
+BS GESTION
+</div>
+
+<h1>
+Votre tranquillité,
+<br>
+<span>notre engagement.</span>
+</h1>
+
+<p>
+Un accompagnement professionnel pour vos démarches administratives,
+vos projets de création d'entreprise et vos besoins en gestion.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-gold">
+Demander un devis
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Prendre rendez-vous
+</a>
+
+</div>
+
+<div class="hero-info">
+✓ Écoute &nbsp;&nbsp;
+✓ Accompagnement personnalisé &nbsp;&nbsp;
+✓ Suivi de vos démarches
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+NOS SERVICES
+</div>
+
+<h2>
+Des solutions adaptées à vos besoins
+</h2>
+
+<p>
+BS GESTION vous accompagne dans vos démarches avec une approche
+simple, claire et personnalisée.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<div class="service-number">01</div>
+
+<h3>
+Régularisation & séjour
+</h3>
+
+<p>
+Accompagnement administratif pour la préparation et le suivi
+de vos démarches liées au séjour.
+</p>
+
+<a href="#contact">
+En savoir plus →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">02</div>
+
+<h3>
+Création de société
+</h3>
+
+<p>
+Accompagnement dans la préparation de votre projet,
+les formalités et l'organisation de votre dossier.
+</p>
+
+<a href="#contact">
+Demander un devis →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">03</div>
+
+<h3>
+Démarches administratives
+</h3>
+
+<p>
+Aide à la constitution, à la vérification et au suivi
+de vos dossiers administratifs.
+</p>
+
+<a href="#contact">
+Nous contacter →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">04</div>
+
+<h3>
+Conseil & gestion
+</h3>
+
+<p>
+Un accompagnement pratique pour organiser vos démarches
+et vos projets professionnels.
+</p>
+
+<a href="#contact">
+Prendre rendez-vous →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about" id="apropos">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="small-title">
+À PROPOS
+</div>
+
+<h2>
+Un interlocuteur pour avancer sereinement.
+</h2>
+
+</div>
+
+<div>
+
+<p>
+Chez BS GESTION, nous privilégions une approche simple :
+comprendre votre situation, identifier vos besoins et vous
+accompagner dans la préparation de vos démarches.
+</p>
+
+<p>
+Notre objectif est de vous permettre d'avancer avec une
+organisation claire et un suivi personnalisé.
+</p>
+
+<div class="check-list">
+
+<div><span>✓</span> Explications claires</div>
+<div><span>✓</span> Accompagnement personnalisé</div>
+<div><span>✓</span> Suivi organisé</div>
+<div><span>✓</span> Devis avant intervention</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="steps">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+NOTRE MÉTHODE
+</div>
+
+<h2>
+Un accompagnement en 4 étapes
+</h2>
+
+</div>
+
+
+<div class="steps-grid">
+
+
+<div class="step">
+
+<div class="step-number">01</div>
+
+<h3>Échange</h3>
+
+<p>
+Nous échangeons sur votre situation et votre besoin.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">02</div>
+
+<h3>Analyse</h3>
+
+<p>
+Nous identifions les démarches et les éléments nécessaires.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">03</div>
+
+<h3>Préparation</h3>
+
+<p>
+Votre dossier est préparé avec méthode.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">04</div>
+
+<h3>Suivi</h3>
+
+<p>
+Nous vous accompagnons dans le suivi de votre démarche.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="pricing" id="tarifs">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+NOS TARIFS
+</div>
+
+<h2>
+Des prestations sur devis
+</h2>
+
+<p>
+Chaque situation étant différente, le tarif est déterminé
+en fonction de la nature et de la complexité du dossier.
+</p>
+
+</div>
+
+
+<div class="price-list">
+
+<div class="price-item">
+
+<span>
+Régularisation / démarches liées au séjour
+</span>
+
+<strong>
+Sur devis
+</strong>
+
+</div>
+
+
+<div class="price-item">
+
+<span>
+Création de société
+</span>
+
+<strong>
+Sur devis
+</strong>
+
+</div>
+
+
+<div class="price-item">
+
+<span>
+Démarches administratives
+</span>
+
+<strong>
+Sur devis
+</strong>
+
+</div>
+
+
+<div class="price-item">
+
+<span>
+Conseil & gestion
+</span>
+
+<strong>
+Sur devis
+</strong>
+
+</div>
+
+</div>
+
+<p class="price-note">
+Le tarif définitif est confirmé avant toute intervention.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<div class="container">
+
+<div class="small-title">
+BS GESTION
+</div>
+
+<h2>
+Parlons de votre projet.
+</h2>
+
+<p>
+Vous avez une démarche ou un projet professionnel ?
+Contactez-nous pour étudier votre situation.
+</p>
+
+<a href="#contact" class="btn btn-gold">
+Demander un devis
+</a>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+<div>
+
+<div class="small-title">
+CONTACT
+</div>
+
+<h2>
+Contactez BS GESTION
+</h2>
+
+<p class="contact-intro">
+Décrivez-nous votre besoin. Nous vous recontacterons
+afin d'étudier votre demande.
+</p>
+
+<div class="contact-details">
+
+<a href="tel:+33689744312">
+📞 06 89 74 43 12
+</a>
+
+<a href="mailto:bs.gestion.31@gmail.com">
+✉ bs.gestion.31@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<form onsubmit="envoyerEmail(event)">
+
+<div class="form-group">
+
+<label>Nom et prénom</label>
+
+<input type="text" id="nom" required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Téléphone</label>
+
+<input type="tel" id="telephone" required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input type="email" id="email" required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Votre demande</label>
+
+<textarea id="message" required></textarea>
+
+</div>
+
+
+<button type="submit" class="btn btn-gold">
+Envoyer ma demande
+</button>
+
+<p class="form-note">
+Le formulaire ouvre votre messagerie avec votre demande préremplie.
+</p>
+
+</form>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container footer-main">
+
+<div class="footer-column">
+
+<a href="#accueil" class="logo">
+<span>BS</span> GESTION
+</a>
+
+<p>
+Votre tranquillité, notre engagement.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Navigation</h3>
+
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#apropos">À propos</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<a href="tel:+33689744312">
+06 89 74 43 12
+</a>
+
+<a href="mailto:bs.gestion.31@gmail.com">
+bs.gestion.31@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 BS GESTION — Tous droits réservés.
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+const menu = document.getElementById("navigation");
+
+menu.classList.toggle("active");
+
+}
+
+
+function envoyerEmail(event) {
+
+event.preventDefault();
+
+const nom =
+document.getElementById("nom").value;
+
+const telephone =
+document.getElementById("telephone").value;
+
+const email =
+document.getElementById("email").value;
+
+const message =
+document.getElementById("message").value;
+
+const sujet =
+encodeURIComponent(
+"Demande de renseignements - BS GESTION"
+);
+
+const corps =
+encodeURIComponent(
+"Nom : " + nom +
+"\nTéléphone : " + telephone +
+"\nEmail : " + email +
+"\n\nDemande :\n" + message
+);
+
+window.location.href =
+"mailto:bs.gestion.31@gmail.com?subject="
++ sujet +
+"&body="
++ corps;
+
+}
+
+</script>
+
+</body>
+</html>
