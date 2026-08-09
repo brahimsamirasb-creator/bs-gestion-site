@@ -3,46 +3,678 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Contact | BS GESTION</title>
 
     <meta name="description"
-          content="Contactez BS GESTION pour toute demande d'accompagnement administratif, professionnel ou de création de société.">
+          content="Contactez BS GESTION pour toute demande de gestion administrative, conseil et accompagnement.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
+
+    <style>
+
+        /* =====================================================
+           STYLE DE SECOURS - PAGE CONTACT
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #171717;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #080808;
+            border-bottom: 4px solid #b00000;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #d71920;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 0;
+        }
+
+        nav a:hover {
+            color: #d71920;
+        }
+
+        .menu {
+            display: none;
+            color: #ffffff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .page-hero {
+            min-height: 440px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.88),
+                    rgba(0,0,0,0.65),
+                    rgba(0,0,0,0.35)
+                ),
+                url("https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1800");
+
+            background-size: cover;
+            background-position: center;
+
+            border-bottom: 5px solid #b00000;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 9px 18px;
+            margin-bottom: 20px;
+
+            border: 1px solid #d71920;
+
+            color: #ffffff;
+            background: rgba(0,0,0,0.35);
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .page-hero h1 {
+            margin: 0 0 20px;
+
+            color: #ffffff;
+
+            font-size: clamp(45px, 7vw, 70px);
+            line-height: 1.05;
+        }
+
+        .page-hero h1 span {
+            color: #d71920;
+        }
+
+        .page-hero p {
+            max-width: 750px;
+            color: #eeeeee;
+            font-size: 19px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-section {
+            padding: 90px 0;
+            background: #f7f7f7;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-text h2 {
+            font-size: 40px;
+            margin: 0 0 20px;
+            color: #111111;
+        }
+
+        .contact-text > p {
+            color: #555555;
+            font-size: 17px;
+        }
+
+        /* ================= INFOS ================= */
+
+        .contact-card {
+            margin-top: 30px;
+            padding: 30px;
+
+            background: #ffffff;
+
+            border-left: 5px solid #b00000;
+
+            box-shadow:
+                0 12px 35px rgba(0,0,0,0.10);
+        }
+
+        .contact-card h3 {
+            margin-top: 0;
+            color: #111111;
+            font-size: 23px;
+        }
+
+        .contact-card p {
+            color: #444444;
+        }
+
+        .contact-email {
+            display: inline-block;
+            margin: 10px 0 20px;
+
+            color: #b00000;
+
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .check {
+            margin: 12px 0;
+            color: #222222;
+            font-weight: 600;
+        }
+
+        .check span {
+            color: #b00000;
+            font-weight: 900;
+            margin-right: 8px;
+        }
+
+        /* ================= FORMULAIRE ================= */
+
+        .contact-form {
+            background: #ffffff;
+
+            padding: 40px;
+
+            border-top: 5px solid #b00000;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .contact-form h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            color: #111111;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #222222;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+
+            background: #ffffff;
+
+            color: #111111;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+
+            border-color: #b00000;
+
+            box-shadow:
+                0 0 0 3px rgba(176,0,0,0.10);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn-red {
+            display: inline-block;
+
+            width: 100%;
+
+            padding: 15px 25px;
+
+            border: none;
+            border-radius: 4px;
+
+            background: linear-gradient(
+                135deg,
+                #d71920,
+                #780000
+            );
+
+            color: #ffffff;
+
+            font-size: 15px;
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+        .btn-red:hover {
+            background: #b00000;
+        }
+
+        .form-note {
+            margin-top: 12px;
+
+            color: #777777;
+
+            font-size: 12px;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            padding: 80px 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(176,0,0,0.28),
+                    transparent 45%
+                ),
+                #050505;
+
+            text-align: center;
+
+            border-top: 5px solid #b00000;
+            border-bottom: 5px solid #b00000;
+        }
+
+        .cta h2 {
+            margin: 0 0 15px;
+
+            color: #ffffff;
+
+            font-size: 42px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+
+            color: #cccccc;
+        }
+
+        .cta-email {
+            display: inline-block;
+
+            padding: 15px 25px;
+
+            background: #b00000;
+
+            color: #ffffff;
+
+            font-weight: 800;
+
+            border-radius: 4px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #050505;
+            color: #aaaaaa;
+            border-top: 4px solid #b00000;
+        }
+
+        .footer-main {
+            padding: 60px 0;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        .footer-logo {
+            color: #ffffff;
+
+            font-size: 25px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+        .footer-logo span {
+            color: #d71920;
+        }
+
+        .footer-description {
+            max-width: 350px;
+            color: #bbbbbb;
+        }
+
+        .footer-main h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .footer-main a {
+            display: block;
+
+            margin-bottom: 9px;
+
+            color: #aaaaaa;
+        }
+
+        .footer-main a:hover {
+            color: #d71920;
+        }
+
+        .footer-address {
+            padding: 15px 18px;
+
+            border-left: 3px solid #b00000;
+
+            background: rgba(255,255,255,0.04);
+
+            color: #cccccc;
+        }
+
+        .footer-address strong {
+            color: #ffffff;
+        }
+
+        .footer-highlight {
+            padding: 25px 0;
+
+            background: #111111;
+
+            border-top: 1px solid #292929;
+            border-bottom: 1px solid #292929;
+        }
+
+        .footer-highlight-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-highlight-label {
+            display: block;
+
+            color: #d71920;
+
+            font-size: 12px;
+            font-weight: 900;
+
+            letter-spacing: 3px;
+        }
+
+        .footer-highlight strong {
+            color: #ffffff;
+        }
+
+        .footer-contact-btn {
+            padding: 12px 22px;
+
+            border: 1px solid #b00000;
+
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .footer-contact-btn:hover {
+            background: #b00000;
+        }
+
+        .footer-bottom {
+            padding: 20px;
+
+            border-top: 1px solid #292929;
+
+            text-align: center;
+
+            color: #999999;
+
+            font-size: 12px;
+        }
+
+        .footer-bottom strong {
+            color: #ffffff;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 950px) {
+
+            nav {
+                display: none;
+
+                position: absolute;
+
+                top: 82px;
+                left: 0;
+                right: 0;
+
+                padding: 25px;
+
+                background: #080808;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                border-bottom: 3px solid #b00000;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 92%;
+            }
+
+            .navbar {
+                min-height: 72px;
+            }
+
+            nav {
+                top: 72px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .page-hero {
+                min-height: 390px;
+            }
+
+            .page-hero h1 {
+                font-size: 44px;
+            }
+
+            .page-hero p {
+                font-size: 17px;
+            }
+
+            .contact-section {
+                padding: 60px 0;
+            }
+
+            .contact-text h2 {
+                font-size: 32px;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-highlight-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cta h2 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
+
     <div class="container navbar">
 
         <a href="index.html" class="logo">
             BS <span>GESTION</span>
         </a>
 
-        <div class="menu" onclick="toggleMenu()">☰</div>
+        <div class="menu"
+             onclick="toggleMenu()"
+             aria-label="Ouvrir le menu">
+            ☰
+        </div>
 
         <nav id="mainNav">
+
             <a href="index.html">Accueil</a>
+
             <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création Société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
+
+            <a href="creation-societe.html">
+                Création Société
+            </a>
+
+            <a href="administratif.html">
+                Administratif
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<section class="page-hero photo-contact">
+<!-- =====================================================
+     HERO CONTACT
+===================================================== -->
+
+<section class="page-hero">
 
     <div class="container page-hero-content">
 
         <div class="badge">
-            CONTACT
+            BS GESTION • CONTACT
         </div>
 
         <h1>
@@ -59,190 +691,212 @@
 </section>
 
 
-<section class="contact">
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact-section">
 
     <div class="container contact-grid">
 
-        <div>
 
-            <div class="section-label">
-                NOUS CONTACTER
-            </div>
+        <!-- ================= INFORMATIONS ================= -->
+
+        <div class="contact-text">
 
             <h2>
                 Une question ? Un projet ?
             </h2>
 
-            <p class="contact-intro">
-                Pour toute demande d'information ou d'accompagnement,
-                vous pouvez nous contacter directement par e-mail.
+            <p>
+                Pour toute demande d'information ou
+                d'accompagnement, vous pouvez nous contacter
+                directement par e-mail.
             </p>
 
 
-            <div class="company-info">
+            <div class="contact-card">
 
                 <h3>
                     BS GESTION
                 </h3>
 
                 <p>
-                    <strong>Activité :</strong>
-                    Gestion administrative, conseil et accompagnement
+                    Activité : Gestion administrative,
+                    conseil et accompagnement
                 </p>
 
-                <p>
-                    <strong>E-mail :</strong>
-                    <a href="mailto:bs.gestion.31@gmail.com">
-                        bs.gestion.31@gmail.com
-                    </a>
-                </p>
+                <a class="contact-email"
+                   href="mailto:bs.gestion.31@gmail.com">
 
-            </div>
+                    bs.gestion.31@gmail.com
+
+                </a>
 
 
-            <div class="contact-points">
+                <div class="check">
+                    <span>✓</span>
+                    Réponse personnalisée
+                </div>
 
-                <p>✓ Réponse personnalisée</p>
+                <div class="check">
+                    <span>✓</span>
+                    Étude de votre besoin
+                </div>
 
-                <p>✓ Étude de votre besoin</p>
+                <div class="check">
+                    <span>✓</span>
+                    Accompagnement adapté à votre situation
+                </div>
 
-                <p>✓ Accompagnement adapté à votre situation</p>
-
-                <p>✓ Confidentialité des informations transmises</p>
+                <div class="check">
+                    <span>✓</span>
+                    Confidentialité des informations transmises
+                </div>
 
             </div>
 
         </div>
 
 
-        <div>
+        <!-- ================= FORMULAIRE ================= -->
 
-            <form action="mailto:bs.gestion.31@gmail.com"
-                  method="post"
-                  enctype="text/plain">
+        <form class="contact-form"
+              action="mailto:bs.gestion.31@gmail.com"
+              method="post"
+              enctype="text/plain">
 
-                <div class="form-group">
-
-                    <label for="nom">
-                        Nom et prénom
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nom"
-                        name="Nom et prénom"
-                        placeholder="Votre nom et prénom"
-                        required
-                    >
-
-                </div>
+            <h3>
+                NOUS CONTACTER
+            </h3>
 
 
-                <div class="form-group">
+            <div class="form-group">
 
-                    <label for="email">
-                        Adresse e-mail
-                    </label>
+                <label for="nom">
+                    Nom et prénom
+                </label>
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="Email"
-                        placeholder="votre@email.com"
-                        required
-                    >
+                <input
+                    type="text"
+                    id="nom"
+                    name="Nom et prénom"
+                    placeholder="Votre nom et prénom"
+                    required>
 
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="telephone">
-                        Téléphone
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="telephone"
-                        name="Téléphone"
-                        placeholder="Votre numéro de téléphone"
-                    >
-
-                </div>
+            </div>
 
 
-                <div class="form-group">
+            <div class="form-group">
 
-                    <label for="sujet">
-                        Votre demande
-                    </label>
+                <label for="email">
+                    Adresse e-mail
+                </label>
 
-                    <select id="sujet" name="Demande">
+                <input
+                    type="email"
+                    id="email"
+                    name="E-mail"
+                    placeholder="votre@email.com"
+                    required>
 
-                        <option value="">
-                            Sélectionnez votre demande
-                        </option>
-
-                        <option value="Gestion administrative">
-                            Gestion administrative
-                        </option>
-
-                        <option value="Séjour et démarches">
-                            Séjour & démarches
-                        </option>
-
-                        <option value="Création de société">
-                            Création de société
-                        </option>
-
-                        <option value="Accompagnement professionnel">
-                            Accompagnement professionnel
-                        </option>
-
-                        <option value="Autre">
-                            Autre demande
-                        </option>
-
-                    </select>
-
-                </div>
+            </div>
 
 
-                <div class="form-group">
+            <div class="form-group">
 
-                    <label for="message">
-                        Votre message
-                    </label>
+                <label for="telephone">
+                    Téléphone
+                </label>
 
-                    <textarea
-                        id="message"
-                        name="Message"
-                        placeholder="Expliquez-nous votre situation..."
-                        required
-                    ></textarea>
+                <input
+                    type="tel"
+                    id="telephone"
+                    name="Téléphone"
+                    placeholder="Votre numéro de téléphone">
 
-                </div>
+            </div>
 
 
-                <button type="submit"
-                        class="btn btn-red">
-                    Envoyer ma demande
-                </button>
+            <div class="form-group">
 
-                <p class="form-note">
-                    En cliquant sur « Envoyer ma demande »,
-                    votre logiciel de messagerie peut s'ouvrir
-                    pour envoyer le message à BS GESTION.
-                </p>
+                <label for="demande">
+                    Votre demande
+                </label>
 
-            </form>
+                <select id="demande"
+                        name="Demande"
+                        required>
 
-        </div>
+                    <option value="">
+                        Sélectionnez votre demande
+                    </option>
+
+                    <option value="Gestion administrative">
+                        Gestion administrative
+                    </option>
+
+                    <option value="Séjour et démarches">
+                        Séjour & démarches
+                    </option>
+
+                    <option value="Création de société">
+                        Création de société
+                    </option>
+
+                    <option value="Accompagnement professionnel">
+                        Accompagnement professionnel
+                    </option>
+
+                    <option value="Autre demande">
+                        Autre demande
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Votre message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="Message"
+                    placeholder="Expliquez-nous votre situation..."
+                    required></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn-red">
+
+                Envoyer ma demande
+
+            </button>
+
+
+            <p class="form-note">
+                En cliquant sur « Envoyer ma demande »,
+                votre logiciel de messagerie peut s'ouvrir
+                pour envoyer le message à BS GESTION.
+            </p>
+
+        </form>
 
     </div>
 
 </section>
 
+
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section class="cta">
 
@@ -256,9 +910,11 @@
             Contactez BS GESTION pour échanger sur votre situation.
         </p>
 
-        <a href="mailto:bs.gestion.31@gmail.com"
-           class="btn btn-red">
+        <a class="cta-email"
+           href="mailto:bs.gestion.31@gmail.com">
+
             bs.gestion.31@gmail.com
+
         </a>
 
     </div>
@@ -266,52 +922,116 @@
 </section>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
     <div class="container footer-main">
 
+
         <div>
 
-            <h3>BS GESTION</h3>
+            <div class="footer-logo">
+                BS <span>GESTION</span>
+            </div>
 
-            <p>
+            <p class="footer-description">
                 Gestion administrative, conseil et accompagnement
                 pour particuliers et professionnels.
             </p>
 
-            <p>
-                📧
-                <a href="mailto:bs.gestion.31@gmail.com">
-                    bs.gestion.31@gmail.com
-                </a>
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>Navigation</h3>
-
-            <a href="index.html">Accueil</a>
-            <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création Société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-
-        <div>
-
-            <h3>Contact</h3>
-
             <a href="mailto:bs.gestion.31@gmail.com">
-                bs.gestion.31@gmail.com
+                📧 bs.gestion.31@gmail.com
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Informations société
+            </h3>
+
+            <div class="footer-address">
+
+                <strong>
+                    BS GESTION
+                </strong>
+
+                <br><br>
+
+                116 Route d'Espagne<br>
+                Hélios V – BAL 504<br>
+                31100 Toulouse
+
+                <br><br>
+
+                <strong>
+                    SIRET :
+                </strong>
+
+                948 907 142 00012
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="sejour.html">
+                Séjour
+            </a>
+
+            <a href="creation-societe.html">
+                Création Société
+            </a>
+
+            <a href="administratif.html">
+                Administratif
             </a>
 
             <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-highlight">
+
+        <div class="container footer-highlight-inner">
+
+            <div>
+
+                <span class="footer-highlight-label">
+                    BS GESTION
+                </span>
+
+                <strong>
+                    Votre organisation, notre accompagnement.
+                </strong>
+
+            </div>
+
+            <a href="contact.html"
+               class="footer-contact-btn">
+
                 Demander un accompagnement
+
             </a>
 
         </div>
@@ -320,18 +1040,31 @@
 
 
     <div class="footer-bottom">
-        © 2026 BS GESTION — Tous droits réservés.
+
+        © 2026
+        <strong>BS GESTION</strong>
+        — Tous droits réservés.
+
     </div>
 
 </footer>
 
 
 <script>
-function toggleMenu() {
-    document.getElementById("mainNav").classList.toggle("active");
-}
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("mainNav");
+
+        if (nav) {
+            nav.classList.toggle("active");
+        }
+
+    }
+
 </script>
 
 </body>
+
 </html>
 ```
