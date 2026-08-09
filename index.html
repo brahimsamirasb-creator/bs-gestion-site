@@ -1,6 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,31 +13,67 @@
           content="BS GESTION accompagne particuliers et professionnels dans leurs démarches administratives, projets professionnels, création de société et organisation documentaire.">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
 <header>
+
     <div class="container navbar">
 
         <a href="index.html" class="logo">
             BS <span>GESTION</span>
         </a>
 
-        <div class="menu" onclick="toggleMenu()">☰</div>
+        <div class="menu"
+             onclick="toggleMenu()"
+             aria-label="Ouvrir le menu">
+            ☰
+        </div>
 
         <nav id="mainNav">
+
             <a href="index.html">Accueil</a>
-            <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création Société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
+
+            <a href="sejour.html">
+                Séjour
+            </a>
+
+            <a href="creation-societe.html">
+                Création Société
+            </a>
+
+            <a href="administratif.html">
+                Administratif
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
+
+<!-- =========================================================
+     CONTENU PRINCIPAL
+========================================================= -->
+
 <main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero photo-home">
 
@@ -58,7 +97,9 @@
         </p>
 
         <div class="buttons">
-            <a href="contact.html" class="btn btn-red">
+
+            <a href="contact.html"
+               class="btn btn-red">
                 Demander un accompagnement
             </a>
 
@@ -66,6 +107,7 @@
                class="btn btn-outline">
                 Envoyer un e-mail
             </a>
+
         </div>
 
         <div class="hero-contact">
@@ -76,12 +118,20 @@
 
 </section>
 
-<section class="services">
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section class="services" id="services">
 
     <div class="container">
 
         <div class="section-title">
-            <div class="section-label">NOS SERVICES</div>
+
+            <div class="section-label">
+                NOS SERVICES
+            </div>
 
             <h2>
                 Des solutions adaptées à vos besoins
@@ -91,12 +141,20 @@
                 BS GESTION vous accompagne avec une approche
                 structurée, professionnelle et rassurante.
             </p>
+
         </div>
+
 
         <div class="services-grid">
 
+
+            <!-- SERVICE 01 -->
+
             <article class="card">
-                <div class="card-number">01</div>
+
+                <div class="card-number">
+                    01
+                </div>
 
                 <h3>
                     Gestion administrative
@@ -110,10 +168,17 @@
                 <a href="administratif.html">
                     En savoir plus →
                 </a>
+
             </article>
 
+
+            <!-- SERVICE 02 -->
+
             <article class="card">
-                <div class="card-number">02</div>
+
+                <div class="card-number">
+                    02
+                </div>
 
                 <h3>
                     Séjour & démarches
@@ -127,10 +192,17 @@
                 <a href="sejour.html">
                     Découvrir →
                 </a>
+
             </article>
 
+
+            <!-- SERVICE 03 -->
+
             <article class="card">
-                <div class="card-number">03</div>
+
+                <div class="card-number">
+                    03
+                </div>
 
                 <h3>
                     Création de société
@@ -144,10 +216,17 @@
                 <a href="creation-societe.html">
                     Découvrir →
                 </a>
+
             </article>
 
+
+            <!-- SERVICE 04 -->
+
             <article class="card">
-                <div class="card-number">04</div>
+
+                <div class="card-number">
+                    04
+                </div>
 
                 <h3>
                     Accompagnement professionnel
@@ -161,6 +240,7 @@
                 <a href="contact.html">
                     Nous contacter →
                 </a>
+
             </article>
 
         </div>
@@ -169,11 +249,17 @@
 
 </section>
 
+
+<!-- =========================================================
+     À PROPOS
+========================================================= -->
+
 <section class="about">
 
     <div class="container about-grid">
 
         <div>
+
             <div class="section-label">
                 À PROPOS DE BS GESTION
             </div>
@@ -181,7 +267,9 @@
             <h2>
                 L'administration ne doit pas devenir un obstacle.
             </h2>
+
         </div>
+
 
         <div>
 
@@ -196,6 +284,7 @@
                 préparer vos démarches et structurer vos informations
                 avec une méthode claire et professionnelle.
             </p>
+
 
             <div class="checks">
 
@@ -227,6 +316,11 @@
 
 </section>
 
+
+<!-- =========================================================
+     MÉTHODE
+========================================================= -->
+
 <section class="method">
 
     <div class="container">
@@ -241,52 +335,86 @@
                 Une organisation simple
             </h2>
 
+            <p>
+                Une méthode claire pour vous accompagner
+                dans vos démarches.
+            </p>
+
         </div>
+
 
         <div class="method-grid">
 
-            <div class="step">
-                <div class="step-number">01</div>
 
-                <h3>Comprendre</h3>
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Comprendre
+                </h3>
 
                 <p>
                     Nous identifions précisément votre besoin
                     et les démarches concernées.
                 </p>
+
             </div>
 
-            <div class="step">
-                <div class="step-number">02</div>
 
-                <h3>Classer</h3>
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Classer
+                </h3>
 
                 <p>
                     Les documents et informations sont organisés
                     par catégorie.
                 </p>
+
             </div>
 
-            <div class="step">
-                <div class="step-number">03</div>
 
-                <h3>Préparer</h3>
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Préparer
+                </h3>
 
                 <p>
                     Les éléments nécessaires sont préparés
                     de manière méthodique.
                 </p>
+
             </div>
 
-            <div class="step">
-                <div class="step-number">04</div>
 
-                <h3>Suivre</h3>
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Suivre
+                </h3>
 
                 <p>
                     Vous disposez d'une meilleure visibilité
                     sur l'avancement de vos démarches.
                 </p>
+
             </div>
 
         </div>
@@ -294,6 +422,11 @@
     </div>
 
 </section>
+
+
+<!-- =========================================================
+     DEVIS / ACCOMPAGNEMENT
+========================================================= -->
 
 <section class="devis">
 
@@ -314,7 +447,8 @@
                 ÉTUDE DE VOTRE BESOIN
             </div>
 
-            <a href="contact.html" class="btn btn-red">
+            <a href="contact.html"
+               class="btn btn-red">
                 Nous contacter
             </a>
 
@@ -323,6 +457,11 @@
     </div>
 
 </section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
 
 <section class="cta">
 
@@ -345,14 +484,24 @@
 
 </section>
 
+
 </main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
     <div class="container footer-main">
 
+
         <div>
-            <h3>BS GESTION</h3>
+
+            <h3>
+                BS GESTION
+            </h3>
 
             <p>
                 Gestion administrative, conseil et accompagnement
@@ -365,20 +514,44 @@
                     bs.gestion.31@gmail.com
                 </a>
             </p>
+
         </div>
 
-        <div>
-            <h3>Navigation</h3>
 
-            <a href="index.html">Accueil</a>
-            <a href="sejour.html">Séjour</a>
-            <a href="creation-societe.html">Création Société</a>
-            <a href="administratif.html">Administratif</a>
-            <a href="contact.html">Contact</a>
+        <div>
+
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="sejour.html">
+                Séjour
+            </a>
+
+            <a href="creation-societe.html">
+                Création Société
+            </a>
+
+            <a href="administratif.html">
+                Administratif
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
         </div>
 
+
         <div>
-            <h3>Nous contacter</h3>
+
+            <h3>
+                Nous contacter
+            </h3>
 
             <a href="mailto:bs.gestion.31@gmail.com">
                 bs.gestion.31@gmail.com
@@ -387,21 +560,28 @@
             <a href="contact.html">
                 Demander un accompagnement
             </a>
+
         </div>
 
     </div>
 
+
     <div class="footer-bottom">
+
         © 2026 BS GESTION — Tous droits réservés.
+
     </div>
 
 </footer>
 
-<script>
-function toggleMenu() {
-    document.getElementById("mainNav").classList.toggle("active");
-}
-</script>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
+```
