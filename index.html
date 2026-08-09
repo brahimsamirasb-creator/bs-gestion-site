@@ -1,270 +1,469 @@
+```html
 <!DOCTYPE html>
-
 <html lang="fr">
 
 <head>
 
-```
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<!-- Vérification Google Search Console -->
-<meta name="google-site-verification" content="nIFYZLY8k1V9UsveYBv7grHMnG36aGlD_nrbFQLih6I">
+    <!-- =====================================================
+         GOOGLE SEARCH CONSOLE
+    ====================================================== -->
 
-<title>BS GESTION | Gestion administrative, conseil et accompagnement à Toulouse</title>
+    <meta name="google-site-verification"
+          content="XqsaCLgDyK7hN-AIZ7C89sVSoLpAgjChOkgFte1HcQg">
 
-<meta name="description"
-      content="BS GESTION accompagne particuliers et professionnels à Toulouse dans leurs démarches administratives, dossiers de séjour, création de société et organisation professionnelle.">
 
-<meta name="robots" content="index, follow">
+    <!-- =====================================================
+         SEO PRINCIPAL
+    ====================================================== -->
 
-<meta name="author" content="BS GESTION">
+    <title>
+        BS GESTION | Gestion administrative, conseil et accompagnement à Toulouse
+    </title>
 
-<link rel="canonical"
-      href="https://brahimsamirasb-creator.github.io/bs-gestion-site/">
+    <meta name="description"
+          content="BS GESTION accompagne particuliers et professionnels à Toulouse dans leurs démarches administratives, dossiers de séjour, création de société et organisation professionnelle.">
 
-<link rel="stylesheet" href="style.css">
-```
+    <meta name="keywords"
+          content="BS GESTION, gestion administrative Toulouse, accompagnement administratif Toulouse, création société Toulouse, démarches administratives Toulouse, dossier séjour Toulouse, conseil administratif">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <meta name="author"
+          content="BS GESTION">
+
+
+    <!-- =====================================================
+         URL OFFICIELLE
+    ====================================================== -->
+
+    <link rel="canonical"
+          href="https://www.bsgestion.fr/">
+
+
+    <!-- =====================================================
+         COULEUR NAVIGATEUR
+    ====================================================== -->
+
+    <meta name="theme-color"
+          content="#111111">
+
+
+    <!-- =====================================================
+         OPEN GRAPH — FACEBOOK / WHATSAPP / LINKEDIN
+    ====================================================== -->
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:locale"
+          content="fr_FR">
+
+    <meta property="og:site_name"
+          content="BS GESTION">
+
+    <meta property="og:title"
+          content="BS GESTION | Gestion administrative et accompagnement à Toulouse">
+
+    <meta property="og:description"
+          content="BS GESTION accompagne particuliers et professionnels dans leurs démarches administratives, dossiers de séjour, création de société et organisation professionnelle à Toulouse.">
+
+    <meta property="og:url"
+          content="https://www.bsgestion.fr/">
+
+    <!--
+    Si vous avez une image Open Graph dédiée,
+    vous pourrez ajouter ici :
+
+    <meta property="og:image"
+          content="https://www.bsgestion.fr/images/bs-gestion-og.jpg">
+    -->
+
+
+    <!-- =====================================================
+         TWITTER / X
+    ====================================================== -->
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="BS GESTION | Gestion administrative à Toulouse">
+
+    <meta name="twitter:description"
+          content="Gestion administrative, conseil et accompagnement pour particuliers et professionnels à Toulouse.">
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="icon"
+          href="favicon.ico"
+          type="image/x-icon">
+
+
+    <!-- =====================================================
+         FEUILLE DE STYLE
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- =====================================================
+         DONNÉES STRUCTURÉES GOOGLE
+    ====================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "BS GESTION",
+        "url": "https://www.bsgestion.fr/",
+        "email": "bs.gestion.31@gmail.com",
+        "description": "BS GESTION accompagne les particuliers et professionnels dans leurs démarches administratives, dossiers de séjour, création de société et organisation professionnelle.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "116 Route d'Espagne, Hélios V, BAL 504",
+            "postalCode": "31100",
+            "addressLocality": "Toulouse",
+            "addressCountry": "FR"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Toulouse"
+        }
+    }
+    </script>
 
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
      HEADER
 ========================================================= -->
 
-<header>
+<header class="site-header">
 
-```
-<div class="container navbar">
+    <div class="container navbar">
 
-    <a href="index.html" class="logo">
-        BS <span>GESTION</span>
-    </a>
+        <a href="index.html"
+           class="logo"
+           aria-label="BS GESTION - Accueil">
 
-    <div class="menu"
-         onclick="toggleMenu()"
-         aria-label="Ouvrir le menu"
-         role="button"
-         tabindex="0">
-        ☰
+            BS <span>GESTION</span>
+
+        </a>
+
+
+        <div class="menu"
+             onclick="toggleMenu()"
+             aria-label="Ouvrir le menu"
+             role="button"
+             tabindex="0">
+
+            ☰
+
+        </div>
+
+
+        <nav id="mainNav"
+             aria-label="Navigation principale">
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="sejour.html">
+                Séjour
+            </a>
+
+            <a href="creation-societe.html">
+                Création Société
+            </a>
+
+            <a href="administratif.html">
+                Administratif
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
     </div>
-
-    <nav id="mainNav">
-
-        <a href="index.html">Accueil</a>
-
-        <a href="sejour.html">
-            Séjour
-        </a>
-
-        <a href="creation-societe.html">
-            Création Société
-        </a>
-
-        <a href="administratif.html">
-            Administratif
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </nav>
-
-</div>
-```
 
 </header>
 
-<!-- =========================================================
-     CONTENU PRINCIPAL
-========================================================= -->
 
-<main>
 
 <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section class="hero photo-home">
+<main>
 
-```
-<div class="container hero-content">
+<section class="hero">
 
-    <div class="badge">
-        ORGANISATION • ADMINISTRATION • GESTION
+    <div class="container hero-content">
+
+
+        <div class="badge">
+
+            ORGANISATION • ADMINISTRATION • GESTION
+
+        </div>
+
+
+        <h1>
+
+            BS <span>GESTION</span>
+
+        </h1>
+
+
+        <p>
+
+            Gestion administrative, conseil et accompagnement
+            à Toulouse.
+
+        </p>
+
+
+        <p>
+
+            Une organisation claire pour avancer avec sérénité
+            dans vos démarches personnelles et professionnelles.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="contact.html"
+               class="btn btn-red">
+
+                Envoyer ma demande
+
+            </a>
+
+
+            <a href="mailto:bs.gestion.31@gmail.com"
+               class="btn btn-outline">
+
+                Envoyer un e-mail
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-contact">
+
+            📧
+            <a href="mailto:bs.gestion.31@gmail.com">
+                bs.gestion.31@gmail.com
+            </a>
+
+        </div>
+
     </div>
-
-    <h1>
-        BS <span>GESTION</span>
-    </h1>
-
-    <p>
-        Gestion administrative, conseil et accompagnement à Toulouse.
-    </p>
-
-    <p>
-        Une organisation claire pour avancer avec sérénité
-        dans vos démarches personnelles et professionnelles.
-    </p>
-
-    <div class="buttons">
-
-        <a href="contact.html"
-           class="btn btn-red">
-            Envoyer ma demande
-        </a>
-
-        <a href="mailto:bs.gestion.31@gmail.com"
-           class="btn btn-outline">
-            Envoyer un e-mail
-        </a>
-
-    </div>
-
-    <div class="hero-contact">
-        📧 bs.gestion.31@gmail.com
-    </div>
-
-</div>
-```
 
 </section>
+
+
 
 <!-- =========================================================
      SERVICES
 ========================================================= -->
 
-<section class="services" id="services">
+<section class="services">
 
-```
-<div class="container">
+    <div class="container">
 
-    <div class="section-title">
 
-        <div class="section-label">
-            NOS SERVICES
+        <div class="section-title">
+
+            <div class="section-label">
+
+                NOS SERVICES
+
+            </div>
+
+
+            <h2>
+
+                Des solutions adaptées à vos besoins
+
+            </h2>
+
+
+            <p>
+
+                BS GESTION vous accompagne avec une approche
+                structurée, professionnelle et rassurante.
+
+            </p>
+
         </div>
 
-        <h2>
-            Des solutions adaptées à vos besoins
-        </h2>
 
-        <p>
-            BS GESTION vous accompagne avec une approche
-            structurée, professionnelle et rassurante.
-        </p>
+
+        <div class="services-grid">
+
+
+            <!-- SERVICE 01 -->
+
+            <article class="card">
+
+                <div class="card-number">
+                    01
+                </div>
+
+
+                <h3>
+
+                    Gestion administrative
+
+                </h3>
+
+
+                <p>
+
+                    Organisation des documents, préparation des dossiers,
+                    courriers, formulaires et suivi des pièces justificatives.
+
+                </p>
+
+
+                <a href="administratif.html">
+
+                    En savoir plus →
+
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 02 -->
+
+            <article class="card">
+
+                <div class="card-number">
+                    02
+                </div>
+
+
+                <h3>
+
+                    Séjour & démarches
+
+                </h3>
+
+
+                <p>
+
+                    Accompagnement dans la préparation et l'organisation
+                    des dossiers liés aux démarches de séjour.
+
+                </p>
+
+
+                <a href="sejour.html">
+
+                    Découvrir →
+
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 03 -->
+
+            <article class="card">
+
+                <div class="card-number">
+                    03
+                </div>
+
+
+                <h3>
+
+                    Création de société
+
+                </h3>
+
+
+                <p>
+
+                    Accompagnement administratif pour structurer
+                    votre projet de création d'entreprise.
+
+                </p>
+
+
+                <a href="creation-societe.html">
+
+                    Découvrir →
+
+                </a>
+
+            </article>
+
+
+
+            <!-- SERVICE 04 -->
+
+            <article class="card">
+
+                <div class="card-number">
+                    04
+                </div>
+
+
+                <h3>
+
+                    Accompagnement professionnel
+
+                </h3>
+
+
+                <p>
+
+                    Organisation, conseil et assistance administrative
+                    pour entrepreneurs et professionnels.
+
+                </p>
+
+
+                <a href="contact.html">
+
+                    Nous contacter →
+
+                </a>
+
+            </article>
+
+
+        </div>
 
     </div>
-
-
-    <div class="services-grid">
-
-
-        <!-- SERVICE 01 -->
-
-        <article class="card">
-
-            <div class="card-number">
-                01
-            </div>
-
-            <h3>
-                Gestion administrative
-            </h3>
-
-            <p>
-                Organisation des documents, préparation des dossiers,
-                courriers, formulaires et suivi des pièces justificatives.
-            </p>
-
-            <a href="administratif.html">
-                En savoir plus →
-            </a>
-
-        </article>
-
-
-        <!-- SERVICE 02 -->
-
-        <article class="card">
-
-            <div class="card-number">
-                02
-            </div>
-
-            <h3>
-                Séjour & démarches
-            </h3>
-
-            <p>
-                Accompagnement dans la préparation et l'organisation
-                des dossiers liés aux démarches de séjour.
-            </p>
-
-            <a href="sejour.html">
-                Découvrir →
-            </a>
-
-        </article>
-
-
-        <!-- SERVICE 03 -->
-
-        <article class="card">
-
-            <div class="card-number">
-                03
-            </div>
-
-            <h3>
-                Création de société
-            </h3>
-
-            <p>
-                Accompagnement administratif pour structurer
-                votre projet de création d'entreprise.
-            </p>
-
-            <a href="creation-societe.html">
-                Découvrir →
-            </a>
-
-        </article>
-
-
-        <!-- SERVICE 04 -->
-
-        <article class="card">
-
-            <div class="card-number">
-                04
-            </div>
-
-            <h3>
-                Accompagnement professionnel
-            </h3>
-
-            <p>
-                Organisation, conseil et assistance administrative
-                pour entrepreneurs et professionnels.
-            </p>
-
-            <a href="contact.html">
-                Nous contacter →
-            </a>
-
-        </article>
-
-    </div>
-
-</div>
-```
 
 </section>
+
+
 
 <!-- =========================================================
      À PROPOS
@@ -272,67 +471,97 @@
 
 <section class="about">
 
-```
-<div class="container about-grid">
-
-    <div>
-
-        <div class="section-label">
-            À PROPOS DE BS GESTION
-        </div>
-
-        <h2>
-            L'administration ne doit pas devenir un obstacle.
-        </h2>
-
-    </div>
+    <div class="container about-grid">
 
 
-    <div>
+        <div>
 
-        <p>
-            Courriers, formulaires, justificatifs, dossiers
-            professionnels, documents de société : la gestion
-            administrative peut rapidement devenir chronophage.
-        </p>
+            <div class="section-label">
 
-        <p>
-            BS GESTION vous aide à organiser vos documents,
-            préparer vos démarches et structurer vos informations
-            avec une méthode claire et professionnelle.
-        </p>
+                À PROPOS DE BS GESTION
 
-
-        <div class="checks">
-
-            <div>
-                <span>✓</span>
-                Organisation structurée
             </div>
 
-            <div>
-                <span>✓</span>
-                Accompagnement personnalisé
-            </div>
 
-            <div>
-                <span>✓</span>
-                Confidentialité des informations
-            </div>
+            <h2>
 
-            <div>
-                <span>✓</span>
-                Suivi méthodique des dossiers
-            </div>
+                L'administration ne doit pas devenir un obstacle.
+
+            </h2>
 
         </div>
 
-    </div>
 
-</div>
-```
+
+        <div>
+
+            <p>
+
+                Courriers, formulaires, justificatifs, dossiers
+                professionnels, documents de société : la gestion
+                administrative peut rapidement devenir chronophage.
+
+            </p>
+
+
+            <p>
+
+                BS GESTION vous aide à organiser vos documents,
+                préparer vos démarches et structurer vos informations
+                avec une méthode claire et professionnelle.
+
+            </p>
+
+
+
+            <div class="checks">
+
+
+                <div>
+
+                    <span>✓</span>
+
+                    Organisation structurée
+
+                </div>
+
+
+                <div>
+
+                    <span>✓</span>
+
+                    Accompagnement personnalisé
+
+                </div>
+
+
+                <div>
+
+                    <span>✓</span>
+
+                    Confidentialité des informations
+
+                </div>
+
+
+                <div>
+
+                    <span>✓</span>
+
+                    Suivi méthodique des dossiers
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
+
+
 
 <!-- =========================================================
      MÉTHODE
@@ -340,172 +569,226 @@
 
 <section class="method">
 
-```
-<div class="container">
+    <div class="container">
 
-    <div class="section-title">
 
-        <div class="section-label">
-            NOTRE MÉTHODE
+        <div class="section-title">
+
+            <div class="section-label">
+
+                NOTRE MÉTHODE
+
+            </div>
+
+
+            <h2>
+
+                Une organisation simple
+
+            </h2>
+
+
+            <p>
+
+                Une méthode claire pour vous accompagner
+                dans vos démarches.
+
+            </p>
+
         </div>
 
-        <h2>
-            Une organisation simple
-        </h2>
 
-        <p>
-            Une méthode claire pour vous accompagner
-            dans vos démarches.
-        </p>
+
+        <div class="method-grid">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Comprendre
+                </h3>
+
+
+                <p>
+
+                    Nous identifions précisément votre besoin
+                    et les démarches concernées.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Classer
+                </h3>
+
+
+                <p>
+
+                    Les documents et informations sont organisés
+                    par catégorie.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Préparer
+                </h3>
+
+
+                <p>
+
+                    Les éléments nécessaires sont préparés
+                    de manière méthodique.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Suivre
+                </h3>
+
+
+                <p>
+
+                    Vous disposez d'une meilleure visibilité
+                    sur l'avancement de vos démarches.
+
+                </p>
+
+            </div>
+
+
+        </div>
 
     </div>
-
-
-    <div class="method-grid">
-
-
-        <div class="step">
-
-            <div class="step-number">
-                01
-            </div>
-
-            <h3>
-                Comprendre
-            </h3>
-
-            <p>
-                Nous identifions précisément votre besoin
-                et les démarches concernées.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                02
-            </div>
-
-            <h3>
-                Classer
-            </h3>
-
-            <p>
-                Les documents et informations sont organisés
-                par catégorie.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                03
-            </div>
-
-            <h3>
-                Préparer
-            </h3>
-
-            <p>
-                Les éléments nécessaires sont préparés
-                de manière méthodique.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                04
-            </div>
-
-            <h3>
-                Suivre
-            </h3>
-
-            <p>
-                Vous disposez d'une meilleure visibilité
-                sur l'avancement de vos démarches.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-```
 
 </section>
 
+
+
 <!-- =========================================================
-     BESOIN D'ACCOMPAGNEMENT
+     APPEL À L'ACTION
 ========================================================= -->
 
 <section class="devis">
 
-```
-<div class="container">
+    <div class="container">
 
-    <div class="devis-box">
 
-        <h2>
-            Besoin d'un accompagnement ?
-        </h2>
+        <div class="devis-box">
 
-        <p>
-            Expliquez-nous votre situation et nous vous
-            orienterons vers la solution adaptée.
-        </p>
 
-        <div class="no-price">
-            ÉTUDE DE VOTRE BESOIN
+            <h2>
+
+                Besoin d'un accompagnement ?
+
+            </h2>
+
+
+            <p>
+
+                Expliquez-nous votre situation et nous vous
+                orienterons vers la solution adaptée.
+
+            </p>
+
+
+            <div class="no-price">
+
+                ÉTUDE DE VOTRE BESOIN
+
+            </div>
+
+
+            <a href="contact.html"
+               class="btn btn-red">
+
+                Envoyer ma demande
+
+            </a>
+
+
         </div>
 
-        <a href="contact.html"
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT RAPIDE
+========================================================= -->
+
+<section class="contact-quick">
+
+    <div class="container">
+
+
+        <h2>
+
+            Un projet ? Une démarche ?
+
+        </h2>
+
+
+        <p>
+
+            Parlons de votre besoin et avançons ensemble.
+
+        </p>
+
+
+        <a href="mailto:bs.gestion.31@gmail.com"
            class="btn btn-red">
-            Envoyer ma demande
+
+            bs.gestion.31@gmail.com
+
         </a>
 
     </div>
 
-</div>
-```
-
 </section>
 
-<!-- =========================================================
-     CTA
-========================================================= -->
-
-<section class="cta">
-
-```
-<div class="container">
-
-    <h2>
-        Un projet ? Une démarche ?
-    </h2>
-
-    <p>
-        Parlons de votre besoin et avançons ensemble.
-    </p>
-
-    <a href="mailto:bs.gestion.31@gmail.com"
-       class="btn btn-red">
-        bs.gestion.31@gmail.com
-    </a>
-
-</div>
-```
-
-</section>
 
 </main>
+
+
 
 <!-- =========================================================
      FOOTER
@@ -513,170 +796,255 @@
 
 <footer>
 
-```
-<div class="container footer-main">
+
+    <div class="container footer-main">
 
 
-    <!-- =================================================
-         COLONNE 1 — BS GESTION
-    ================================================== -->
+        <!-- =================================================
+             COLONNE 1 — BS GESTION
+        ================================================== -->
 
-    <div class="footer-brand">
+        <div class="footer-brand">
 
-        <div class="footer-logo">
-            BS <span>GESTION</span>
+
+            <div class="footer-logo">
+
+                BS <span>GESTION</span>
+
+            </div>
+
+
+            <div class="footer-line"></div>
+
+
+            <p class="footer-description">
+
+                Gestion administrative, conseil et accompagnement
+                pour particuliers et professionnels à Toulouse.
+
+            </p>
+
+
+            <a href="mailto:bs.gestion.31@gmail.com"
+               class="footer-email">
+
+                📧 bs.gestion.31@gmail.com
+
+            </a>
+
+
         </div>
 
-        <div class="footer-line"></div>
 
-        <p class="footer-description">
-            Gestion administrative, conseil et accompagnement
-            pour particuliers et professionnels à Toulouse.
-        </p>
 
-        <a href="mailto:bs.gestion.31@gmail.com"
-           class="footer-email">
-            📧 bs.gestion.31@gmail.com
-        </a>
+        <!-- =================================================
+             COLONNE 2 — INFORMATIONS SOCIÉTÉ
+        ================================================== -->
+
+        <div class="footer-company">
+
+
+            <h3>
+
+                Informations société
+
+            </h3>
+
+
+            <div class="footer-address">
+
+
+                <strong>
+
+                    BS GESTION
+
+                </strong>
+
+
+                <br><br>
+
+
+                116 Route d'Espagne<br>
+
+                Hélios V – BAL 504<br>
+
+                31100 Toulouse
+
+
+            </div>
+
+
+            <p class="footer-siret">
+
+                <strong>
+
+                    SIRET :
+
+                </strong>
+
+                948 907 142 00012
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Forme juridique :
+
+                </strong>
+
+                SASU
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             COLONNE 3 — NAVIGATION
+        ================================================== -->
+
+        <div class="footer-navigation">
+
+
+            <h3>
+
+                Navigation
+
+            </h3>
+
+
+            <a href="index.html">
+
+                Accueil
+
+            </a>
+
+
+            <a href="sejour.html">
+
+                Séjour
+
+            </a>
+
+
+            <a href="creation-societe.html">
+
+                Création Société
+
+            </a>
+
+
+            <a href="administratif.html">
+
+                Administratif
+
+            </a>
+
+
+            <a href="contact.html">
+
+                Contact
+
+            </a>
+
+
+            <a href="mentions-legales.html">
+
+                Mentions légales
+
+            </a>
+
+
+            <a href="politique-confidentialite.html">
+
+                Politique de confidentialité
+
+            </a>
+
+
+        </div>
+
 
     </div>
 
 
-    <!-- =================================================
-         COLONNE 2 — INFORMATIONS SOCIÉTÉ
-    ================================================== -->
 
-    <div class="footer-company">
+    <!-- =====================================================
+         BLOC PRINCIPAL BS GESTION
+    ====================================================== -->
 
-        <h3>
-            Informations société
-        </h3>
+    <div class="footer-highlight">
 
-        <div class="footer-address">
+
+        <div class="container footer-highlight-inner">
+
+
+            <div>
+
+
+                <span class="footer-highlight-label">
+
+                    BS GESTION
+
+                </span>
+
+
+                <strong>
+
+                    Votre organisation, notre accompagnement.
+
+                </strong>
+
+
+            </div>
+
+
+            <a href="contact.html"
+               class="footer-contact-btn">
+
+                Envoyer ma demande
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BAS DU FOOTER
+    ====================================================== -->
+
+    <div class="footer-bottom">
+
+
+        <div class="container">
+
+
+            © 2026
 
             <strong>
                 BS GESTION
             </strong>
 
-            <br><br>
+            — Tous droits réservés.
 
-            116 Route d'Espagne<br>
-            Hélios V – BAL 504<br>
-            31100 Toulouse
 
         </div>
 
-        <p class="footer-siret">
-
-            <strong>
-                SIRET :
-            </strong>
-
-            948 907 142 00012
-
-        </p>
-
-        <p>
-            <strong>
-                Forme juridique :
-            </strong>
-            SASU
-        </p>
-
     </div>
 
-
-    <!-- =================================================
-         COLONNE 3 — NAVIGATION
-    ================================================== -->
-
-    <div class="footer-navigation">
-
-        <h3>
-            Navigation
-        </h3>
-
-        <a href="index.html">
-            Accueil
-        </a>
-
-        <a href="sejour.html">
-            Séjour
-        </a>
-
-        <a href="creation-societe.html">
-            Création Société
-        </a>
-
-        <a href="administratif.html">
-            Administratif
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-        <a href="mentions-legales.html">
-            Mentions légales
-        </a>
-
-        <a href="politique-confidentialite.html">
-            Politique de confidentialité
-        </a>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     BLOC PRINCIPAL BS GESTION
-====================================================== -->
-
-<div class="footer-highlight">
-
-    <div class="container footer-highlight-inner">
-
-        <div>
-
-            <span class="footer-highlight-label">
-                BS GESTION
-            </span>
-
-            <strong>
-                Votre organisation, notre accompagnement.
-            </strong>
-
-        </div>
-
-        <a href="contact.html"
-           class="footer-contact-btn">
-            Envoyer ma demande
-        </a>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     BAS DU FOOTER
-====================================================== -->
-
-<div class="footer-bottom">
-
-    <div class="container">
-
-        © 2026
-        <strong>BS GESTION</strong>
-        — Tous droits réservés.
-
-    </div>
-
-</div>
-```
 
 </footer>
+
+
 
 <!-- =========================================================
      JAVASCRIPT
@@ -684,6 +1052,8 @@
 
 <script src="script.js"></script>
 
+
 </body>
 
 </html>
+```
