@@ -1,35 +1,33 @@
 /* =========================================================
    BS GESTION
-   STYLE.CSS COMPLET
-   Couleurs : ROUGE FONCÉ / NOIR / BLANC
-   Design : PREMIUM / MODERNE / PROFESSIONNEL
+   STYLE.CSS — VERSION PROPRE ET COMPLÈTE
+   Couleurs : ROUGE FONCÉ / ROUGE / NOIR / BLANC
+   Images : dossier local /images/
 ========================================================= */
+
 
 /* =========================================================
    VARIABLES
 ========================================================= */
 
 :root {
-    --rouge: #b00000;
-    --rouge-fonce: #780000;
-    --rouge-clair: #d71920;
-    --rouge-hover: #c40000;
+    --rouge: #c40000;
+    --rouge-fonce: #7d0000;
+    --rouge-clair: #e00000;
 
     --noir: #080808;
-    --noir-2: #111111;
-    --noir-3: #1c1c1c;
+    --noir-2: #121212;
+    --noir-3: #1d1d1d;
 
     --blanc: #ffffff;
-    --gris-clair: #f5f5f5;
     --gris: #666666;
-    --gris-fonce: #333333;
-    --bordure: #dddddd;
+    --gris-clair: #f5f5f5;
+    --gris-border: #dddddd;
 
-    --ombre: 0 15px 45px rgba(0, 0, 0, 0.14);
-    --ombre-legere: 0 8px 25px rgba(0, 0, 0, 0.08);
-
+    --ombre: 0 15px 40px rgba(0, 0, 0, 0.15);
     --transition: 0.3s ease;
 }
+
 
 /* =========================================================
    RESET
@@ -47,7 +45,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--blanc);
+    background: #ffffff;
     color: #171717;
     line-height: 1.7;
     overflow-x: hidden;
@@ -60,7 +58,6 @@ img {
 }
 
 a {
-    color: inherit;
     transition: var(--transition);
 }
 
@@ -77,6 +74,7 @@ select {
     margin: 0 auto;
 }
 
+
 /* =========================================================
    HEADER
 ========================================================= */
@@ -85,28 +83,35 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
-    background: var(--noir);
+
+    background: #080808;
+
     border-bottom: 4px solid var(--rouge);
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.30);
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.30);
 }
 
 .navbar {
     min-height: 82px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 
 /* =========================================================
    LOGO
 ========================================================= */
 
 .logo {
-    display: inline-block;
-    color: var(--blanc);
+    color: #ffffff;
     text-decoration: none;
+
     font-size: 27px;
     font-weight: 900;
+
     letter-spacing: 2px;
 }
 
@@ -115,8 +120,13 @@ header {
 }
 
 .logo:hover {
-    color: var(--blanc);
+    color: #ffffff;
 }
+
+.logo:hover span {
+    color: #ff2020;
+}
+
 
 /* =========================================================
    NAVIGATION
@@ -125,36 +135,44 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 nav a {
     position: relative;
-    color: var(--blanc);
+
+    color: #ffffff;
     text-decoration: none;
+
     font-size: 14px;
     font-weight: 700;
+
     padding: 10px 0;
 }
 
 nav a::after {
     content: "";
+
     position: absolute;
     left: 0;
     bottom: 2px;
+
     width: 0;
     height: 3px;
+
     background: var(--rouge-clair);
+
     transition: var(--transition);
 }
 
 nav a:hover {
-    color: var(--rouge-clair);
+    color: #ffffff;
 }
 
 nav a:hover::after {
     width: 100%;
 }
+
 
 /* =========================================================
    MENU MOBILE
@@ -162,11 +180,16 @@ nav a:hover::after {
 
 .menu {
     display: none;
-    color: var(--blanc);
+
+    color: #ffffff;
+
     font-size: 31px;
+
     cursor: pointer;
+
     user-select: none;
 }
+
 
 /* =========================================================
    BOUTONS
@@ -174,193 +197,253 @@ nav a:hover::after {
 
 .btn {
     display: inline-block;
+
     padding: 15px 28px;
+
     border-radius: 5px;
+
     text-decoration: none;
+
     font-weight: 800;
+
     text-align: center;
+
     cursor: pointer;
+
     transition: var(--transition);
 }
 
-/* Bouton rouge */
+
+/* ROUGE */
 
 .btn-red {
-    background: linear-gradient(
-        135deg,
-        var(--rouge-clair),
-        var(--rouge-fonce)
-    );
+    color: #ffffff !important;
 
-    color: var(--blanc) !important;
-    border: 2px solid var(--rouge-clair);
+    background:
+        linear-gradient(
+            135deg,
+            #e00000,
+            #7d0000
+        );
+
+    border: 2px solid #e00000;
 
     box-shadow:
-        0 10px 30px rgba(176, 0, 0, 0.35);
+        0 10px 25px rgba(196, 0, 0, 0.30);
 }
 
 .btn-red:hover {
-    background: linear-gradient(
-        135deg,
-        var(--rouge-hover),
-        var(--rouge-fonce)
-    );
+    color: #ffffff !important;
 
-    color: var(--blanc) !important;
+    background:
+        linear-gradient(
+            135deg,
+            #ff1a1a,
+            #900000
+        );
+
     transform: translateY(-3px);
 
     box-shadow:
-        0 15px 35px rgba(176, 0, 0, 0.45);
+        0 15px 35px rgba(196, 0, 0, 0.45);
 }
 
-/* Bouton blanc */
+
+/* BLANC */
 
 .btn-outline {
-    color: var(--blanc) !important;
-    background: rgba(0, 0, 0, 0.35);
-    border: 2px solid var(--blanc);
+    color: #ffffff !important;
+
+    background: transparent;
+
+    border: 2px solid #ffffff;
 }
 
 .btn-outline:hover {
-    color: var(--blanc) !important;
+    color: #ffffff !important;
+
     background: var(--rouge);
+
     border-color: var(--rouge);
+
     transform: translateY(-3px);
 }
 
+
 /* =========================================================
-   HERO PRINCIPAL
+   HERO
 ========================================================= */
 
-.hero,
-.page-hero {
+.hero {
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
     position: relative;
-    background-color: var(--noir);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
     overflow: hidden;
+
+    color: #ffffff;
+
+    border-bottom: 6px solid var(--rouge);
+
+    background-color: #080808;
 }
 
-/* Image accueil */
+
+/*
+   IMAGE LOCALE ACCUEIL
+*/
 
 .photo-home {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
-            rgba(0, 0, 0, 0.30)
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.35)
         ),
-        url("images/accueil.jpg");
+        url("images/accueil.svg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Image séjour */
+
+/*
+   HERO PAGES INTERNES
+*/
+
+.page-hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    border-bottom: 5px solid var(--rouge);
+
+    background-color: #080808;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* IMAGES LOCALES */
 
 .photo-sejour {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.30)
         ),
-        url("images/sejour.jpg");
+        url("images/sejour.svg");
 }
-
-/* Image création société */
 
 .photo-creation {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.30)
         ),
-        url("images/creation.jpg");
+        url("images/creation.svg");
 }
-
-/* Image administratif */
 
 .photo-administratif {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.30)
         ),
-        url("images/administratif.jpg");
+        url("images/administratif.svg");
 }
-
-/* Image contact */
 
 .photo-contact {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.30)
         ),
-        url("images/contact.jpg");
+        url("images/contact.svg");
 }
+
 
 /* =========================================================
-   HERO ACCUEIL
+   CERCLES DÉCORATIFS
 ========================================================= */
-
-.hero {
-    min-height: 720px;
-    display: flex;
-    align-items: center;
-    color: var(--blanc);
-    border-bottom: 6px solid var(--rouge);
-}
 
 .hero::before,
 .page-hero::before {
     content: "";
+
     position: absolute;
 
-    width: 550px;
-    height: 550px;
+    width: 520px;
+    height: 520px;
 
-    right: -260px;
-    top: 60px;
+    right: -240px;
+    top: 50px;
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.12);
+
     border-radius: 50%;
 }
 
 .hero::after,
 .page-hero::after {
     content: "";
+
     position: absolute;
 
-    width: 360px;
-    height: 360px;
+    width: 340px;
+    height: 340px;
 
-    right: -150px;
-    top: 155px;
+    right: -110px;
+    top: 140px;
 
-    border: 2px solid rgba(215, 25, 32, 0.55);
+    border:
+        4px solid
+        rgba(196, 0, 0, 0.60);
+
     border-radius: 50%;
 }
 
+
 /* =========================================================
-   CONTENU HERO
+   HERO CONTENT
 ========================================================= */
 
 .hero-content,
 .page-hero-content {
     position: relative;
+
     z-index: 2;
+
     max-width: 850px;
 
-    animation: apparition 0.8s ease forwards;
+    animation:
+        apparition 0.8s ease forwards;
 }
+
 
 /* =========================================================
    BADGE
@@ -370,18 +453,27 @@ nav a:hover::after {
     display: inline-block;
 
     padding: 9px 18px;
+
     margin-bottom: 25px;
 
-    border: 1px solid var(--rouge-clair);
-    background: rgba(0, 0, 0, 0.35);
+    border:
+        1px solid
+        var(--rouge-clair);
 
-    color: var(--blanc);
+    color: #ffffff;
+
+    background:
+        rgba(0, 0, 0, 0.35);
 
     font-size: 12px;
+
     font-weight: 800;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
+
 
 /* =========================================================
    TITRES HERO
@@ -389,13 +481,16 @@ nav a:hover::after {
 
 .hero h1,
 .page-hero h1 {
-    color: var(--blanc);
+    color: #ffffff;
+
     line-height: 1.05;
+
     margin-bottom: 25px;
 }
 
 .hero h1 {
     font-size: clamp(48px, 8vw, 82px);
+
     letter-spacing: -2px;
 }
 
@@ -408,6 +503,7 @@ nav a:hover::after {
     color: var(--rouge-clair);
 }
 
+
 /* =========================================================
    TEXTES HERO
 ========================================================= */
@@ -415,6 +511,7 @@ nav a:hover::after {
 .hero p,
 .page-hero p {
     color: #eeeeee;
+
     max-width: 780px;
 }
 
@@ -424,27 +521,16 @@ nav a:hover::after {
 
 .hero p:first-of-type {
     font-size: 24px;
+
     font-weight: 800;
-    color: var(--blanc);
-}
 
-/* =========================================================
-   HERO PAGES INTERNES
-========================================================= */
-
-.page-hero {
-    min-height: 440px;
-    display: flex;
-    align-items: center;
-
-    color: var(--blanc);
-
-    border-bottom: 5px solid var(--rouge);
+    color: #ffffff;
 }
 
 .page-hero p {
     font-size: 19px;
 }
+
 
 /* =========================================================
    BOUTONS HERO
@@ -452,16 +538,22 @@ nav a:hover::after {
 
 .buttons {
     display: flex;
-    flex-wrap: wrap;
+
     gap: 15px;
+
+    flex-wrap: wrap;
+
     margin-top: 35px;
 }
 
 .hero-contact {
-    margin-top: 30px;
+    margin-top: 35px;
+
     color: #dddddd;
+
     font-size: 14px;
 }
+
 
 /* =========================================================
    SECTIONS
@@ -471,47 +563,62 @@ section {
     padding: 95px 0;
 }
 
+
 /* =========================================================
-   TITRES DE SECTIONS
+   TITRES SECTIONS
 ========================================================= */
 
 .section-title {
     text-align: center;
+
     margin-bottom: 55px;
 }
 
 .section-label {
     color: var(--rouge);
+
     font-size: 12px;
+
     font-weight: 900;
+
     letter-spacing: 3px;
+
     text-transform: uppercase;
+
     margin-bottom: 12px;
 }
 
 .section-title h2 {
-    color: var(--noir-2);
     font-size: 43px;
+
     line-height: 1.2;
+
+    color: #111111;
 }
 
 .section-title p {
     max-width: 760px;
+
     margin: 16px auto 0;
+
     color: var(--gris);
 }
+
 
 /* =========================================================
    SERVICES
 ========================================================= */
 
 .services {
-    background: var(--blanc);
+    background: #ffffff;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 22px;
 }
 
@@ -520,17 +627,23 @@ section {
 
     padding: 35px 28px;
 
-    background: var(--blanc);
+    background: #ffffff;
 
-    border: 1px solid var(--bordure);
-    border-top: 5px solid var(--noir-2);
+    border:
+        1px solid
+        var(--gris-border);
 
-    overflow: hidden;
+    border-top:
+        6px solid
+        var(--noir);
 
     transition: var(--transition);
 
+    overflow: hidden;
+
     box-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.05);
+        0 3px 15px
+        rgba(0, 0, 0, 0.05);
 }
 
 .card::after {
@@ -546,32 +659,39 @@ section {
 
     border-radius: 50%;
 
-    background: rgba(176, 0, 0, 0.08);
+    background:
+        rgba(196, 0, 0, 0.10);
 }
 
 .card:hover {
     transform: translateY(-8px);
 
-    border-top-color: var(--rouge);
+    border-top-color:
+        var(--rouge);
 
-    box-shadow: var(--ombre);
+    box-shadow:
+        var(--ombre);
 }
 
 .card-number {
     color: var(--rouge);
-    font-size: 18px;
+
     font-weight: 900;
+
+    font-size: 18px;
+
     margin-bottom: 18px;
 }
 
 .card h3 {
-    color: var(--noir-2);
     font-size: 21px;
+
     margin-bottom: 15px;
 }
 
 .card p {
     color: var(--gris);
+
     font-size: 15px;
 }
 
@@ -582,59 +702,71 @@ section {
 
     color: var(--rouge);
 
-    text-decoration: none;
-
     font-weight: 800;
+
+    text-decoration: none;
 }
 
 .card a:hover {
     color: var(--rouge-fonce);
 }
 
+
 /* =========================================================
    À PROPOS
 ========================================================= */
 
 .about {
-    color: var(--blanc);
-
     background:
         radial-gradient(
             circle at 10% 80%,
-            rgba(176, 0, 0, 0.30),
-            transparent 32%
+            rgba(196, 0, 0, 0.30),
+            transparent 30%
         ),
-        var(--noir);
+        #080808;
+
+    color: #ffffff;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 75px;
+
     align-items: center;
 }
 
 .about h2 {
-    color: var(--blanc);
     font-size: 45px;
+
     line-height: 1.15;
+
+    color: #ffffff;
 }
 
 .about p {
     color: #cccccc;
+
     margin-bottom: 20px;
 }
 
 .checks div {
     margin-bottom: 14px;
+
     color: #eeeeee;
 }
 
 .checks span {
     color: var(--rouge-clair);
+
     font-weight: 900;
+
     margin-right: 8px;
 }
+
 
 /* =========================================================
    MÉTHODE
@@ -646,36 +778,45 @@ section {
 
 .method-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 20px;
 }
 
 .step {
+    background: #ffffff;
+
     padding: 30px;
 
-    background: var(--blanc);
-
-    border-top: 5px solid var(--rouge);
+    border-top:
+        5px solid
+        var(--rouge);
 
     box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.05);
+        0 5px 20px
+        rgba(0, 0, 0, 0.06);
 
     transition: var(--transition);
 }
 
 .step:hover {
     transform: translateY(-5px);
-    box-shadow: var(--ombre);
+
+    box-shadow:
+        var(--ombre);
 }
 
 .step-number {
-    color: var(--rouge);
     font-size: 36px;
+
     font-weight: 900;
+
+    color: var(--rouge);
 }
 
 .step h3 {
-    color: var(--noir-2);
     margin: 10px 0;
 }
 
@@ -683,17 +824,21 @@ section {
     color: var(--gris);
 }
 
+
 /* =========================================================
    DOCUMENTS
 ========================================================= */
 
 .documents {
-    background: var(--blanc);
+    background: #ffffff;
 }
 
 .documents-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 22px;
 }
 
@@ -702,92 +847,105 @@ section {
 
     background: #fafafa;
 
-    border: 1px solid var(--bordure);
-    border-left: 5px solid var(--noir-2);
+    border:
+        1px solid
+        var(--gris-border);
+
+    border-left:
+        5px solid
+        var(--noir);
 
     transition: var(--transition);
 }
 
 .document:hover {
-    border-left-color: var(--rouge);
+    border-left-color:
+        var(--rouge);
+
     transform: translateY(-5px);
-    box-shadow: var(--ombre);
+
+    box-shadow:
+        var(--ombre);
 }
 
 .document h3 {
-    color: var(--noir-2);
     margin-bottom: 12px;
 }
 
 .document p {
     color: var(--gris);
+
     font-size: 15px;
+
     margin-bottom: 20px;
 }
+
 
 /* =========================================================
    PAGES INTERNES
 ========================================================= */
 
 .content-section {
-    background: var(--blanc);
+    background: #ffffff;
 }
 
 .content-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+
+    grid-template-columns:
+        2fr 1fr;
+
     gap: 50px;
+
     align-items: start;
 }
 
 .content-main h2 {
-    color: var(--noir-2);
     font-size: 34px;
+
     margin-bottom: 18px;
 }
 
 .content-main h3 {
-    color: var(--noir-2);
     font-size: 23px;
+
     margin-top: 30px;
+
     margin-bottom: 12px;
 }
 
 .content-main p {
     color: #555555;
+
     margin-bottom: 18px;
 }
 
 .content-main ul {
-    margin: 20px 0 25px 20px;
+    margin:
+        20px 0 25px 20px;
 }
 
 .content-main li {
-    color: #555555;
     margin-bottom: 10px;
-}
 
-.content-main li::marker {
-    color: var(--rouge);
+    color: #555555;
 }
-
-/* =========================================================
-   SIDEBAR
-========================================================= */
 
 .sidebar {
-    padding: 30px;
-
     background: #f7f7f7;
 
-    border-top: 5px solid var(--rouge);
+    border-top:
+        5px solid
+        var(--rouge);
+
+    padding: 30px;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.06);
+        0 10px 30px
+        rgba(0, 0, 0, 0.06);
 }
 
 .sidebar h3 {
-    color: var(--noir-2);
     margin-bottom: 20px;
 }
 
@@ -797,19 +955,23 @@ section {
     color: var(--rouge);
 
     text-decoration: none;
+
     font-weight: 800;
 
     padding: 10px 0;
 
-    border-bottom: 1px solid #dddddd;
+    border-bottom:
+        1px solid
+        #dddddd;
 }
 
 .sidebar a:hover {
     color: var(--rouge-fonce);
 }
 
+
 /* =========================================================
-   BLOC DEVIS / DEMANDE
+   DEVIS / BESOIN
 ========================================================= */
 
 .devis {
@@ -818,66 +980,84 @@ section {
 
 .devis-box {
     max-width: 850px;
+
     margin: auto;
 
     padding: 55px;
 
-    background: var(--blanc);
+    background: #ffffff;
 
-    border-left: 6px solid var(--rouge);
+    border-left:
+        7px solid
+        var(--rouge);
 
     text-align: center;
 
-    box-shadow: var(--ombre);
+    box-shadow:
+        var(--ombre);
 }
 
 .devis-box h2 {
-    color: var(--noir-2);
     font-size: 36px;
+
     margin-bottom: 15px;
 }
 
 .devis-box p {
     color: var(--gris);
+
     margin-bottom: 25px;
 }
 
 .no-price {
-    color: var(--rouge);
     font-weight: 900;
-    letter-spacing: 1px;
+
+    color: var(--rouge);
+
     margin-bottom: 25px;
+
+    letter-spacing: 1px;
 }
+
 
 /* =========================================================
    CTA
 ========================================================= */
 
 .cta {
-    color: var(--blanc);
-    text-align: center;
-
     background:
         radial-gradient(
             circle at center,
-            rgba(176, 0, 0, 0.30),
-            transparent 42%
+            rgba(196, 0, 0, 0.35),
+            transparent 45%
         ),
         #050505;
 
-    border-top: 5px solid var(--rouge);
-    border-bottom: 5px solid var(--rouge);
+    color: #ffffff;
+
+    text-align: center;
+
+    border-top:
+        5px solid
+        var(--rouge);
+
+    border-bottom:
+        5px solid
+        var(--rouge);
 }
 
 .cta h2 {
     font-size: 46px;
+
     margin-bottom: 15px;
 }
 
 .cta p {
     color: #cccccc;
+
     margin-bottom: 30px;
 }
+
 
 /* =========================================================
    CONTACT
@@ -895,21 +1075,29 @@ section {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 70px;
+
     align-items: start;
 }
 
 .contact h2 {
-    color: var(--noir-2);
     font-size: 43px;
+
     margin-bottom: 20px;
+
+    color: #111111;
 }
 
 .contact-intro {
     color: #555555;
+
     font-size: 17px;
 }
+
 
 /* =========================================================
    INFORMATIONS SOCIÉTÉ
@@ -917,45 +1105,58 @@ section {
 
 .company-info {
     margin-top: 30px;
+
     padding: 28px 30px;
 
-    background: var(--blanc);
+    background: #ffffff;
 
-    border: 1px solid #e3e3e3;
-    border-left: 5px solid var(--rouge);
+    border:
+        1px solid
+        #e3e3e3;
 
-    border-radius: 4px;
+    border-left:
+        5px solid
+        var(--rouge);
 
-    box-shadow: var(--ombre-legere);
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
 }
 
 .company-info h3 {
-    color: var(--noir-2);
+    color: #111111;
+
     font-size: 21px;
+
     margin-bottom: 15px;
 }
 
 .company-info p {
     color: #222222;
+
     font-size: 15px;
+
     margin: 7px 0;
-    line-height: 1.6;
 }
 
 .company-info strong {
-    color: var(--noir-2);
+    color: #111111;
 }
 
 .company-info a {
     color: var(--rouge);
+
     font-weight: 800;
+
     text-decoration: none;
 }
 
 .company-info a:hover {
     color: var(--rouge-fonce);
+
     text-decoration: underline;
 }
+
 
 /* =========================================================
    POINTS CONTACT
@@ -963,24 +1164,34 @@ section {
 
 .contact-points {
     margin-top: 25px;
+
     padding: 23px 27px;
 
-    background: var(--blanc);
+    background: #ffffff;
 
-    border: 1px solid #e5e5e5;
-    border-left: 4px solid var(--rouge);
+    border:
+        1px solid
+        #e5e5e5;
+
+    border-left:
+        4px solid
+        var(--rouge);
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.06);
+        0 8px 25px
+        rgba(0, 0, 0, 0.06);
 }
 
 .contact-points p {
     color: #111111 !important;
+
     font-size: 16px;
+
     font-weight: 600;
+
     margin: 10px 0;
-    line-height: 1.6;
 }
+
 
 /* =========================================================
    EMAIL
@@ -995,8 +1206,9 @@ section {
 
     color: var(--rouge);
 
-    font-size: 18px;
     font-weight: 800;
+
+    font-size: 18px;
 
     text-decoration: none;
 
@@ -1007,21 +1219,28 @@ section {
     color: var(--rouge-fonce);
 }
 
+
 /* =========================================================
    FORMULAIRE
 ========================================================= */
 
 form {
+    background: #ffffff;
+
     padding: 38px;
 
-    background: var(--blanc);
+    border:
+        1px solid
+        #dddddd;
 
-    border: 1px solid #dddddd;
-    border-top: 5px solid var(--rouge);
+    border-top:
+        5px solid
+        var(--rouge);
+
+    box-shadow:
+        var(--ombre);
 
     border-radius: 4px;
-
-    box-shadow: var(--ombre);
 }
 
 .form-group {
@@ -1031,12 +1250,13 @@ form {
 label {
     display: block;
 
-    color: #222222;
-
-    font-size: 14px;
     font-weight: 800;
 
+    font-size: 14px;
+
     margin-bottom: 7px;
+
+    color: #222222;
 }
 
 input,
@@ -1046,55 +1266,69 @@ select {
 
     padding: 14px;
 
-    color: #111111;
-    background: var(--blanc);
-
-    border: 1px solid #cccccc;
-    border-radius: 3px;
+    border:
+        1px solid
+        #cccccc;
 
     font-size: 15px;
 
     outline: none;
 
     transition: var(--transition);
+
+    background: #ffffff;
+
+    color: #111111;
+
+    border-radius: 3px;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: var(--rouge);
+    border-color:
+        var(--rouge);
 
     box-shadow:
-        0 0 0 3px rgba(176, 0, 0, 0.10);
+        0 0 0 3px
+        rgba(196, 0, 0, 0.10);
 }
 
 textarea {
     min-height: 145px;
+
     resize: vertical;
 }
 
 button {
     border: 0;
+
     cursor: pointer;
+
     font-size: 15px;
 }
 
 .form-note {
     color: #777777;
+
     font-size: 12px;
+
     margin-top: 10px;
 }
+
 
 /* =========================================================
    FOOTER
 ========================================================= */
 
 footer {
-    color: #aaaaaa;
-
     background: #050505;
 
-    border-top: 4px solid var(--rouge);
+    color: #aaaaaa;
+
+    border-top:
+        4px solid
+        var(--rouge);
 }
 
 .footer-main {
@@ -1103,15 +1337,14 @@ footer {
     display: grid;
 
     grid-template-columns:
-        1.5fr
-        1fr
-        1fr;
+        1.5fr 1fr 1fr;
 
     gap: 50px;
 }
 
 .footer-main h3 {
-    color: var(--blanc);
+    color: #ffffff;
+
     margin-bottom: 15px;
 }
 
@@ -1133,14 +1366,18 @@ footer {
     color: var(--rouge-clair);
 }
 
+
 /* =========================================================
-   LOGO FOOTER
+   FOOTER LOGO
 ========================================================= */
 
 .footer-logo {
-    color: var(--blanc);
-    font-size: 28px;
+    color: #ffffff;
+
+    font-size: 27px;
+
     font-weight: 900;
+
     letter-spacing: 2px;
 }
 
@@ -1149,7 +1386,8 @@ footer {
 }
 
 .footer-line {
-    width: 55px;
+    width: 60px;
+
     height: 4px;
 
     margin: 15px 0;
@@ -1159,22 +1397,18 @@ footer {
 
 .footer-description {
     color: #bbbbbb;
-    max-width: 350px;
-}
 
-/* =========================================================
-   EMAIL FOOTER
-========================================================= */
+    line-height: 1.7;
+}
 
 .footer-email {
-    display: inline-block !important;
-
-    margin-top: 20px;
-
-    color: var(--blanc) !important;
+    color: #ffffff !important;
 
     font-weight: 700;
+
+    margin-top: 20px;
 }
+
 
 /* =========================================================
    INFORMATIONS ENTREPRISE
@@ -1182,66 +1416,63 @@ footer {
 
 .footer-company {
     color: #cccccc;
+
     line-height: 1.8;
 }
 
 .footer-company strong {
-    color: var(--blanc);
+    color: #ffffff;
 }
-
-/* =========================================================
-   ADRESSE
-========================================================= */
 
 .footer-address {
     margin-top: 18px;
+
     padding: 15px 18px;
 
+    border-left:
+        3px solid
+        var(--rouge);
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
     color: #cccccc;
-
-    background: rgba(255, 255, 255, 0.04);
-
-    border-left: 3px solid var(--rouge);
 
     line-height: 1.7;
 }
 
 .footer-address strong {
-    color: var(--blanc);
+    color: #ffffff;
 }
-
-/* =========================================================
-   SIRET
-========================================================= */
 
 .footer-siret {
     color: #cccccc;
-    margin-top: 15px;
 }
 
+
 /* =========================================================
-   BLOC FOOTER PREMIUM
+   FOOTER HIGHLIGHT
 ========================================================= */
 
 .footer-highlight {
     background:
         linear-gradient(
             90deg,
-            #080808,
-            #170000,
-            #080808
+            #7d0000,
+            #c40000,
+            #7d0000
         );
 
-    border-top: 1px solid #292929;
-    border-bottom: 1px solid #292929;
+    color: #ffffff;
 }
 
 .footer-highlight-inner {
-    min-height: 120px;
+    min-height: 100px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 25px;
@@ -1250,9 +1481,8 @@ footer {
 .footer-highlight-label {
     display: block;
 
-    color: var(--rouge-clair);
-
     font-size: 12px;
+
     font-weight: 900;
 
     letter-spacing: 3px;
@@ -1261,58 +1491,56 @@ footer {
 }
 
 .footer-highlight strong {
-    color: var(--blanc);
     font-size: 20px;
 }
-
-/* =========================================================
-   BOUTON FOOTER
-========================================================= */
 
 .footer-contact-btn {
     display: inline-block;
 
     padding: 13px 24px;
 
-    color: var(--blanc) !important;
+    color: #111111 !important;
 
-    background: var(--rouge);
-
-    border: 2px solid var(--rouge);
-
-    border-radius: 4px;
-
-    font-weight: 800;
+    background: #ffffff;
 
     text-decoration: none;
+
+    font-weight: 900;
+
+    border-radius: 4px;
 }
 
 .footer-contact-btn:hover {
-    background: var(--rouge-clair);
-    border-color: var(--rouge-clair);
+    background: #111111;
+
+    color: #ffffff !important;
 
     transform: translateY(-2px);
 }
+
 
 /* =========================================================
    BAS FOOTER
 ========================================================= */
 
 .footer-bottom {
-    padding: 20px;
-
-    color: #999999;
-
-    font-size: 12px;
+    border-top:
+        1px solid
+        #292929;
 
     text-align: center;
 
-    border-top: 1px solid #292929;
+    padding: 20px;
+
+    font-size: 12px;
+
+    color: #999999;
 }
 
 .footer-bottom strong {
-    color: var(--blanc);
+    color: #ffffff;
 }
+
 
 /* =========================================================
    ANIMATION
@@ -1329,8 +1557,8 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
+
 
 /* =========================================================
    TABLETTES
@@ -1344,19 +1572,23 @@ footer {
         position: absolute;
 
         top: 82px;
+
         left: 0;
         right: 0;
 
-        padding: 25px;
-
-        background: var(--noir);
+        background: #080808;
 
         flex-direction: column;
+
         align-items: flex-start;
+
+        padding: 25px;
 
         gap: 15px;
 
-        border-bottom: 3px solid var(--rouge);
+        border-bottom:
+            3px solid
+            var(--rouge);
     }
 
     nav.active {
@@ -1388,8 +1620,8 @@ footer {
     .footer-main {
         grid-template-columns: 1fr 1fr;
     }
-
 }
+
 
 /* =========================================================
    MOBILES
@@ -1414,7 +1646,7 @@ footer {
     }
 
     .hero {
-        min-height: 650px;
+        min-height: 620px;
     }
 
     .hero h1 {
@@ -1430,7 +1662,7 @@ footer {
     }
 
     .page-hero {
-        min-height: 380px;
+        min-height: 360px;
     }
 
     .page-hero h1 {
@@ -1454,17 +1686,14 @@ footer {
 
     .services-grid,
     .method-grid,
-    .documents-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .documents-grid,
     .footer-main {
         grid-template-columns: 1fr;
-        gap: 35px;
     }
 
     .buttons {
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -1478,6 +1707,18 @@ footer {
 
     form {
         padding: 25px;
+    }
+
+    .footer-main {
+        gap: 30px;
+    }
+
+    .footer-highlight-inner {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 0;
     }
 
     .content-main h2 {
@@ -1499,17 +1740,11 @@ footer {
     .contact-points p {
         font-size: 15px;
     }
-
-    .footer-highlight-inner {
-        padding: 30px 0;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
 }
 
+
 /* =========================================================
-   PETITS TELEPHONES
+   PETITS TÉLÉPHONES
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -1524,12 +1759,13 @@ footer {
 
     .badge {
         font-size: 10px;
+
         letter-spacing: 1px;
     }
 
     .btn {
         padding: 13px 20px;
+
         font-size: 14px;
     }
-
 }
