@@ -1,8 +1,7 @@
 /* =========================================================
-   BS GESTION
-   STYLE.CSS — VERSION PROPRE ET COMPLÈTE
-   Couleurs : ROUGE FONCÉ / ROUGE / NOIR / BLANC
-   Images : dossier local /images/
+   BS GESTION — STYLE.CSS COMPLET
+   Design : ROUGE FONCÉ • NOIR • BLANC
+   Style : PREMIUM • ÉLÉGANT • MODERNE • PROFESSIONNEL
 ========================================================= */
 
 
@@ -11,20 +10,25 @@
 ========================================================= */
 
 :root {
-    --rouge: #c40000;
+    --rouge: #b00000;
     --rouge-fonce: #7d0000;
-    --rouge-clair: #e00000;
+    --rouge-clair: #d41414;
+    --rouge-hover: #c40000;
 
     --noir: #080808;
-    --noir-2: #121212;
-    --noir-3: #1d1d1d;
+    --noir-2: #111111;
+    --noir-3: #1b1b1b;
 
     --blanc: #ffffff;
-    --gris: #666666;
-    --gris-clair: #f5f5f5;
-    --gris-border: #dddddd;
 
-    --ombre: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --gris: #666666;
+    --gris-fonce: #333333;
+    --gris-clair: #f5f5f5;
+    --gris-border: #dedede;
+
+    --ombre: 0 18px 50px rgba(0, 0, 0, 0.12);
+    --ombre-legere: 0 8px 25px rgba(0, 0, 0, 0.08);
+
     --transition: 0.3s ease;
 }
 
@@ -45,7 +49,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
+    background: var(--blanc);
     color: #171717;
     line-height: 1.7;
     overflow-x: hidden;
@@ -53,7 +57,6 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -80,21 +83,16 @@ select {
 ========================================================= */
 
 header {
+    background: var(--noir);
     position: sticky;
     top: 0;
     z-index: 9999;
-
-    background: #080808;
-
     border-bottom: 4px solid var(--rouge);
-
-    box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
 }
 
 .navbar {
     min-height: 82px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,12 +104,10 @@ header {
 ========================================================= */
 
 .logo {
-    color: #ffffff;
+    color: var(--blanc);
     text-decoration: none;
-
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 900;
-
     letter-spacing: 2px;
 }
 
@@ -120,11 +116,7 @@ header {
 }
 
 .logo:hover {
-    color: #ffffff;
-}
-
-.logo:hover span {
-    color: #ff2020;
+    color: var(--blanc);
 }
 
 
@@ -139,34 +131,27 @@ nav {
 }
 
 nav a {
-    position: relative;
-
-    color: #ffffff;
+    color: var(--blanc);
     text-decoration: none;
-
     font-size: 14px;
     font-weight: 700;
-
+    position: relative;
     padding: 10px 0;
 }
 
 nav a::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: 2px;
-
     width: 0;
-    height: 3px;
-
+    height: 2px;
     background: var(--rouge-clair);
-
     transition: var(--transition);
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 nav a:hover::after {
@@ -180,13 +165,9 @@ nav a:hover::after {
 
 .menu {
     display: none;
-
-    color: #ffffff;
-
-    font-size: 31px;
-
+    color: var(--blanc);
+    font-size: 30px;
     cursor: pointer;
-
     user-select: none;
 }
 
@@ -197,75 +178,65 @@ nav a:hover::after {
 
 .btn {
     display: inline-block;
-
     padding: 15px 28px;
-
     border-radius: 5px;
-
     text-decoration: none;
-
     font-weight: 800;
-
-    text-align: center;
-
-    cursor: pointer;
-
     transition: var(--transition);
+    cursor: pointer;
+    text-align: center;
 }
 
 
-/* ROUGE */
+/* =========================================================
+   BOUTON ROUGE
+========================================================= */
 
 .btn-red {
-    color: #ffffff !important;
+    background: linear-gradient(
+        135deg,
+        var(--rouge-clair),
+        var(--rouge-fonce)
+    );
 
-    background:
-        linear-gradient(
-            135deg,
-            #e00000,
-            #7d0000
-        );
+    color: var(--blanc) !important;
 
-    border: 2px solid #e00000;
+    border: 2px solid var(--rouge-clair);
 
     box-shadow:
-        0 10px 25px rgba(196, 0, 0, 0.30);
+        0 10px 25px rgba(176, 0, 0, 0.30);
 }
 
 .btn-red:hover {
-    color: #ffffff !important;
+    background: linear-gradient(
+        135deg,
+        var(--rouge-hover),
+        var(--rouge-fonce)
+    );
 
-    background:
-        linear-gradient(
-            135deg,
-            #ff1a1a,
-            #900000
-        );
+    color: var(--blanc) !important;
 
     transform: translateY(-3px);
 
     box-shadow:
-        0 15px 35px rgba(196, 0, 0, 0.45);
+        0 15px 35px rgba(176, 0, 0, 0.40);
 }
 
 
-/* BLANC */
+/* =========================================================
+   BOUTON OUTLINE
+========================================================= */
 
 .btn-outline {
-    color: #ffffff !important;
-
-    background: transparent;
-
-    border: 2px solid #ffffff;
+    color: var(--blanc) !important;
+    border: 2px solid var(--blanc);
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .btn-outline:hover {
-    color: #ffffff !important;
-
     background: var(--rouge);
-
     border-color: var(--rouge);
-
+    color: var(--blanc) !important;
     transform: translateY(-3px);
 }
 
@@ -274,6 +245,13 @@ nav a:hover::after {
    HERO
 ========================================================= */
 
+.hero,
+.page-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .hero {
     min-height: 720px;
 
@@ -281,107 +259,11 @@ nav a:hover::after {
     align-items: center;
 
     position: relative;
-
     overflow: hidden;
 
-    color: #ffffff;
+    color: var(--blanc);
 
     border-bottom: 6px solid var(--rouge);
-
-    background-color: #080808;
-}
-
-
-/*
-   IMAGE LOCALE ACCUEIL
-*/
-
-.photo-home {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.62),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url("images/accueil.svg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-/*
-   HERO PAGES INTERNES
-*/
-
-.page-hero {
-    min-height: 430px;
-
-    display: flex;
-    align-items: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    color: #ffffff;
-
-    border-bottom: 5px solid var(--rouge);
-
-    background-color: #080808;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-/* IMAGES LOCALES */
-
-.photo-sejour {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.30)
-        ),
-        url("images/sejour.svg");
-}
-
-.photo-creation {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.30)
-        ),
-        url("images/creation.svg");
-}
-
-.photo-administratif {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.30)
-        ),
-        url("images/administratif.svg");
-}
-
-.photo-contact {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.30)
-        ),
-        url("images/contact.svg");
 }
 
 
@@ -398,11 +280,11 @@ nav a:hover::after {
     width: 520px;
     height: 520px;
 
-    right: -240px;
-    top: 50px;
+    right: -230px;
+    top: 60px;
 
     border:
-        2px solid
+        1px solid
         rgba(255, 255, 255, 0.12);
 
     border-radius: 50%;
@@ -414,17 +296,91 @@ nav a:hover::after {
 
     position: absolute;
 
-    width: 340px;
-    height: 340px;
+    width: 350px;
+    height: 350px;
 
-    right: -110px;
-    top: 140px;
+    right: -120px;
+    top: 145px;
 
     border:
-        4px solid
-        rgba(196, 0, 0, 0.60);
+        2px solid
+        rgba(176, 0, 0, 0.50);
 
     border-radius: 50%;
+}
+
+
+/* =========================================================
+   PHOTOS — CORRIGÉES
+========================================================= */
+
+/* PAGE ACCUEIL */
+
+.photo-home {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1800");
+}
+
+
+/* PAGE SÉJOUR */
+
+.photo-sejour {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1800");
+}
+
+
+/* PAGE CRÉATION SOCIÉTÉ */
+
+.photo-creation {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1800");
+}
+
+
+/* PAGE ADMINISTRATIF */
+
+.photo-administratif {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1800");
+}
+
+
+/* PAGE CONTACT */
+
+.photo-contact {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
 
 
@@ -435,7 +391,6 @@ nav a:hover::after {
 .hero-content,
 .page-hero-content {
     position: relative;
-
     z-index: 2;
 
     max-width: 850px;
@@ -456,17 +411,13 @@ nav a:hover::after {
 
     margin-bottom: 25px;
 
-    border:
-        1px solid
-        var(--rouge-clair);
+    border: 1px solid var(--rouge-clair);
 
-    color: #ffffff;
+    color: var(--blanc);
 
-    background:
-        rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.25);
 
     font-size: 12px;
-
     font-weight: 800;
 
     letter-spacing: 2px;
@@ -481,16 +432,13 @@ nav a:hover::after {
 
 .hero h1,
 .page-hero h1 {
-    color: #ffffff;
-
+    color: var(--blanc);
     line-height: 1.05;
-
     margin-bottom: 25px;
 }
 
 .hero h1 {
     font-size: clamp(48px, 8vw, 82px);
-
     letter-spacing: -2px;
 }
 
@@ -511,7 +459,6 @@ nav a:hover::after {
 .hero p,
 .page-hero p {
     color: #eeeeee;
-
     max-width: 780px;
 }
 
@@ -521,10 +468,27 @@ nav a:hover::after {
 
 .hero p:first-of-type {
     font-size: 24px;
-
     font-weight: 800;
+    color: var(--blanc);
+}
 
-    color: #ffffff;
+
+/* =========================================================
+   HERO PAGE INTERNE
+========================================================= */
+
+.page-hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    color: var(--blanc);
+
+    border-bottom: 5px solid var(--rouge);
 }
 
 .page-hero p {
@@ -533,7 +497,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   BOUTONS HERO
+   HERO BUTTONS
 ========================================================= */
 
 .buttons {
@@ -565,12 +529,11 @@ section {
 
 
 /* =========================================================
-   TITRES SECTIONS
+   TITRES DE SECTIONS
 ========================================================= */
 
 .section-title {
     text-align: center;
-
     margin-bottom: 55px;
 }
 
@@ -610,7 +573,7 @@ section {
 ========================================================= */
 
 .services {
-    background: #ffffff;
+    background: var(--blanc);
 }
 
 .services-grid {
@@ -627,15 +590,11 @@ section {
 
     padding: 35px 28px;
 
-    background: #ffffff;
+    background: var(--blanc);
 
-    border:
-        1px solid
-        var(--gris-border);
+    border: 1px solid var(--gris-border);
 
-    border-top:
-        6px solid
-        var(--noir);
+    border-top: 5px solid #111111;
 
     transition: var(--transition);
 
@@ -643,7 +602,7 @@ section {
 
     box-shadow:
         0 3px 15px
-        rgba(0, 0, 0, 0.05);
+        rgba(0, 0, 0, 0.04);
 }
 
 .card::after {
@@ -651,26 +610,24 @@ section {
 
     position: absolute;
 
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
 
-    right: -60px;
-    bottom: -60px;
+    right: -55px;
+    bottom: -55px;
 
     border-radius: 50%;
 
     background:
-        rgba(196, 0, 0, 0.10);
+        rgba(176, 0, 0, 0.08);
 }
 
 .card:hover {
     transform: translateY(-8px);
 
-    border-top-color:
-        var(--rouge);
+    border-top-color: var(--rouge);
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .card-number {
@@ -720,12 +677,12 @@ section {
     background:
         radial-gradient(
             circle at 10% 80%,
-            rgba(196, 0, 0, 0.30),
+            rgba(176, 0, 0, 0.25),
             transparent 30%
         ),
-        #080808;
+        var(--noir);
 
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 .about-grid {
@@ -744,7 +701,7 @@ section {
 
     line-height: 1.15;
 
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 .about p {
@@ -786,17 +743,15 @@ section {
 }
 
 .step {
-    background: #ffffff;
+    background: var(--blanc);
 
     padding: 30px;
 
-    border-top:
-        5px solid
-        var(--rouge);
+    border-top: 5px solid var(--rouge);
 
     box-shadow:
         0 5px 20px
-        rgba(0, 0, 0, 0.06);
+        rgba(0, 0, 0, 0.05);
 
     transition: var(--transition);
 }
@@ -804,8 +759,7 @@ section {
 .step:hover {
     transform: translateY(-5px);
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .step-number {
@@ -830,7 +784,7 @@ section {
 ========================================================= */
 
 .documents {
-    background: #ffffff;
+    background: var(--blanc);
 }
 
 .documents-grid {
@@ -847,25 +801,19 @@ section {
 
     background: #fafafa;
 
-    border:
-        1px solid
-        var(--gris-border);
+    border: 1px solid var(--gris-border);
 
-    border-left:
-        5px solid
-        var(--noir);
+    border-left: 5px solid #111111;
 
     transition: var(--transition);
 }
 
 .document:hover {
-    border-left-color:
-        var(--rouge);
+    border-left-color: var(--rouge);
 
     transform: translateY(-5px);
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .document h3 {
@@ -886,7 +834,7 @@ section {
 ========================================================= */
 
 .content-section {
-    background: #ffffff;
+    background: var(--blanc);
 }
 
 .content-grid {
@@ -931,12 +879,15 @@ section {
     color: #555555;
 }
 
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
 .sidebar {
     background: #f7f7f7;
 
-    border-top:
-        5px solid
-        var(--rouge);
+    border-top: 5px solid var(--rouge);
 
     padding: 30px;
 
@@ -961,8 +912,7 @@ section {
     padding: 10px 0;
 
     border-bottom:
-        1px solid
-        #dddddd;
+        1px solid #dddddd;
 }
 
 .sidebar a:hover {
@@ -971,7 +921,7 @@ section {
 
 
 /* =========================================================
-   DEVIS / BESOIN
+   DEVIS
 ========================================================= */
 
 .devis {
@@ -985,16 +935,13 @@ section {
 
     padding: 55px;
 
-    background: #ffffff;
+    background: var(--blanc);
 
-    border-left:
-        7px solid
-        var(--rouge);
+    border-left: 6px solid var(--rouge);
 
     text-align: center;
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .devis-box h2 {
@@ -1028,22 +975,18 @@ section {
     background:
         radial-gradient(
             circle at center,
-            rgba(196, 0, 0, 0.35),
-            transparent 45%
+            rgba(176, 0, 0, 0.28),
+            transparent 40%
         ),
         #050505;
 
-    color: #ffffff;
+    color: var(--blanc);
 
     text-align: center;
 
-    border-top:
-        5px solid
-        var(--rouge);
+    border-top: 5px solid var(--rouge);
 
-    border-bottom:
-        5px solid
-        var(--rouge);
+    border-bottom: 5px solid var(--rouge);
 }
 
 .cta h2 {
@@ -1098,6 +1041,10 @@ section {
     font-size: 17px;
 }
 
+.contact-details {
+    margin-top: 30px;
+}
+
 
 /* =========================================================
    INFORMATIONS SOCIÉTÉ
@@ -1108,19 +1055,15 @@ section {
 
     padding: 28px 30px;
 
-    background: #ffffff;
+    background: var(--blanc);
 
-    border:
-        1px solid
-        #e3e3e3;
+    border: 1px solid #e3e3e3;
 
-    border-left:
-        5px solid
-        var(--rouge);
+    border-left: 5px solid var(--rouge);
 
-    box-shadow:
-        0 8px 25px
-        rgba(0, 0, 0, 0.08);
+    box-shadow: var(--ombre-legere);
+
+    border-radius: 4px;
 }
 
 .company-info h3 {
@@ -1137,6 +1080,8 @@ section {
     font-size: 15px;
 
     margin: 7px 0;
+
+    line-height: 1.6;
 }
 
 .company-info strong {
@@ -1167,15 +1112,11 @@ section {
 
     padding: 23px 27px;
 
-    background: #ffffff;
+    background: var(--blanc);
 
-    border:
-        1px solid
-        #e5e5e5;
+    border: 1px solid #e5e5e5;
 
-    border-left:
-        4px solid
-        var(--rouge);
+    border-left: 4px solid var(--rouge);
 
     box-shadow:
         0 8px 25px
@@ -1190,16 +1131,14 @@ section {
     font-weight: 600;
 
     margin: 10px 0;
+
+    line-height: 1.6;
 }
 
 
 /* =========================================================
    EMAIL
 ========================================================= */
-
-.contact-details {
-    margin-top: 30px;
-}
 
 .contact-details a {
     display: block;
@@ -1225,20 +1164,15 @@ section {
 ========================================================= */
 
 form {
-    background: #ffffff;
+    background: var(--blanc);
 
     padding: 38px;
 
-    border:
-        1px solid
-        #dddddd;
+    border: 1px solid #dddddd;
 
-    border-top:
-        5px solid
-        var(--rouge);
+    border-top: 5px solid var(--rouge);
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 
     border-radius: 4px;
 }
@@ -1266,9 +1200,9 @@ select {
 
     padding: 14px;
 
-    border:
-        1px solid
-        #cccccc;
+    border: 1px solid #cccccc;
+
+    font-family: inherit;
 
     font-size: 15px;
 
@@ -1276,7 +1210,7 @@ select {
 
     transition: var(--transition);
 
-    background: #ffffff;
+    background: var(--blanc);
 
     color: #111111;
 
@@ -1286,12 +1220,11 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-    border-color:
-        var(--rouge);
+    border-color: var(--rouge);
 
     box-shadow:
         0 0 0 3px
-        rgba(196, 0, 0, 0.10);
+        rgba(176, 0, 0, 0.10);
 }
 
 textarea {
@@ -1326,9 +1259,7 @@ footer {
 
     color: #aaaaaa;
 
-    border-top:
-        4px solid
-        var(--rouge);
+    border-top: 4px solid var(--rouge);
 }
 
 .footer-main {
@@ -1343,7 +1274,7 @@ footer {
 }
 
 .footer-main h3 {
-    color: #ffffff;
+    color: var(--blanc);
 
     margin-bottom: 15px;
 }
@@ -1368,11 +1299,11 @@ footer {
 
 
 /* =========================================================
-   FOOTER LOGO
+   LOGO FOOTER
 ========================================================= */
 
 .footer-logo {
-    color: #ffffff;
+    color: var(--blanc);
 
     font-size: 27px;
 
@@ -1386,32 +1317,29 @@ footer {
 }
 
 .footer-line {
-    width: 60px;
+    width: 55px;
 
-    height: 4px;
-
-    margin: 15px 0;
+    height: 3px;
 
     background: var(--rouge);
+
+    margin:
+        15px 0 20px;
 }
 
 .footer-description {
-    color: #bbbbbb;
+    color: #aaaaaa;
 
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .footer-email {
-    color: #ffffff !important;
-
-    font-weight: 700;
-
     margin-top: 20px;
 }
 
 
 /* =========================================================
-   INFORMATIONS ENTREPRISE
+   INFORMATIONS ENTREPRISE FOOTER
 ========================================================= */
 
 .footer-company {
@@ -1421,20 +1349,33 @@ footer {
 }
 
 .footer-company strong {
-    color: #ffffff;
+    color: var(--blanc);
 }
+
+.footer-company a {
+    color: var(--blanc);
+
+    font-weight: 700;
+}
+
+.footer-company a:hover {
+    color: var(--rouge-clair);
+}
+
+
+/* =========================================================
+   ADRESSE BS GESTION
+========================================================= */
 
 .footer-address {
     margin-top: 18px;
 
     padding: 15px 18px;
 
-    border-left:
-        3px solid
-        var(--rouge);
+    border-left: 3px solid var(--rouge);
 
     background:
-        rgba(255, 255, 255, 0.04);
+        rgba(255, 255, 255, 0.03);
 
     color: #cccccc;
 
@@ -1442,28 +1383,46 @@ footer {
 }
 
 .footer-address strong {
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 .footer-siret {
     color: #cccccc;
+
+    margin-top: 18px;
 }
 
 
 /* =========================================================
-   FOOTER HIGHLIGHT
+   NAVIGATION FOOTER
+========================================================= */
+
+.footer-navigation a {
+    color: #aaaaaa;
+}
+
+.footer-navigation a:hover {
+    color: var(--rouge-clair);
+}
+
+
+/* =========================================================
+   BLOC PRINCIPAL BS GESTION
 ========================================================= */
 
 .footer-highlight {
+    border-top:
+        1px solid #292929;
+
+    border-bottom:
+        1px solid #292929;
+
     background:
         linear-gradient(
             90deg,
-            #7d0000,
-            #c40000,
-            #7d0000
+            rgba(176, 0, 0, 0.15),
+            rgba(255, 255, 255, 0.02)
         );
-
-    color: #ffffff;
 }
 
 .footer-highlight-inner {
@@ -1481,6 +1440,8 @@ footer {
 .footer-highlight-label {
     display: block;
 
+    color: var(--rouge-clair);
+
     font-size: 12px;
 
     font-weight: 900;
@@ -1491,42 +1452,46 @@ footer {
 }
 
 .footer-highlight strong {
-    font-size: 20px;
+    display: block;
+
+    color: var(--blanc);
+
+    font-size: 18px;
 }
 
 .footer-contact-btn {
     display: inline-block;
 
-    padding: 13px 24px;
+    padding: 13px 22px;
 
-    color: #111111 !important;
+    background: var(--rouge);
 
-    background: #ffffff;
+    color: var(--blanc) !important;
 
     text-decoration: none;
 
-    font-weight: 900;
+    font-weight: 800;
+
+    border:
+        1px solid var(--rouge-clair);
 
     border-radius: 4px;
 }
 
 .footer-contact-btn:hover {
-    background: #111111;
-
-    color: #ffffff !important;
+    background: var(--rouge-clair);
 
     transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   BAS FOOTER
+   BAS DU FOOTER
 ========================================================= */
 
 .footer-bottom {
     border-top:
-        1px solid
-        #292929;
+        1px solid #292929;
 
     text-align: center;
 
@@ -1538,7 +1503,7 @@ footer {
 }
 
 .footer-bottom strong {
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 
@@ -1576,7 +1541,7 @@ footer {
         left: 0;
         right: 0;
 
-        background: #080808;
+        background: var(--noir);
 
         flex-direction: column;
 
@@ -1587,8 +1552,7 @@ footer {
         gap: 15px;
 
         border-bottom:
-            3px solid
-            var(--rouge);
+            3px solid var(--rouge);
     }
 
     nav.active {
@@ -1600,11 +1564,13 @@ footer {
     }
 
     .services-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .method-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .about-grid,
@@ -1614,11 +1580,23 @@ footer {
     }
 
     .documents-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .footer-main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .footer-highlight-inner {
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 30px 0;
     }
 }
 
@@ -1647,6 +1625,9 @@ footer {
 
     .hero {
         min-height: 620px;
+
+        background-position:
+            center center;
     }
 
     .hero h1 {
@@ -1663,6 +1644,9 @@ footer {
 
     .page-hero {
         min-height: 360px;
+
+        background-position:
+            center center;
     }
 
     .page-hero h1 {
@@ -1699,6 +1683,8 @@ footer {
 
     .buttons .btn {
         width: 100%;
+
+        text-align: center;
     }
 
     .devis-box {
@@ -1711,14 +1697,6 @@ footer {
 
     .footer-main {
         gap: 30px;
-    }
-
-    .footer-highlight-inner {
-        flex-direction: column;
-
-        text-align: center;
-
-        padding: 30px 0;
     }
 
     .content-main h2 {
