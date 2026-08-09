@@ -1,6 +1,6 @@
+```javascript
 /* =========================================================
-   BS GESTION
-   SCRIPT.JS
+   BS GESTION - SCRIPT.JS
 ========================================================= */
 
 function toggleMenu() {
@@ -14,7 +14,7 @@ function toggleMenu() {
 }
 
 
-/* Fermer le menu après avoir cliqué sur un lien */
+/* Ferme le menu après avoir cliqué sur un lien */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -29,9 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     links.forEach(function (link) {
 
         link.addEventListener("click", function () {
+
             nav.classList.remove("active");
+
         });
 
     });
 
 });
+```
