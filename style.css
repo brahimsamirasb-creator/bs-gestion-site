@@ -1,46 +1,30 @@
 ```css
 /* =========================================================
-   BS GESTION — STYLE.CSS COMPLET
-   DESIGN : ROUGE • NOIR • BLANC
-   STYLE : PREMIUM • ÉLÉGANT • MODERNE • PROFESSIONNEL
-========================================================= */
-
-
-/* =========================================================
-   VARIABLES
+   BS GESTION — STYLE.CSS
+   ROUGE NORMAL • NOIR • BLANC
+   VERSION CORRIGÉE — ROUGE FORCÉ
 ========================================================= */
 
 :root {
+    --rouge: #C00000;
+    --rouge-fonce: #900000;
+    --rouge-clair: #E00000;
+    --rouge-hover: #D00000;
 
-    /* ROUGE PRINCIPAL — ROUGE NORMAL ET BIEN VISIBLE */
-    --rouge: #C1121F;
-    --rouge-fonce: #990F18;
-    --rouge-clair: #E01E2D;
-    --rouge-hover: #A90F1A;
-
-    /* NOIR */
     --noir: #080808;
     --noir-2: #111111;
-    --noir-3: #1B1B1B;
+    --noir-3: #1c1c1c;
 
-    /* BLANC */
-    --blanc: #FFFFFF;
+    --blanc: #ffffff;
 
-    /* GRIS */
     --gris: #666666;
-    --gris-fonce: #333333;
-    --gris-clair: #F5F5F5;
-    --gris-border: #DDDDDD;
+    --gris-clair: #f5f5f5;
+    --gris-border: #dddddd;
 
-    /* OMBRES */
-    --ombre:
-        0 18px 50px rgba(0, 0, 0, 0.12);
+    --ombre: 0 18px 50px rgba(0,0,0,.12);
+    --ombre-legere: 0 8px 25px rgba(0,0,0,.08);
 
-    --ombre-legere:
-        0 8px 25px rgba(0, 0, 0, 0.08);
-
-    /* TRANSITION */
-    --transition: 0.3s ease;
+    --transition: .3s ease;
 }
 
 
@@ -60,7 +44,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--blanc);
+    background: #ffffff;
     color: #171717;
     line-height: 1.7;
     overflow-x: hidden;
@@ -95,17 +79,14 @@ select {
 ========================================================= */
 
 header {
-    background: var(--noir);
-
+    background: #080808 !important;
     position: sticky;
     top: 0;
-
     z-index: 9999;
 
-    border-bottom: 4px solid var(--rouge);
+    border-bottom: 5px solid #C00000 !important;
 
-    box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 5px 25px rgba(0,0,0,.28);
 }
 
 .navbar {
@@ -122,23 +103,20 @@ header {
 ========================================================= */
 
 .logo {
-    color: #FFFFFF;
-
+    color: #ffffff !important;
     text-decoration: none;
 
     font-size: 26px;
-
     font-weight: 900;
-
     letter-spacing: 2px;
 }
 
 .logo span {
-    color: var(--rouge);
+    color: #E00000 !important;
 }
 
 .logo:hover {
-    color: #FFFFFF;
+    color: #ffffff !important;
 }
 
 
@@ -148,23 +126,18 @@ header {
 
 nav {
     display: flex;
-
     align-items: center;
-
     gap: 28px;
 }
 
 nav a {
-    color: #FFFFFF;
-
+    color: #ffffff !important;
     text-decoration: none;
 
     font-size: 14px;
-
     font-weight: 700;
 
     position: relative;
-
     padding: 10px 0;
 }
 
@@ -172,22 +145,19 @@ nav a::after {
     content: "";
 
     position: absolute;
-
     left: 0;
-
     bottom: 1px;
 
     width: 0;
-
     height: 3px;
 
-    background: var(--rouge);
+    background: #E00000 !important;
 
     transition: var(--transition);
 }
 
 nav a:hover {
-    color: var(--rouge);
+    color: #E00000 !important;
 }
 
 nav a:hover::after {
@@ -202,12 +172,10 @@ nav a:hover::after {
 .menu {
     display: none;
 
-    color: #FFFFFF;
+    color: #ffffff !important;
 
     font-size: 30px;
-
     cursor: pointer;
-
     user-select: none;
 }
 
@@ -240,27 +208,26 @@ nav a:hover::after {
 ========================================================= */
 
 .btn-red {
-    background: var(--rouge);
+    background: #C00000 !important;
+    color: #ffffff !important;
 
-    color: #FFFFFF !important;
-
-    border: 2px solid var(--rouge);
+    border: 2px solid #E00000 !important;
 
     box-shadow:
-        0 10px 28px rgba(193, 18, 31, 0.35);
+        0 10px 28px rgba(192,0,0,.35);
 }
 
 .btn-red:hover {
-    background: var(--rouge-hover);
+    background: #D00000 !important;
 
-    border-color: var(--rouge-hover);
+    color: #ffffff !important;
 
-    color: #FFFFFF !important;
+    border-color: #D00000 !important;
 
     transform: translateY(-3px);
 
     box-shadow:
-        0 15px 35px rgba(193, 18, 31, 0.45);
+        0 15px 35px rgba(192,0,0,.45);
 }
 
 
@@ -269,19 +236,19 @@ nav a:hover::after {
 ========================================================= */
 
 .btn-outline {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 
-    border: 2px solid #FFFFFF;
+    border: 2px solid #ffffff !important;
 
-    background: rgba(0, 0, 0, 0.30);
+    background: rgba(0,0,0,.30);
 }
 
 .btn-outline:hover {
-    background: var(--rouge);
+    background: #C00000 !important;
 
-    border-color: var(--rouge);
+    border-color: #C00000 !important;
 
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 
     transform: translateY(-3px);
 }
@@ -294,36 +261,27 @@ nav a:hover::after {
 .hero,
 .page-hero {
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
 }
-
-
-/* =========================================================
-   HERO ACCUEIL
-========================================================= */
 
 .hero {
     min-height: 720px;
 
     display: flex;
-
     align-items: center;
 
     position: relative;
-
     overflow: hidden;
 
-    color: #FFFFFF;
+    color: #ffffff;
 
-    border-bottom: 6px solid var(--rouge);
+    border-bottom: 7px solid #C00000 !important;
 }
 
 
 /* =========================================================
-   CERCLES DÉCORATIFS
+   CERCLES DÉCORATIFS ROUGES
 ========================================================= */
 
 .hero::before,
@@ -333,16 +291,12 @@ nav a:hover::after {
     position: absolute;
 
     width: 520px;
-
     height: 520px;
 
     right: -230px;
-
     top: 60px;
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255,255,255,.15);
 
     border-radius: 50%;
 }
@@ -354,18 +308,17 @@ nav a:hover::after {
     position: absolute;
 
     width: 350px;
-
     height: 350px;
 
     right: -120px;
-
     top: 145px;
 
-    border:
-        3px solid
-        rgba(193, 18, 31, 0.75);
+    border: 4px solid #C00000 !important;
 
     border-radius: 50%;
+
+    box-shadow:
+        0 0 30px rgba(192,0,0,.35);
 }
 
 
@@ -375,89 +328,77 @@ nav a:hover::after {
 
 .photo-home {
     background-image:
-
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.82),
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.30)
+            rgba(0,0,0,.78),
+            rgba(0,0,0,.48),
+            rgba(0,0,0,.18)
         ),
-
         url("https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
 
 .photo-sejour {
     background-image:
-
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.78),
-            rgba(0, 0, 0, 0.52),
-            rgba(0, 0, 0, 0.25)
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.15)
         ),
-
         url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
 
 .photo-creation {
     background-image:
-
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.78),
-            rgba(0, 0, 0, 0.52),
-            rgba(0, 0, 0, 0.25)
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.15)
         ),
-
         url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
 
 .photo-administratif {
     background-image:
-
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.78),
-            rgba(0, 0, 0, 0.52),
-            rgba(0, 0, 0, 0.25)
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.15)
         ),
-
         url("https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
 
 .photo-contact {
     background-image:
-
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.78),
-            rgba(0, 0, 0, 0.52),
-            rgba(0, 0, 0, 0.25)
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.15)
         ),
-
         url("https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
 
 
 /* =========================================================
-   HERO CONTENT
+   CONTENU HERO
 ========================================================= */
 
 .hero-content,
 .page-hero-content {
     position: relative;
-
     z-index: 2;
 
     max-width: 850px;
 
-    animation:
-        apparition 0.8s ease forwards;
+    animation: apparition .8s ease forwards;
 }
 
 
 /* =========================================================
-   BADGE
+   BADGE ROUGE
 ========================================================= */
 
 .badge {
@@ -467,22 +408,21 @@ nav a:hover::after {
 
     margin-bottom: 25px;
 
-    border:
-        2px solid
-        var(--rouge);
+    border: 2px solid #E00000 !important;
 
-    color: #FFFFFF;
+    color: #ffffff !important;
 
-    background:
-        rgba(193, 18, 31, 0.12);
+    background: rgba(192,0,0,.18) !important;
 
     font-size: 12px;
-
     font-weight: 800;
 
     letter-spacing: 2px;
 
     text-transform: uppercase;
+
+    box-shadow:
+        0 0 20px rgba(192,0,0,.18);
 }
 
 
@@ -492,7 +432,7 @@ nav a:hover::after {
 
 .hero h1,
 .page-hero h1 {
-    color: #FFFFFF;
+    color: #ffffff !important;
 
     line-height: 1.05;
 
@@ -500,20 +440,17 @@ nav a:hover::after {
 }
 
 .hero h1 {
-    font-size:
-        clamp(48px, 8vw, 82px);
-
+    font-size: clamp(48px,8vw,82px);
     letter-spacing: -2px;
 }
 
 .page-hero h1 {
-    font-size:
-        clamp(42px, 7vw, 68px);
+    font-size: clamp(42px,7vw,68px);
 }
 
 .hero h1 span,
 .page-hero h1 span {
-    color: var(--rouge);
+    color: #E00000 !important;
 }
 
 
@@ -523,8 +460,7 @@ nav a:hover::after {
 
 .hero p,
 .page-hero p {
-    color: #EEEEEE;
-
+    color: #eeeeee !important;
     max-width: 780px;
 }
 
@@ -534,10 +470,8 @@ nav a:hover::after {
 
 .hero p:first-of-type {
     font-size: 24px;
-
     font-weight: 800;
-
-    color: #FFFFFF;
+    color: #ffffff !important;
 }
 
 
@@ -549,18 +483,14 @@ nav a:hover::after {
     min-height: 430px;
 
     display: flex;
-
     align-items: center;
 
     position: relative;
-
     overflow: hidden;
 
-    color: #FFFFFF;
+    color: #ffffff;
 
-    border-bottom:
-        5px solid
-        var(--rouge);
+    border-bottom: 7px solid #C00000 !important;
 }
 
 .page-hero p {
@@ -574,19 +504,14 @@ nav a:hover::after {
 
 .buttons {
     display: flex;
-
     gap: 15px;
-
     flex-wrap: wrap;
-
     margin-top: 35px;
 }
 
 .hero-contact {
     margin-top: 35px;
-
-    color: #DDDDDD;
-
+    color: #dddddd !important;
     font-size: 14px;
 }
 
@@ -606,15 +531,13 @@ section {
 
 .section-title {
     text-align: center;
-
     margin-bottom: 55px;
 }
 
 .section-label {
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 
     font-size: 12px;
-
     font-weight: 900;
 
     letter-spacing: 3px;
@@ -626,18 +549,14 @@ section {
 
 .section-title h2 {
     font-size: 43px;
-
     line-height: 1.2;
-
     color: #111111;
 }
 
 .section-title p {
     max-width: 760px;
-
     margin: 16px auto 0;
-
-    color: var(--gris);
+    color: #666666;
 }
 
 
@@ -646,21 +565,18 @@ section {
 ========================================================= */
 
 .services {
-    background: #FFFFFF;
+    background: #ffffff;
 }
 
 .services-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4,1fr);
     gap: 22px;
 }
 
 
 /* =========================================================
-   CARTES SERVICES
+   CARTES
 ========================================================= */
 
 .card {
@@ -668,23 +584,18 @@ section {
 
     padding: 35px 28px;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
-    border:
-        1px solid
-        var(--gris-border);
+    border: 1px solid #dedede;
 
-    border-top:
-        5px solid
-        var(--rouge) !important;
+    border-top: 6px solid #C00000 !important;
 
     transition: var(--transition);
 
     overflow: hidden;
 
     box-shadow:
-        0 3px 15px
-        rgba(0, 0, 0, 0.05);
+        0 3px 15px rgba(0,0,0,.05);
 }
 
 .card::after {
@@ -693,35 +604,28 @@ section {
     position: absolute;
 
     width: 110px;
-
     height: 110px;
 
     right: -55px;
-
     bottom: -55px;
 
     border-radius: 50%;
 
-    background:
-        rgba(193, 18, 31, 0.10);
+    background: rgba(192,0,0,.10) !important;
 }
 
 .card:hover {
-    transform:
-        translateY(-8px);
+    transform: translateY(-8px);
 
-    border-top-color:
-        var(--rouge-clair) !important;
+    border-top-color: #E00000 !important;
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .card-number {
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 
     font-weight: 900;
-
     font-size: 18px;
 
     margin-bottom: 18px;
@@ -729,13 +633,11 @@ section {
 
 .card h3 {
     font-size: 21px;
-
     margin-bottom: 15px;
 }
 
 .card p {
-    color: var(--gris);
-
+    color: #666666;
     font-size: 15px;
 }
 
@@ -744,7 +646,7 @@ section {
 
     margin-top: 20px;
 
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 
     font-weight: 800;
 
@@ -752,7 +654,7 @@ section {
 }
 
 .card a:hover {
-    color: var(--rouge-fonce) !important;
+    color: #900000 !important;
 }
 
 
@@ -762,23 +664,19 @@ section {
 
 .about {
     background:
-
         radial-gradient(
             circle at 10% 80%,
-            rgba(193, 18, 31, 0.32),
+            rgba(192,0,0,.30),
             transparent 32%
         ),
+        #080808;
 
-        var(--noir);
-
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .about-grid {
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 75px;
 
@@ -787,26 +685,26 @@ section {
 
 .about h2 {
     font-size: 45px;
-
     line-height: 1.15;
+    color: #ffffff;
+}
 
-    color: #FFFFFF;
+.about h2 span {
+    color: #E00000 !important;
 }
 
 .about p {
-    color: #CCCCCC;
-
+    color: #cccccc;
     margin-bottom: 20px;
 }
 
 .checks div {
     margin-bottom: 14px;
-
-    color: #EEEEEE;
+    color: #eeeeee;
 }
 
 .checks span {
-    color: var(--rouge) !important;
+    color: #E00000 !important;
 
     font-weight: 900;
 
@@ -819,51 +717,41 @@ section {
 ========================================================= */
 
 .method {
-    background: var(--gris-clair);
+    background: #f5f5f5;
 }
 
 .method-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
 
 .step {
-    background: #FFFFFF;
+    background: #ffffff;
 
     padding: 30px;
 
-    border-top:
-        5px solid
-        var(--rouge) !important;
+    border-top: 6px solid #C00000 !important;
 
     box-shadow:
-        0 5px 20px
-        rgba(0, 0, 0, 0.05);
+        0 5px 20px rgba(0,0,0,.05);
 
     transition: var(--transition);
 }
 
 .step:hover {
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
-    border-top-color:
-        var(--rouge-clair) !important;
+    border-top-color: #E00000 !important;
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .step-number {
     font-size: 36px;
-
     font-weight: 900;
 
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 }
 
 .step h3 {
@@ -871,7 +759,7 @@ section {
 }
 
 .step p {
-    color: var(--gris);
+    color: #666666;
 }
 
 
@@ -880,43 +768,33 @@ section {
 ========================================================= */
 
 .documents {
-    background: #FFFFFF;
+    background: #ffffff;
 }
 
 .documents-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 22px;
 }
 
 .document {
     padding: 30px;
 
-    background: #FAFAFA;
+    background: #fafafa;
 
-    border:
-        1px solid
-        var(--gris-border);
+    border: 1px solid #dedede;
 
-    border-left:
-        5px solid
-        var(--rouge) !important;
+    border-left: 6px solid #C00000 !important;
 
     transition: var(--transition);
 }
 
 .document:hover {
-    border-left-color:
-        var(--rouge-clair) !important;
+    border-left-color: #E00000 !important;
 
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .document h3 {
@@ -924,7 +802,7 @@ section {
 }
 
 .document p {
-    color: var(--gris);
+    color: #666666;
 
     font-size: 15px;
 
@@ -937,14 +815,13 @@ section {
 ========================================================= */
 
 .content-section {
-    background: #FFFFFF;
+    background: #ffffff;
 }
 
 .content-grid {
     display: grid;
 
-    grid-template-columns:
-        2fr 1fr;
+    grid-template-columns: 2fr 1fr;
 
     gap: 50px;
 
@@ -953,47 +830,44 @@ section {
 
 .content-main h2 {
     font-size: 34px;
-
     margin-bottom: 18px;
+}
+
+.content-main h2 span,
+.content-main h3 span {
+    color: #C00000 !important;
 }
 
 .content-main h3 {
     font-size: 23px;
 
     margin-top: 30px;
-
     margin-bottom: 12px;
 }
 
 .content-main p {
     color: #555555;
-
     margin-bottom: 18px;
 }
 
 .content-main ul {
-    margin:
-        20px 0 25px 20px;
+    margin: 20px 0 25px 20px;
 }
 
 .content-main li {
     margin-bottom: 10px;
-
     color: #555555;
 }
 
 .sidebar {
-    background: #F7F7F7;
+    background: #f7f7f7;
 
-    border-top:
-        5px solid
-        var(--rouge) !important;
+    border-top: 6px solid #C00000 !important;
 
     padding: 30px;
 
     box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, 0.06);
+        0 10px 30px rgba(0,0,0,.06);
 }
 
 .sidebar h3 {
@@ -1003,7 +877,7 @@ section {
 .sidebar a {
     display: block;
 
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 
     text-decoration: none;
 
@@ -1011,22 +885,20 @@ section {
 
     padding: 10px 0;
 
-    border-bottom:
-        1px solid
-        #DDDDDD;
+    border-bottom: 1px solid #dddddd;
 }
 
 .sidebar a:hover {
-    color: var(--rouge-fonce) !important;
+    color: #900000 !important;
 }
 
 
 /* =========================================================
-   DEVIS / ACCOMPAGNEMENT
+   DEVIS
 ========================================================= */
 
 .devis {
-    background: var(--gris-clair);
+    background: #f5f5f5;
 }
 
 .devis-box {
@@ -1036,34 +908,29 @@ section {
 
     padding: 55px;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
-    border-left:
-        7px solid
-        var(--rouge) !important;
+    border-left: 7px solid #C00000 !important;
 
     text-align: center;
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 }
 
 .devis-box h2 {
     font-size: 36px;
-
     margin-bottom: 15px;
 }
 
 .devis-box p {
-    color: var(--gris);
-
+    color: #666666;
     margin-bottom: 25px;
 }
 
 .no-price {
     font-weight: 900;
 
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 
     margin-bottom: 25px;
 
@@ -1077,37 +944,32 @@ section {
 
 .cta {
     background:
-
         radial-gradient(
             circle at center,
-            rgba(193, 18, 31, 0.38),
+            rgba(192,0,0,.35),
             transparent 45%
         ),
-
         #050505;
 
-    color: #FFFFFF;
+    color: #ffffff;
 
     text-align: center;
 
-    border-top:
-        5px solid
-        var(--rouge) !important;
-
-    border-bottom:
-        5px solid
-        var(--rouge) !important;
+    border-top: 6px solid #C00000 !important;
+    border-bottom: 6px solid #C00000 !important;
 }
 
 .cta h2 {
     font-size: 46px;
-
     margin-bottom: 15px;
 }
 
-.cta p {
-    color: #CCCCCC;
+.cta h2 span {
+    color: #E00000 !important;
+}
 
+.cta p {
+    color: #cccccc;
     margin-bottom: 30px;
 }
 
@@ -1118,20 +980,18 @@ section {
 
 .contact {
     background:
-
         linear-gradient(
             135deg,
-            #F8F8F8 0%,
-            #FFFFFF 50%,
-            #F5F5F5 100%
+            #f8f8f8 0%,
+            #ffffff 50%,
+            #f5f5f5 100%
         );
 }
 
 .contact-grid {
     display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 70px;
 
@@ -1140,15 +1000,16 @@ section {
 
 .contact h2 {
     font-size: 43px;
-
     margin-bottom: 20px;
-
     color: #111111;
+}
+
+.contact h2 span {
+    color: #C00000 !important;
 }
 
 .contact-intro {
     color: #555555;
-
     font-size: 17px;
 }
 
@@ -1166,18 +1027,13 @@ section {
 
     padding: 28px 30px;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
-    border:
-        1px solid
-        #E3E3E3;
+    border: 1px solid #e3e3e3;
 
-    border-left:
-        5px solid
-        var(--rouge) !important;
+    border-left: 6px solid #C00000 !important;
 
-    box-shadow:
-        var(--ombre-legere);
+    box-shadow: var(--ombre-legere);
 
     border-radius: 4px;
 }
@@ -1188,6 +1044,10 @@ section {
     font-size: 21px;
 
     margin-bottom: 15px;
+}
+
+.company-info h3 span {
+    color: #C00000 !important;
 }
 
 .company-info p {
@@ -1205,7 +1065,7 @@ section {
 }
 
 .company-info a {
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 
     font-weight: 800;
 
@@ -1213,7 +1073,7 @@ section {
 }
 
 .company-info a:hover {
-    color: var(--rouge-fonce) !important;
+    color: #900000 !important;
 
     text-decoration: underline;
 }
@@ -1228,19 +1088,14 @@ section {
 
     padding: 23px 27px;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
-    border:
-        1px solid
-        #E5E5E5;
+    border: 1px solid #e5e5e5;
 
-    border-left:
-        4px solid
-        var(--rouge) !important;
+    border-left: 5px solid #C00000 !important;
 
     box-shadow:
-        0 8px 25px
-        rgba(0, 0, 0, 0.06);
+        0 8px 25px rgba(0,0,0,.06);
 }
 
 .contact-points p {
@@ -1257,13 +1112,13 @@ section {
 
 
 /* =========================================================
-   EMAIL / TELEPHONE
+   EMAIL
 ========================================================= */
 
 .contact-details a {
     display: block;
 
-    color: var(--rouge) !important;
+    color: #C00000 !important;
 
     font-weight: 800;
 
@@ -1275,7 +1130,7 @@ section {
 }
 
 .contact-details a:hover {
-    color: var(--rouge-fonce) !important;
+    color: #900000 !important;
 }
 
 
@@ -1284,20 +1139,15 @@ section {
 ========================================================= */
 
 form {
-    background: #FFFFFF;
+    background: #ffffff;
 
     padding: 38px;
 
-    border:
-        1px solid
-        #DDDDDD;
+    border: 1px solid #dddddd;
 
-    border-top:
-        5px solid
-        var(--rouge) !important;
+    border-top: 6px solid #C00000 !important;
 
-    box-shadow:
-        var(--ombre);
+    box-shadow: var(--ombre);
 
     border-radius: 4px;
 }
@@ -1325,9 +1175,7 @@ select {
 
     padding: 14px;
 
-    border:
-        1px solid
-        #CCCCCC;
+    border: 1px solid #cccccc;
 
     font-family: inherit;
 
@@ -1337,7 +1185,7 @@ select {
 
     transition: var(--transition);
 
-    background: #FFFFFF;
+    background: #ffffff;
 
     color: #111111;
 
@@ -1347,17 +1195,14 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-    border-color:
-        var(--rouge) !important;
+    border-color: #C00000 !important;
 
     box-shadow:
-        0 0 0 3px
-        rgba(193, 18, 31, 0.15);
+        0 0 0 3px rgba(192,0,0,.15) !important;
 }
 
 textarea {
     min-height: 145px;
-
     resize: vertical;
 }
 
@@ -1367,6 +1212,35 @@ button {
     cursor: pointer;
 
     font-size: 15px;
+}
+
+form button,
+form .btn,
+form input[type="submit"] {
+    background: #C00000 !important;
+
+    color: #ffffff !important;
+
+    border: 2px solid #E00000 !important;
+
+    font-weight: 800;
+
+    padding: 15px 28px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 10px 25px rgba(192,0,0,.30);
+}
+
+form button:hover,
+form .btn:hover,
+form input[type="submit"]:hover {
+    background: #D00000 !important;
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
 }
 
 .form-note {
@@ -1379,67 +1253,15 @@ button {
 
 
 /* =========================================================
-   BOUTON FORMULAIRE
-========================================================= */
-
-form button,
-form .btn,
-form input[type="submit"] {
-
-    background:
-        var(--rouge) !important;
-
-    color:
-        #FFFFFF !important;
-
-    border:
-        2px solid
-        var(--rouge) !important;
-
-    font-weight: 800;
-
-    padding: 15px 28px;
-
-    border-radius: 5px;
-
-    box-shadow:
-        0 10px 25px
-        rgba(193, 18, 31, 0.30);
-
-    transition:
-        var(--transition);
-}
-
-form button:hover,
-form .btn:hover,
-form input[type="submit"]:hover {
-
-    background:
-        var(--rouge-hover) !important;
-
-    border-color:
-        var(--rouge-hover) !important;
-
-    color:
-        #FFFFFF !important;
-
-    transform:
-        translateY(-2px);
-}
-
-
-/* =========================================================
    FOOTER
 ========================================================= */
 
 footer {
-    background: #050505;
+    background: #050505 !important;
 
-    color: #AAAAAA;
+    color: #aaaaaa;
 
-    border-top:
-        5px solid
-        var(--rouge) !important;
+    border-top: 6px solid #C00000 !important;
 }
 
 .footer-main {
@@ -1447,16 +1269,18 @@ footer {
 
     display: grid;
 
-    grid-template-columns:
-        1.5fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
 
     gap: 50px;
 }
 
 .footer-main h3 {
-    color: #FFFFFF;
-
+    color: #ffffff;
     margin-bottom: 15px;
+}
+
+.footer-main h3 span {
+    color: #E00000 !important;
 }
 
 .footer-main p {
@@ -1466,7 +1290,7 @@ footer {
 .footer-main a {
     display: block;
 
-    color: #AAAAAA;
+    color: #aaaaaa;
 
     text-decoration: none;
 
@@ -1474,117 +1298,83 @@ footer {
 }
 
 .footer-main a:hover {
-    color: var(--rouge) !important;
+    color: #E00000 !important;
 }
 
 
 /* =========================================================
-   INFORMATIONS ENTREPRISE FOOTER
+   BLOC BS GESTION
 ========================================================= */
 
 .footer-company {
-    color: #CCCCCC;
+    color: #cccccc;
 
     line-height: 1.8;
+
+    padding: 24px;
+
+    border: 1px solid rgba(255,255,255,.10);
+
+    border-left: 6px solid #C00000 !important;
+
+    background: rgba(255,255,255,.03);
 }
 
 .footer-company strong {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.footer-company a {
-    color: #FFFFFF;
+.footer-company .company-name {
+    display: block;
 
-    font-weight: 700;
-}
+    color: #E00000 !important;
 
-.footer-company a:hover {
-    color: var(--rouge) !important;
-}
-
-
-/* =========================================================
-   BLOC BS GESTION — FOOTER
-========================================================= */
-
-.footer-brand-box {
-
-    margin-top: 20px;
-
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(193, 18, 31, 0.16),
-            rgba(255, 255, 255, 0.03)
-        );
-
-    border:
-        1px solid
-        rgba(193, 18, 31, 0.65);
-
-    border-left:
-        6px solid
-        var(--rouge);
-
-    box-shadow:
-        0 10px 35px
-        rgba(0, 0, 0, 0.25);
-}
-
-.footer-brand-box .brand-name {
-
-    font-size: 28px;
+    font-size: 24px;
 
     font-weight: 900;
 
     letter-spacing: 2px;
 
-    color: #FFFFFF;
-
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.footer-brand-box .brand-name span {
+.footer-company a {
+    color: #ffffff;
 
-    color: var(--rouge);
+    font-weight: 700;
 }
 
-.footer-brand-box p {
-
-    color: #CCCCCC;
-
-    font-size: 14px;
-
-    margin: 5px 0;
+.footer-company a:hover {
+    color: #E00000 !important;
 }
 
 
 /* =========================================================
-   ADRESSE BS GESTION
+   ADRESSE
 ========================================================= */
 
 .footer-address {
-
     margin-top: 18px;
 
     padding: 16px 18px;
 
-    border-left:
-        4px solid
-        var(--rouge);
+    border-left: 5px solid #C00000 !important;
 
-    background:
-        rgba(255, 255, 255, 0.04);
+    background: rgba(192,0,0,.08);
 
-    color: #CCCCCC;
+    color: #cccccc;
 
     line-height: 1.7;
 }
 
 .footer-address strong {
-    color: #FFFFFF;
+    color: #ffffff;
+}
+
+.footer-address .siret {
+    color: #E00000 !important;
+
+    font-weight: 800;
 }
 
 
@@ -1593,10 +1383,7 @@ footer {
 ========================================================= */
 
 .footer-bottom {
-
-    border-top:
-        1px solid
-        #292929;
+    border-top: 1px solid #292929;
 
     text-align: center;
 
@@ -1607,28 +1394,105 @@ footer {
     color: #999999;
 }
 
+.footer-bottom strong {
+    color: #E00000 !important;
+}
+
 
 /* =========================================================
    ANIMATION
 ========================================================= */
 
 @keyframes apparition {
-
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(20px);
+        transform: translateY(20px);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
+}
+
+
+/* =========================================================
+   FORÇAGE ROUGE BS GESTION
+   CES RÈGLES GARANTISSENT LA VISIBILITÉ
+========================================================= */
+
+header {
+    border-bottom-color: #C00000 !important;
+}
+
+.hero,
+.page-hero {
+    border-bottom-color: #C00000 !important;
+}
+
+footer {
+    border-top-color: #C00000 !important;
+}
+
+.card {
+    border-top-color: #C00000 !important;
+}
+
+.step {
+    border-top-color: #C00000 !important;
+}
+
+.document {
+    border-left-color: #C00000 !important;
+}
+
+.sidebar {
+    border-top-color: #C00000 !important;
+}
+
+form {
+    border-top-color: #C00000 !important;
+}
+
+.company-info {
+    border-left-color: #C00000 !important;
+}
+
+.contact-points {
+    border-left-color: #C00000 !important;
+}
+
+.devis-box {
+    border-left-color: #C00000 !important;
+}
+
+.cta {
+    border-top-color: #C00000 !important;
+    border-bottom-color: #C00000 !important;
+}
+
+.section-label,
+.card-number,
+.card a,
+.step-number,
+.no-price,
+.company-info a,
+.contact-details a,
+.sidebar a {
+    color: #C00000 !important;
+}
+
+.logo span,
+.hero h1 span,
+.page-hero h1 span,
+.about h2 span,
+.cta h2 span,
+.contact h2 span,
+.company-info h3 span,
+.footer-company .company-name,
+.footer-address .siret,
+.footer-bottom strong {
+    color: #E00000 !important;
 }
 
 
@@ -1639,7 +1503,6 @@ footer {
 @media (max-width: 950px) {
 
     nav {
-
         display: none;
 
         position: absolute;
@@ -1647,11 +1510,9 @@ footer {
         top: 82px;
 
         left: 0;
-
         right: 0;
 
-        background:
-            #080808;
+        background: #080808;
 
         flex-direction: column;
 
@@ -1661,13 +1522,10 @@ footer {
 
         gap: 15px;
 
-        border-bottom:
-            4px solid
-            var(--rouge);
+        border-bottom: 5px solid #C00000 !important;
 
         box-shadow:
-            0 10px 25px
-            rgba(0, 0, 0, 0.25);
+            0 10px 25px rgba(0,0,0,.25);
     }
 
     nav.active {
@@ -1679,30 +1537,25 @@ footer {
     }
 
     .services-grid {
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .method-grid {
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .about-grid,
     .contact-grid,
     .content-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .documents-grid {
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .footer-main {
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1772,19 +1625,16 @@ footer {
     .method-grid,
     .documents-grid,
     .footer-main {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .buttons {
         flex-direction: column;
-
         align-items: stretch;
     }
 
     .buttons .btn {
         width: 100%;
-
         text-align: center;
     }
 
@@ -1819,14 +1669,6 @@ footer {
     .contact-points p {
         font-size: 15px;
     }
-
-    .footer-brand-box {
-        padding: 20px;
-    }
-
-    .footer-brand-box .brand-name {
-        font-size: 24px;
-    }
 }
 
 
@@ -1846,69 +1688,21 @@ footer {
 
     .badge {
         font-size: 10px;
-
         letter-spacing: 1px;
     }
 
     .btn {
         padding: 13px 20px;
-
         font-size: 14px;
     }
 }
 
 
 /* =========================================================
-   SÉCURITÉ COULEUR ROUGE
-   FORCE LE ROUGE SUR LES ÉLÉMENTS IMPORTANTS
-========================================================= */
-
-.section-label,
-.card-number,
-.card a,
-.step-number,
-.no-price,
-.company-info a,
-.contact-details a,
-.sidebar a {
-    color:
-        var(--rouge) !important;
-}
-
-.card,
-.step {
-    border-top-color:
-        var(--rouge) !important;
-}
-
-.document {
-    border-left-color:
-        var(--rouge) !important;
-}
-
-.hero,
-.page-hero {
-    border-bottom-color:
-        var(--rouge) !important;
-}
-
-header,
-footer {
-    border-color:
-        var(--rouge) !important;
-}
-
-
-/* =========================================================
-   FIN STYLE.CSS
-   BS GESTION
-
-   ADRESSE :
+   FIN — BS GESTION
    116 ROUTE D'ESPAGNE
    HELIOS V - BAL 504
    31100 TOULOUSE
-
-   SIRET :
-   94890714200012
+   SIRET : 94890714200012
 ========================================================= */
 ```
