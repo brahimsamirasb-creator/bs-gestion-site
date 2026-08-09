@@ -1,1763 +1,891 @@
-/* =========================================================
-   BS GESTION — STYLE.CSS COMPLET
-   Design : ROUGE FONCÉ • NOIR • BLANC
-   Style : PREMIUM • ÉLÉGANT • MODERNE • PROFESSIONNEL
-========================================================= */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* =========================================================
-   VARIABLES
-========================================================= */
+    <meta
+        name="description"
+        content="BS GESTION - Accompagnement administratif et organisation des démarches liées au séjour en France."
+    >
 
-:root {
+    <title>Séjour & démarches | BS GESTION</title>
 
-    --rouge: #b00000;
-    --rouge-fonce: #7d0000;
-    --rouge-clair: #d41414;
-    --rouge-hover: #c40000;
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    --noir: #080808;
-    --noir-2: #111111;
-    --noir-3: #1b1b1b;
+<body>
 
-    --blanc: #ffffff;
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    --gris: #666666;
-    --gris-fonce: #333333;
-    --gris-clair: #f5f5f5;
-    --gris-border: #dedede;
+<header>
+    <div class="container navbar">
 
-    --ombre: 0 18px 50px rgba(0, 0, 0, 0.12);
-    --ombre-legere: 0 8px 25px rgba(0, 0, 0, 0.08);
+        <a href="index.html" class="logo">
+            BS <span>GESTION</span>
+        </a>
 
-    --transition: 0.3s ease;
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--blanc);
-    color: #171717;
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    transition: var(--transition);
-}
-
-button,
-input,
-textarea,
-select {
-    font-family: inherit;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-header {
-    background: #080808;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-
-    border-bottom: 4px solid var(--rouge);
-
-    box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.25);
-}
-
-.navbar {
-    min-height: 82px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo {
-    color: #ffffff;
-    text-decoration: none;
-
-    font-size: 25px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: var(--rouge-clair);
-}
-
-.logo:hover {
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-nav a {
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    position: relative;
-
-    padding: 10px 0;
-}
-
-nav a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 2px;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--rouge-clair);
-
-    transition: var(--transition);
-}
-
-nav a:hover {
-    color: #ffffff;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-
-/* =========================================================
-   MENU MOBILE
-========================================================= */
-
-.menu {
-    display: none;
-
-    color: #ffffff;
-
-    font-size: 30px;
-
-    cursor: pointer;
-
-    user-select: none;
-}
-
-
-/* =========================================================
-   BOUTONS
-========================================================= */
-
-.btn {
-    display: inline-block;
-
-    padding: 15px 28px;
-
-    border-radius: 5px;
-
-    text-decoration: none;
-
-    font-weight: 800;
-
-    transition: var(--transition);
-
-    cursor: pointer;
-
-    text-align: center;
-}
-
-
-/* ---------------------------------------------------------
-   BOUTON ROUGE
---------------------------------------------------------- */
-
-.btn-red {
-    background: linear-gradient(
-        135deg,
-        var(--rouge-clair),
-        var(--rouge-fonce)
-    );
-
-    color: #ffffff !important;
-
-    border: 2px solid var(--rouge-clair);
-
-    box-shadow:
-        0 10px 25px rgba(176, 0, 0, 0.30);
-}
-
-.btn-red:hover {
-    background: linear-gradient(
-        135deg,
-        var(--rouge-hover),
-        var(--rouge-fonce)
-    );
-
-    color: #ffffff !important;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 15px 35px rgba(176, 0, 0, 0.40);
-}
-
-
-/* ---------------------------------------------------------
-   BOUTON OUTLINE
---------------------------------------------------------- */
-
-.btn-outline {
-    color: #ffffff !important;
-
-    border: 2px solid #ffffff;
-
-    background: rgba(0, 0, 0, 0.25);
-}
-
-.btn-outline:hover {
-    background: var(--rouge);
-
-    border-color: var(--rouge);
-
-    color: #ffffff !important;
-
-    transform: translateY(-3px);
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero,
-.page-hero {
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-}
-
-.hero {
-
-    min-height: 720px;
-
-    display: flex;
-
-    align-items: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    color: #ffffff;
-
-    border-bottom: 6px solid var(--rouge);
-}
-
-
-/* ---------------------------------------------------------
-   CERCLES DÉCORATIFS
---------------------------------------------------------- */
-
-.hero::before,
-.page-hero::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 520px;
-    height: 520px;
-
-    right: -230px;
-    top: 60px;
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    border-radius: 50%;
-}
-
-.hero::after,
-.page-hero::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    right: -120px;
-    top: 145px;
-
-    border: 2px solid rgba(176, 0, 0, 0.50);
-
-    border-radius: 50%;
-}
-
-
-/* =========================================================
-   PHOTOS
-========================================================= */
-
-.photo-home {
-
-    background-image:
-
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
-            rgba(0, 0, 0, 0.35)
-        ),
-
-        url("https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1800");
-}
-
-
-.photo-sejour {
-
-    background-image:
-
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
-            rgba(0, 0, 0, 0.35)
-        ),
-
-        url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1800");
-}
-
-
-.photo-creation {
-
-    background-image:
-
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
-            rgba(0, 0, 0, 0.35)
-        ),
-
-        url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1800");
-}
-
-
-.photo-administratif {
-
-    background-image:
-
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
-            rgba(0, 0, 0, 0.35)
-        ),
-
-        url("https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1800");
-}
-
-
-.photo-contact {
-
-    background-image:
-
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.90),
-            rgba(0, 0, 0, 0.68),
-            rgba(0, 0, 0, 0.35)
-        ),
-
-        url("https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1800");
-}
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
-.hero-content,
-.page-hero-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 850px;
-
-    animation: apparition 0.8s ease forwards;
-}
-
-
-/* =========================================================
-   BADGE
-========================================================= */
-
-.badge {
-
-    display: inline-block;
-
-    padding: 9px 18px;
-
-    margin-bottom: 25px;
-
-    border: 1px solid var(--rouge-clair);
-
-    color: #ffffff;
-
-    background: rgba(0, 0, 0, 0.25);
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   TITRES HERO
-========================================================= */
-
-.hero h1,
-.page-hero h1 {
-
-    color: #ffffff;
-
-    line-height: 1.05;
-
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-
-    font-size: clamp(48px, 8vw, 82px);
-
-    letter-spacing: -2px;
-}
-
-.page-hero h1 {
-
-    font-size: clamp(42px, 7vw, 68px);
-}
-
-.hero h1 span,
-.page-hero h1 span {
-
-    color: var(--rouge-clair);
-}
-
-
-/* =========================================================
-   TEXTES HERO
-========================================================= */
-
-.hero p,
-.page-hero p {
-
-    color: #eeeeee;
-
-    max-width: 780px;
-}
-
-.hero p {
-
-    font-size: 19px;
-}
-
-.hero p:first-of-type {
-
-    font-size: 24px;
-
-    font-weight: 800;
-
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   HERO PAGE INTERNE
-========================================================= */
-
-.page-hero {
-
-    min-height: 430px;
-
-    display: flex;
-
-    align-items: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    color: #ffffff;
-
-    border-bottom: 5px solid var(--rouge);
-}
-
-.page-hero p {
-
-    font-size: 19px;
-}
-
-
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
-
-.buttons {
-
-    display: flex;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-
-    margin-top: 35px;
-}
-
-.hero-contact {
-
-    margin-top: 35px;
-
-    color: #dddddd;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   SECTIONS
-========================================================= */
-
-section {
-
-    padding: 95px 0;
-}
-
-
-/* =========================================================
-   TITRES DE SECTIONS
-========================================================= */
-
-.section-title {
-
-    text-align: center;
-
-    margin-bottom: 55px;
-}
-
-.section-label {
-
-    color: var(--rouge);
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 12px;
-}
-
-.section-title h2 {
-
-    font-size: 43px;
-
-    line-height: 1.2;
-
-    color: #111111;
-}
-
-.section-title p {
-
-    max-width: 760px;
-
-    margin: 16px auto 0;
-
-    color: var(--gris);
-}
-
-
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.services {
-
-    background: #ffffff;
-}
-
-.services-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 22px;
-}
-
-.card {
-
-    position: relative;
-
-    padding: 35px 28px;
-
-    background: #ffffff;
-
-    border: 1px solid var(--gris-border);
-
-    border-top: 5px solid #111111;
-
-    transition: var(--transition);
-
-    overflow: hidden;
-
-    box-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.04);
-}
+        <div class="menu" onclick="toggleMenu()" aria-label="Ouvrir le menu">
+            ☰
+        </div>
 
-.card::after {
+        <nav id="mainNav">
 
-    content: "";
+            <a href="index.html">
+                Accueil
+            </a>
 
-    position: absolute;
+            <a href="sejour.html" class="active">
+                Séjour
+            </a>
 
-    width: 110px;
-    height: 110px;
+            <a href="creation-societe.html">
+                Création Société
+            </a>
 
-    right: -55px;
-    bottom: -55px;
+            <a href="administratif.html">
+                Administratif
+            </a>
 
-    border-radius: 50%;
+            <a href="contact.html">
+                Contact
+            </a>
 
-    background: rgba(176, 0, 0, 0.08);
-}
-
-.card:hover {
-
-    transform: translateY(-8px);
-
-    border-top-color: var(--rouge);
-
-    box-shadow: var(--ombre);
-}
-
-.card-number {
-
-    color: var(--rouge);
-
-    font-weight: 900;
-
-    font-size: 18px;
-
-    margin-bottom: 18px;
-}
-
-.card h3 {
-
-    font-size: 21px;
-
-    margin-bottom: 15px;
-}
-
-.card p {
-
-    color: var(--gris);
-
-    font-size: 15px;
-}
-
-.card a {
-
-    display: inline-block;
-
-    margin-top: 20px;
-
-    color: var(--rouge);
-
-    font-weight: 800;
-
-    text-decoration: none;
-}
-
-.card a:hover {
-
-    color: var(--rouge-fonce);
-}
-
-
-/* =========================================================
-   À PROPOS
-========================================================= */
-
-.about {
-
-    background:
-
-        radial-gradient(
-            circle at 10% 80%,
-            rgba(176, 0, 0, 0.25),
-            transparent 30%
-        ),
-
-        var(--noir);
-
-    color: #ffffff;
-}
-
-.about-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 75px;
-
-    align-items: center;
-}
-
-.about h2 {
-
-    font-size: 45px;
-
-    line-height: 1.15;
-
-    color: #ffffff;
-}
-
-.about p {
-
-    color: #cccccc;
-
-    margin-bottom: 20px;
-}
-
-.checks div {
-
-    margin-bottom: 14px;
-
-    color: #eeeeee;
-}
-
-.checks span {
-
-    color: var(--rouge-clair);
-
-    font-weight: 900;
-
-    margin-right: 8px;
-}
-
-
-/* =========================================================
-   MÉTHODE
-========================================================= */
-
-.method {
-
-    background: var(--gris-clair);
-}
-
-.method-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.step {
-
-    background: #ffffff;
-
-    padding: 30px;
-
-    border-top: 5px solid var(--rouge);
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.05);
-
-    transition: var(--transition);
-}
-
-.step:hover {
-
-    transform: translateY(-5px);
-
-    box-shadow: var(--ombre);
-}
-
-.step-number {
-
-    font-size: 36px;
-
-    font-weight: 900;
-
-    color: var(--rouge);
-}
-
-.step h3 {
-
-    margin: 10px 0;
-}
-
-.step p {
-
-    color: var(--gris);
-}
-
-
-/* =========================================================
-   DOCUMENTS
-========================================================= */
-
-.documents {
-
-    background: #ffffff;
-}
-
-.documents-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 22px;
-}
-
-.document {
-
-    padding: 30px;
-
-    background: #fafafa;
-
-    border: 1px solid var(--gris-border);
-
-    border-left: 5px solid #111111;
-
-    transition: var(--transition);
-}
-
-.document:hover {
-
-    border-left-color: var(--rouge);
-
-    transform: translateY(-5px);
-
-    box-shadow: var(--ombre);
-}
-
-.document h3 {
-
-    margin-bottom: 12px;
-}
-
-.document p {
-
-    color: var(--gris);
-
-    font-size: 15px;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================================
-   PAGES INTERNES
-========================================================= */
-
-.content-section {
-
-    background: #ffffff;
-}
-
-.content-grid {
-
-    display: grid;
-
-    grid-template-columns: 2fr 1fr;
-
-    gap: 50px;
-
-    align-items: start;
-}
-
-.content-main h2 {
-
-    font-size: 34px;
-
-    margin-bottom: 18px;
-}
-
-.content-main h3 {
-
-    font-size: 23px;
-
-    margin-top: 30px;
-
-    margin-bottom: 12px;
-}
-
-.content-main p {
-
-    color: #555555;
-
-    margin-bottom: 18px;
-}
-
-.content-main ul {
-
-    margin: 20px 0 25px 20px;
-}
-
-.content-main li {
-
-    margin-bottom: 10px;
-
-    color: #555555;
-}
-
-.sidebar {
-
-    background: #f7f7f7;
-
-    border-top: 5px solid var(--rouge);
-
-    padding: 30px;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.06);
-}
-
-.sidebar h3 {
-
-    margin-bottom: 20px;
-}
-
-.sidebar a {
-
-    display: block;
-
-    color: var(--rouge);
-
-    text-decoration: none;
-
-    font-weight: 800;
-
-    padding: 10px 0;
-
-    border-bottom: 1px solid #dddddd;
-}
-
-.sidebar a:hover {
-
-    color: var(--rouge-fonce);
-}
-
-
-/* =========================================================
-   DEVIS
-========================================================= */
-
-.devis {
-
-    background: var(--gris-clair);
-}
-
-.devis-box {
-
-    max-width: 850px;
-
-    margin: auto;
-
-    padding: 55px;
-
-    background: #ffffff;
-
-    border-left: 6px solid var(--rouge);
-
-    text-align: center;
-
-    box-shadow: var(--ombre);
-}
-
-.devis-box h2 {
-
-    font-size: 36px;
-
-    margin-bottom: 15px;
-}
-
-.devis-box p {
-
-    color: var(--gris);
-
-    margin-bottom: 25px;
-}
-
-.no-price {
-
-    font-weight: 900;
-
-    color: var(--rouge);
-
-    margin-bottom: 25px;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.cta {
-
-    background:
-
-        radial-gradient(
-            circle at center,
-            rgba(176, 0, 0, 0.28),
-            transparent 40%
-        ),
+        </nav>
 
-        #050505;
+    </div>
+</header>
 
-    color: #ffffff;
 
-    text-align: center;
+<!-- =========================================================
+     HERO SÉJOUR
+========================================================= -->
 
-    border-top: 5px solid var(--rouge);
+<section class="page-hero photo-sejour">
 
-    border-bottom: 5px solid var(--rouge);
-}
-
-.cta h2 {
-
-    font-size: 46px;
-
-    margin-bottom: 15px;
-}
+    <div class="container">
 
-.cta p {
+        <div class="page-hero-content">
 
-    color: #cccccc;
+            <div class="badge">
+                SÉJOUR & DÉMARCHES
+            </div>
 
-    margin-bottom: 30px;
-}
+            <h1>
+                Votre séjour en France,
+                <span>mieux organisé</span>
+            </h1>
 
+            <p>
+                BS GESTION vous accompagne dans la préparation,
+                l'organisation et le suivi administratif de vos démarches
+                liées au séjour en France.
+            </p>
 
-/* =========================================================
-   CONTACT
-========================================================= */
+            <div class="buttons">
 
-.contact {
+                <a
+                    href="contact.html"
+                    class="btn btn-red"
+                >
+                    Demander un accompagnement
+                </a>
 
-    background:
+                <a
+                    href="index.html"
+                    class="btn btn-outline"
+                >
+                    Retour à l'accueil
+                </a>
 
-        linear-gradient(
-            135deg,
-            #f8f8f8 0%,
-            #ffffff 50%,
-            #f5f5f5 100%
-        );
-}
+            </div>
 
-.contact-grid {
+        </div>
 
-    display: grid;
+    </div>
 
-    grid-template-columns: 1fr 1fr;
+</section>
 
-    gap: 70px;
 
-    align-items: start;
-}
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
 
-.contact h2 {
+<section class="content-section">
 
-    font-size: 43px;
+    <div class="container content-grid">
 
-    margin-bottom: 20px;
+        <div class="content-main">
 
-    color: #111111;
-}
+            <div class="section-label">
+                ACCOMPAGNEMENT
+            </div>
 
-.contact-intro {
+            <h2>
+                Préparer votre dossier avec méthode
+            </h2>
 
-    color: #555555;
+            <p>
+                Les démarches liées au séjour en France peuvent nécessiter
+                de nombreux documents, justificatifs et informations.
+            </p>
 
-    font-size: 17px;
-}
+            <p>
+                BS GESTION vous aide à organiser les éléments de votre
+                dossier afin de vous permettre de présenter des documents
+                clairs, structurés et facilement vérifiables.
+            </p>
 
-.contact-details {
+            <p>
+                Notre accompagnement porte principalement sur
+                l'organisation administrative et la préparation des
+                documents nécessaires à votre démarche.
+            </p>
 
-    margin-top: 30px;
-}
+            <h3>
+                Une organisation adaptée à votre situation
+            </h3>
 
+            <p>
+                Chaque situation étant différente, nous prenons le temps
+                d'identifier votre besoin afin de vous orienter vers une
+                organisation adaptée de votre dossier.
+            </p>
 
-/* =========================================================
-   INFORMATIONS SOCIÉTÉ
-========================================================= */
+            <ul>
 
-.company-info {
+                <li>
+                    Analyse de votre besoin administratif
+                </li>
 
-    margin-top: 30px;
+                <li>
+                    Organisation des documents
+                </li>
 
-    padding: 28px 30px;
+                <li>
+                    Classement des justificatifs
+                </li>
 
-    background: #ffffff;
+                <li>
+                    Préparation des informations nécessaires
+                </li>
 
-    border: 1px solid #e3e3e3;
+                <li>
+                    Vérification de la cohérence et de la présentation
+                    du dossier
+                </li>
 
-    border-left: 5px solid var(--rouge);
+                <li>
+                    Suivi des documents transmis
+                </li>
 
-    box-shadow: var(--ombre-legere);
+            </ul>
 
-    border-radius: 4px;
-}
+        </div>
 
-.company-info h3 {
 
-    color: #111111;
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
 
-    font-size: 21px;
+        <aside class="sidebar">
 
-    margin-bottom: 15px;
-}
+            <h3>
+                Nos démarches
+            </h3>
 
-.company-info p {
+            <a href="#organisation">
+                Organisation du dossier
+            </a>
 
-    color: #222222;
+            <a href="#documents">
+                Documents et justificatifs
+            </a>
 
-    font-size: 15px;
+            <a href="#accompagnement">
+                Accompagnement
+            </a>
 
-    margin: 7px 0;
+            <a href="#suivi">
+                Suivi administratif
+            </a>
 
-    line-height: 1.6;
-}
+            <a href="contact.html">
+                Nous contacter
+            </a>
 
-.company-info strong {
+        </aside>
 
-    color: #111111;
-}
+    </div>
 
-.company-info a {
+</section>
 
-    color: var(--rouge);
 
-    font-weight: 800;
+<!-- =========================================================
+     ORGANISATION
+========================================================= -->
 
-    text-decoration: none;
-}
+<section
+    class="services"
+    id="organisation"
+>
 
-.company-info a:hover {
+    <div class="container">
 
-    color: var(--rouge-fonce);
+        <div class="section-title">
 
-    text-decoration: underline;
-}
+            <div class="section-label">
+                NOS SERVICES
+            </div>
 
+            <h2>
+                Une démarche mieux organisée
+            </h2>
 
-/* =========================================================
-   POINTS CONTACT
-========================================================= */
+            <p>
+                Nous vous aidons à structurer les différentes étapes
+                de votre dossier.
+            </p>
 
-.contact-points {
+        </div>
 
-    margin-top: 25px;
 
-    padding: 23px 27px;
+        <div class="services-grid">
 
-    background: #ffffff;
+            <article class="card">
 
-    border: 1px solid #e5e5e5;
+                <div class="card-number">
+                    01
+                </div>
 
-    border-left: 4px solid var(--rouge);
+                <h3>
+                    Analyse du besoin
+                </h3>
 
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.06);
-}
+                <p>
+                    Comprendre votre situation et identifier les éléments
+                    administratifs nécessaires à l'organisation de votre
+                    dossier.
+                </p>
 
-.contact-points p {
+                <a href="contact.html">
+                    En savoir plus →
+                </a>
 
-    color: #111111 !important;
+            </article>
 
-    font-size: 16px;
 
-    font-weight: 600;
+            <article class="card">
 
-    margin: 10px 0;
+                <div class="card-number">
+                    02
+                </div>
 
-    line-height: 1.6;
-}
+                <h3>
+                    Organisation
+                </h3>
 
+                <p>
+                    Classer et structurer vos documents afin de disposer
+                    d'un dossier clair et facilement consultable.
+                </p>
 
-/* =========================================================
-   EMAIL
-========================================================= */
+                <a href="contact.html">
+                    En savoir plus →
+                </a>
 
-.contact-details a {
+            </article>
 
-    display: block;
 
-    color: var(--rouge);
+            <article class="card">
 
-    font-weight: 800;
+                <div class="card-number">
+                    03
+                </div>
 
-    font-size: 18px;
+                <h3>
+                    Préparation
+                </h3>
 
-    text-decoration: none;
+                <p>
+                    Préparer les informations et documents nécessaires
+                    à votre démarche selon votre situation.
+                </p>
 
-    margin-bottom: 15px;
-}
+                <a href="contact.html">
+                    En savoir plus →
+                </a>
 
-.contact-details a:hover {
+            </article>
 
-    color: var(--rouge-fonce);
-}
 
+            <article class="card">
 
-/* =========================================================
-   FORMULAIRE
-========================================================= */
+                <div class="card-number">
+                    04
+                </div>
 
-form {
+                <h3>
+                    Suivi
+                </h3>
 
-    background: #ffffff;
+                <p>
+                    Conserver une organisation claire des documents
+                    transmis et des différentes étapes de votre démarche.
+                </p>
 
-    padding: 38px;
+                <a href="contact.html">
+                    En savoir plus →
+                </a>
 
-    border: 1px solid #dddddd;
+            </article>
 
-    border-top: 5px solid var(--rouge);
+        </div>
 
-    box-shadow: var(--ombre);
+    </div>
 
-    border-radius: 4px;
-}
+</section>
 
-.form-group {
 
-    margin-bottom: 18px;
-}
+<!-- =========================================================
+     DOCUMENTS
+========================================================= -->
 
-label {
+<section
+    class="documents"
+    id="documents"
+>
 
-    display: block;
+    <div class="container">
 
-    font-weight: 800;
+        <div class="section-title">
 
-    font-size: 14px;
+            <div class="section-label">
+                DOCUMENTS
+            </div>
 
-    margin-bottom: 7px;
+            <h2>
+                Organiser vos pièces justificatives
+            </h2>
 
-    color: #222222;
-}
+            <p>
+                Une présentation structurée permet de mieux suivre
+                les documents nécessaires à votre démarche.
+            </p>
 
-input,
-textarea,
-select {
+        </div>
 
-    width: 100%;
 
-    padding: 14px;
+        <div class="documents-grid">
 
-    border: 1px solid #cccccc;
+            <article class="document">
 
-    font-family: inherit;
+                <h3>
+                    Documents personnels
+                </h3>
 
-    font-size: 15px;
+                <p>
+                    Organisation des documents d'identité et des
+                    justificatifs personnels nécessaires à votre dossier.
+                </p>
 
-    outline: none;
+            </article>
 
-    transition: var(--transition);
 
-    background: #ffffff;
+            <article class="document">
 
-    color: #111111;
+                <h3>
+                    Justificatifs
+                </h3>
 
-    border-radius: 3px;
-}
+                <p>
+                    Classement des justificatifs afin de faciliter
+                    la préparation et la vérification de votre dossier.
+                </p>
 
-input:focus,
-textarea:focus,
-select:focus {
+            </article>
 
-    border-color: var(--rouge);
 
-    box-shadow:
-        0 0 0 3px rgba(176, 0, 0, 0.10);
-}
+            <article class="document">
 
-textarea {
+                <h3>
+                    Courriers
+                </h3>
 
-    min-height: 145px;
+                <p>
+                    Organisation des courriers et documents administratifs
+                    liés à vos démarches.
+                </p>
 
-    resize: vertical;
-}
+            </article>
 
-button {
 
-    border: 0;
+            <article class="document">
 
-    cursor: pointer;
+                <h3>
+                    Formulaires
+                </h3>
 
-    font-size: 15px;
-}
+                <p>
+                    Aide à l'organisation des informations nécessaires
+                    pour préparer les formulaires correspondant à votre
+                    situation.
+                </p>
 
-.form-note {
+            </article>
 
-    color: #777777;
 
-    font-size: 12px;
+            <article class="document">
 
-    margin-top: 10px;
-}
+                <h3>
+                    Classement
+                </h3>
 
+                <p>
+                    Mise en ordre des différentes pièces afin de disposer
+                    d'un dossier lisible et structuré.
+                </p>
 
-/* =========================================================
-   FOOTER
-========================================================= */
+            </article>
 
-footer {
 
-    background: #050505;
+            <article class="document">
 
-    color: #aaaaaa;
+                <h3>
+                    Suivi
+                </h3>
 
-    border-top: 4px solid var(--rouge);
-}
+                <p>
+                    Conservation d'une organisation permettant de suivre
+                    les documents transmis et les démarches effectuées.
+                </p>
 
-.footer-main {
+            </article>
 
-    padding: 60px 0;
+        </div>
 
-    display: grid;
+    </div>
 
-    grid-template-columns: 1.5fr 1fr 1fr;
+</section>
 
-    gap: 50px;
-}
 
-.footer-main h3 {
+<!-- =========================================================
+     ACCOMPAGNEMENT
+========================================================= -->
 
-    color: #ffffff;
+<section
+    class="about"
+    id="accompagnement"
+>
 
-    margin-bottom: 15px;
-}
+    <div class="container about-grid">
 
-.footer-main p {
+        <div>
 
-    margin-top: 10px;
-}
+            <div class="section-label">
+                BS GESTION
+            </div>
 
-.footer-main a {
+            <h2>
+                Un accompagnement clair et méthodique
+            </h2>
 
-    display: block;
+            <p>
+                Notre objectif est de vous aider à mieux organiser
+                votre démarche administrative et à comprendre les
+                différentes pièces qui composent votre dossier.
+            </p>
 
-    color: #aaaaaa;
+            <p>
+                Nous vous accompagnons dans la préparation administrative
+                de votre dossier, sans nous substituer aux autorités
+                compétentes.
+            </p>
 
-    text-decoration: none;
+            <div class="buttons">
 
-    margin-bottom: 9px;
-}
+                <a
+                    href="contact.html"
+                    class="btn btn-red"
+                >
+                    Demander un accompagnement
+                </a>
 
-.footer-main a:hover {
+            </div>
 
-    color: var(--rouge-clair);
-}
+        </div>
 
 
-/* =========================================================
-   INFORMATIONS ENTREPRISE DANS FOOTER
-========================================================= */
+        <div class="checks">
 
-.footer-company {
+            <div>
+                <span>✓</span>
+                Étude de votre situation
+            </div>
 
-    color: #cccccc;
+            <div>
+                <span>✓</span>
+                Organisation des documents
+            </div>
 
-    line-height: 1.8;
-}
+            <div>
+                <span>✓</span>
+                Classement des justificatifs
+            </div>
 
-.footer-company strong {
+            <div>
+                <span>✓</span>
+                Préparation administrative
+            </div>
 
-    color: #ffffff;
-}
+            <div>
+                <span>✓</span>
+                Suivi des documents
+            </div>
 
-.footer-company a {
+            <div>
+                <span>✓</span>
+                Confidentialité des informations transmises
+            </div>
 
-    color: #ffffff;
+        </div>
 
-    font-weight: 700;
-}
+    </div>
 
-.footer-company a:hover {
+</section>
 
-    color: var(--rouge-clair);
-}
 
+<!-- =========================================================
+     SUIVI
+========================================================= -->
 
-/* =========================================================
-   ADRESSE BS GESTION
-========================================================= */
+<section
+    class="method"
+    id="suivi"
+>
 
-.footer-address {
+    <div class="container">
 
-    margin-top: 18px;
+        <div class="section-title">
 
-    padding: 15px 18px;
+            <div class="section-label">
+                NOTRE MÉTHODE
+            </div>
 
-    border-left: 3px solid var(--rouge);
+            <h2>
+                4 étapes simples
+            </h2>
 
-    background: rgba(255, 255, 255, 0.03);
+            <p>
+                Une organisation progressive pour avancer avec
+                davantage de clarté.
+            </p>
 
-    color: #cccccc;
+        </div>
 
-    line-height: 1.7;
-}
 
-.footer-address strong {
+        <div class="method-grid">
 
-    color: #ffffff;
-}
+            <div class="step">
 
+                <div class="step-number">
+                    01
+                </div>
 
-/* =========================================================
-   BAS DU FOOTER
-========================================================= */
+                <h3>
+                    Échange
+                </h3>
 
-.footer-bottom {
+                <p>
+                    Vous nous présentez votre situation et votre besoin.
+                </p>
 
-    border-top: 1px solid #292929;
+            </div>
 
-    text-align: center;
 
-    padding: 20px;
+            <div class="step">
 
-    font-size: 12px;
+                <div class="step-number">
+                    02
+                </div>
 
-    color: #999999;
-}
+                <h3>
+                    Analyse
+                </h3>
 
+                <p>
+                    Nous identifions les documents et informations
+                    à organiser.
+                </p>
 
-/* =========================================================
-   ANIMATION
-========================================================= */
+            </div>
 
-@keyframes apparition {
 
-    from {
+            <div class="step">
 
-        opacity: 0;
+                <div class="step-number">
+                    03
+                </div>
 
-        transform: translateY(20px);
-    }
+                <h3>
+                    Préparation
+                </h3>
 
-    to {
+                <p>
+                    Votre dossier est organisé de manière claire
+                    et méthodique.
+                </p>
 
-        opacity: 1;
+            </div>
 
-        transform: translateY(0);
-    }
-}
 
+            <div class="step">
 
-/* =========================================================
-   TABLETTES
-========================================================= */
+                <div class="step-number">
+                    04
+                </div>
 
-@media (max-width: 950px) {
+                <h3>
+                    Suivi
+                </h3>
 
-    nav {
+                <p>
+                    Vous disposez d'une organisation permettant
+                    de suivre les documents et les démarches.
+                </p>
 
-        display: none;
+            </div>
 
-        position: absolute;
+        </div>
 
-        top: 82px;
+    </div>
 
-        left: 0;
+</section>
 
-        right: 0;
 
-        background: #080808;
+<!-- =========================================================
+     CTA
+========================================================= -->
 
-        flex-direction: column;
+<section class="cta">
 
-        align-items: flex-start;
+    <div class="container">
 
-        padding: 25px;
+        <div class="section-label">
+            BESOIN D'AIDE ?
+        </div>
 
-        gap: 15px;
+        <h2>
+            Votre dossier mérite une organisation claire
+        </h2>
 
-        border-bottom: 3px solid var(--rouge);
-    }
+        <p>
+            Présentez-nous votre situation et nous vous orienterons
+            vers l'accompagnement administratif adapté.
+        </p>
 
-    nav.active {
+        <div class="buttons">
 
-        display: flex;
-    }
+            <a
+                href="contact.html"
+                class="btn btn-red"
+            >
+                Nous contacter
+            </a>
 
-    .menu {
+            <a
+                href="creation-societe.html"
+                class="btn btn-outline"
+            >
+                Création de société
+            </a>
 
-        display: block;
-    }
+        </div>
 
-    .services-grid {
+    </div>
 
-        grid-template-columns: 1fr 1fr;
-    }
+</section>
 
-    .method-grid {
 
-        grid-template-columns: 1fr 1fr;
-    }
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
-    .about-grid,
-    .contact-grid,
-    .content-grid {
+<footer>
 
-        grid-template-columns: 1fr;
-    }
+    <div class="container footer-main">
 
-    .documents-grid {
 
-        grid-template-columns: 1fr 1fr;
-    }
+        <!-- COLONNE 1 -->
 
-    .footer-main {
+        <div>
 
-        grid-template-columns: 1fr 1fr;
-    }
-}
+            <div class="footer-logo">
+                BS <span>GESTION</span>
+            </div>
 
+            <div class="footer-line"></div>
 
-/* =========================================================
-   MOBILES
-========================================================= */
+            <p class="footer-description">
+                Gestion administrative, conseil et accompagnement
+                pour particuliers et professionnels.
+            </p>
 
-@media (max-width: 600px) {
+            <a
+                href="mailto:bs.gestion.31@gmail.com"
+                class="footer-email"
+            >
+                bs.gestion.31@gmail.com
+            </a>
 
-    .container {
+        </div>
 
-        width: 92%;
-    }
 
-    .navbar {
+        <!-- COLONNE 2 -->
 
-        min-height: 72px;
-    }
+        <div>
 
-    nav {
+            <h3>
+                Navigation
+            </h3>
 
-        top: 72px;
-    }
+            <a href="index.html">
+                Accueil
+            </a>
 
-    .logo {
+            <a href="sejour.html">
+                Séjour
+            </a>
 
-        font-size: 21px;
-    }
+            <a href="creation-societe.html">
+                Création Société
+            </a>
 
-    .hero {
+            <a href="administratif.html">
+                Administratif
+            </a>
 
-        min-height: 620px;
-    }
+            <a href="contact.html">
+                Contact
+            </a>
 
-    .hero h1 {
+        </div>
 
-        font-size: 46px;
-    }
 
-    .hero p {
+        <!-- COLONNE 3 -->
 
-        font-size: 17px;
-    }
+        <div>
 
-    .hero p:first-of-type {
+            <h3>
+                Contact
+            </h3>
 
-        font-size: 21px;
-    }
+            <a
+                href="mailto:bs.gestion.31@gmail.com"
+            >
+                bs.gestion.31@gmail.com
+            </a>
 
-    .page-hero {
+            <a href="contact.html">
+                Demander un accompagnement
+            </a>
 
-        min-height: 360px;
-    }
+            <div class="footer-address">
 
-    .page-hero h1 {
+                <strong>
+                    BS GESTION
+                </strong>
 
-        font-size: 42px;
-    }
+                <br>
 
-    .page-hero p {
+                Gestion administrative,
+                conseil et accompagnement.
 
-        font-size: 17px;
-    }
+            </div>
 
-    section {
+        </div>
 
-        padding: 65px 0;
-    }
+    </div>
 
-    .section-title h2,
-    .about h2,
-    .contact h2,
-    .cta h2 {
 
-        font-size: 32px;
-    }
+    <!-- BANDEAU ROUGE -->
 
-    .services-grid,
-    .method-grid,
-    .documents-grid,
-    .footer-main {
+    <div class="footer-highlight">
 
-        grid-template-columns: 1fr;
-    }
+        <div class="container footer-highlight-inner">
 
-    .buttons {
+            <div>
 
-        flex-direction: column;
+                <span class="footer-highlight-label">
+                    UN PROJET ?
+                </span>
 
-        align-items: stretch;
-    }
+                <strong>
+                    Parlons de votre situation
+                </strong>
 
-    .buttons .btn {
+            </div>
 
-        width: 100%;
+            <a
+                href="contact.html"
+                class="footer-contact-btn"
+            >
+                Nous contacter
+            </a>
 
-        text-align: center;
-    }
+        </div>
 
-    .devis-box {
+    </div>
 
-        padding: 30px 20px;
-    }
 
-    form {
+    <!-- COPYRIGHT -->
 
-        padding: 25px;
-    }
+    <div class="footer-bottom">
 
-    .footer-main {
+        <div class="container">
 
-        gap: 30px;
-    }
+            © 2026
+            <strong>BS GESTION</strong>
+            — Tous droits réservés.
 
-    .content-main h2 {
+        </div>
 
-        font-size: 29px;
-    }
+    </div>
 
-    .company-info {
+</footer>
 
-        padding: 22px;
-    }
 
-    .company-info p {
+<!-- =========================================================
+     JAVASCRIPT MENU
+========================================================= -->
 
-        font-size: 14px;
-    }
+<script>
 
-    .contact-points {
+function toggleMenu() {
 
-        padding: 20px;
-    }
+    const nav = document.getElementById("mainNav");
 
-    .contact-points p {
+    nav.classList.toggle("active");
 
-        font-size: 15px;
-    }
 }
 
 
-/* =========================================================
-   PETITS TÉLÉPHONES
-========================================================= */
+/* Fermer le menu après avoir cliqué sur un lien */
 
-@media (max-width: 400px) {
+document.querySelectorAll("#mainNav a").forEach(function(link) {
 
-    .hero h1 {
+    link.addEventListener("click", function() {
 
-        font-size: 40px;
-    }
+        document.getElementById("mainNav").classList.remove("active");
 
-    .page-hero h1 {
+    });
 
-        font-size: 36px;
-    }
+});
 
-    .badge {
+</script>
 
-        font-size: 10px;
-
-        letter-spacing: 1px;
-    }
-
-    .btn {
-
-        padding: 13px 20px;
-
-        font-size: 14px;
-    }
-}
+</body>
+</html>
