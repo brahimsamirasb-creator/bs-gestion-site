@@ -2,32 +2,23 @@
 /* =========================================================
    BS GESTION — STYLE.CSS
    ROUGE FONCÉ • NOIR • BLANC
-   PREMIUM • ÉLÉGANT • MODERNE • PROFESSIONNEL
+   PREMIUM • MODERNE • PROFESSIONNEL
 ========================================================= */
 
 :root {
-    --rouge: #b00000;
-    --rouge-fonce: #780000;
-    --rouge-clair: #d41414;
-    --rouge-hover: #c40000;
-
-    --noir: #080808;
-    --noir-2: #111111;
-    --noir-3: #1c1c1c;
-
+    --rouge: #a40000;
+    --rouge-fonce: #720000;
+    --rouge-clair: #d71920;
+    --noir: #090909;
+    --noir-2: #151515;
     --blanc: #ffffff;
-
-    --gris: #666666;
-    --gris-fonce: #333333;
     --gris-clair: #f5f5f5;
-    --gris-border: #dedede;
-
-    --ombre: 0 18px 50px rgba(0, 0, 0, 0.12);
-    --ombre-legere: 0 8px 25px rgba(0, 0, 0, 0.08);
-
+    --gris: #666666;
+    --gris-fonce: #222222;
+    --bordure: #dddddd;
+    --ombre: 0 15px 40px rgba(0, 0, 0, 0.12);
     --transition: 0.3s ease;
 }
-
 
 /* =========================================================
    RESET
@@ -45,8 +36,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #171717;
+    background: var(--blanc);
+    color: var(--gris-fonce);
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -73,18 +64,17 @@ select {
     margin: 0 auto;
 }
 
-
 /* =========================================================
    HEADER
 ========================================================= */
 
 header {
     background: var(--noir);
+    border-bottom: 4px solid var(--rouge-clair);
     position: sticky;
     top: 0;
     z-index: 9999;
-    border-bottom: 4px solid var(--rouge);
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
 }
 
 .navbar {
@@ -94,15 +84,14 @@ header {
     justify-content: space-between;
 }
 
-
 /* =========================================================
    LOGO
 ========================================================= */
 
 .logo {
-    color: #ffffff;
+    color: var(--blanc);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 900;
     letter-spacing: 2px;
 }
@@ -112,9 +101,8 @@ header {
 }
 
 .logo:hover {
-    color: #ffffff;
+    color: var(--blanc);
 }
-
 
 /* =========================================================
    NAVIGATION
@@ -123,11 +111,11 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 30px;
 }
 
 nav a {
-    color: #ffffff;
+    color: var(--blanc);
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
@@ -141,19 +129,18 @@ nav a::after {
     left: 0;
     bottom: 2px;
     width: 0;
-    height: 2px;
+    height: 3px;
     background: var(--rouge-clair);
     transition: var(--transition);
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: var(--rouge-clair);
 }
 
 nav a:hover::after {
     width: 100%;
 }
-
 
 /* =========================================================
    MENU MOBILE
@@ -161,12 +148,11 @@ nav a:hover::after {
 
 .menu {
     display: none;
-    color: #ffffff;
+    color: var(--blanc);
     font-size: 30px;
     cursor: pointer;
     user-select: none;
 }
-
 
 /* =========================================================
    BOUTONS
@@ -175,55 +161,39 @@ nav a:hover::after {
 .btn {
     display: inline-block;
     padding: 15px 28px;
-    border-radius: 5px;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: 800;
+    text-align: center;
     transition: var(--transition);
     cursor: pointer;
-    text-align: center;
 }
 
 .btn-red {
-    background: linear-gradient(
-        135deg,
-        var(--rouge-clair),
-        var(--rouge-fonce)
-    );
-
-    color: #ffffff !important;
-    border: 2px solid var(--rouge-clair);
-
-    box-shadow:
-        0 10px 25px rgba(176, 0, 0, 0.30);
+    background: var(--rouge);
+    color: var(--blanc) !important;
+    border: 2px solid var(--rouge);
+    box-shadow: 0 10px 25px rgba(164, 0, 0, 0.25);
 }
 
 .btn-red:hover {
-    background: linear-gradient(
-        135deg,
-        var(--rouge-hover),
-        var(--rouge-fonce)
-    );
-
-    color: #ffffff !important;
+    background: var(--rouge-clair);
+    border-color: var(--rouge-clair);
     transform: translateY(-3px);
-
-    box-shadow:
-        0 15px 35px rgba(176, 0, 0, 0.40);
+    box-shadow: 0 15px 30px rgba(164, 0, 0, 0.35);
 }
 
 .btn-outline {
-    color: #ffffff !important;
-    border: 2px solid #ffffff;
-    background: rgba(0, 0, 0, 0.30);
+    background: transparent;
+    color: var(--blanc) !important;
+    border: 2px solid var(--blanc);
 }
 
 .btn-outline:hover {
     background: var(--rouge);
     border-color: var(--rouge);
-    color: #ffffff !important;
     transform: translateY(-3px);
 }
-
 
 /* =========================================================
    HERO
@@ -231,21 +201,27 @@ nav a:hover::after {
 
 .hero,
 .page-hero {
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: var(--blanc);
+    overflow: hidden;
 }
 
 .hero {
-    min-height: 720px;
+    min-height: 700px;
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    color: #ffffff;
     border-bottom: 6px solid var(--rouge);
 }
 
+.page-hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid var(--rouge);
+}
 
 /* =========================================================
    IMAGES HERO
@@ -255,9 +231,9 @@ nav a:hover::after {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.30)
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.28)
         ),
         url("https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
@@ -266,9 +242,9 @@ nav a:hover::after {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.30)
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.25)
         ),
         url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
@@ -277,9 +253,9 @@ nav a:hover::after {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.30)
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.25)
         ),
         url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
@@ -288,9 +264,9 @@ nav a:hover::after {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.30)
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.25)
         ),
         url("https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
@@ -299,48 +275,12 @@ nav a:hover::after {
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.30)
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.25)
         ),
         url("https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1800");
 }
-
-
-/* =========================================================
-   CERCLES DÉCORATIFS
-========================================================= */
-
-.hero::before,
-.page-hero::before {
-    content: "";
-    position: absolute;
-
-    width: 520px;
-    height: 520px;
-
-    right: -230px;
-    top: 60px;
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 50%;
-}
-
-.hero::after,
-.page-hero::after {
-    content: "";
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    right: -120px;
-    top: 145px;
-
-    border: 2px solid rgba(176, 0, 0, 0.50);
-    border-radius: 50%;
-}
-
 
 /* =========================================================
    HERO CONTENT
@@ -351,10 +291,8 @@ nav a:hover::after {
     position: relative;
     z-index: 2;
     max-width: 850px;
-
-    animation: apparition 0.8s ease forwards;
+    animation: apparition 0.8s ease;
 }
-
 
 /* =========================================================
    BADGE
@@ -362,22 +300,16 @@ nav a:hover::after {
 
 .badge {
     display: inline-block;
-
     padding: 9px 18px;
     margin-bottom: 25px;
-
     border: 1px solid var(--rouge-clair);
-
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.35);
-
+    color: var(--blanc);
+    background: rgba(164, 0, 0, 0.25);
     font-size: 12px;
     font-weight: 800;
-
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-
 
 /* =========================================================
    TITRES HERO
@@ -385,7 +317,7 @@ nav a:hover::after {
 
 .hero h1,
 .page-hero h1 {
-    color: #ffffff;
+    color: var(--blanc);
     line-height: 1.05;
     margin-bottom: 25px;
 }
@@ -404,7 +336,6 @@ nav a:hover::after {
     color: var(--rouge-clair);
 }
 
-
 /* =========================================================
    TEXTES HERO
 ========================================================= */
@@ -422,30 +353,12 @@ nav a:hover::after {
 .hero p:first-of-type {
     font-size: 24px;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 .page-hero p {
     font-size: 19px;
 }
-
-
-/* =========================================================
-   HERO PAGE INTERNE
-========================================================= */
-
-.page-hero {
-    min-height: 430px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-
-    color: #ffffff;
-
-    border-bottom: 5px solid var(--rouge);
-}
-
 
 /* =========================================================
    HERO BUTTONS
@@ -459,11 +372,10 @@ nav a:hover::after {
 }
 
 .hero-contact {
-    margin-top: 35px;
+    margin-top: 30px;
     color: #dddddd;
     font-size: 14px;
 }
-
 
 /* =========================================================
    SECTIONS
@@ -473,9 +385,8 @@ section {
     padding: 95px 0;
 }
 
-
 /* =========================================================
-   TITRES SECTIONS
+   TITRES
 ========================================================= */
 
 .section-title {
@@ -487,17 +398,15 @@ section {
     color: var(--rouge);
     font-size: 12px;
     font-weight: 900;
-
     letter-spacing: 3px;
     text-transform: uppercase;
-
     margin-bottom: 12px;
 }
 
 .section-title h2 {
     font-size: 43px;
     line-height: 1.2;
-    color: #111111;
+    color: var(--noir);
 }
 
 .section-title p {
@@ -506,13 +415,12 @@ section {
     color: var(--gris);
 }
 
-
 /* =========================================================
    SERVICES
 ========================================================= */
 
 .services {
-    background: #ffffff;
+    background: var(--blanc);
 }
 
 .services-grid {
@@ -523,43 +431,18 @@ section {
 
 .card {
     position: relative;
-
     padding: 35px 28px;
-
-    background: #ffffff;
-
-    border: 1px solid var(--gris-border);
-    border-top: 5px solid #111111;
-
+    background: var(--blanc);
+    border: 1px solid var(--bordure);
+    border-top: 5px solid var(--noir);
     transition: var(--transition);
-
     overflow: hidden;
-
-    box-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.04);
-}
-
-.card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 110px;
-    height: 110px;
-
-    right: -55px;
-    bottom: -55px;
-
-    border-radius: 50%;
-
-    background: rgba(176, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .card:hover {
     transform: translateY(-8px);
-
     border-top-color: var(--rouge);
-
     box-shadow: var(--ombre);
 }
 
@@ -567,13 +450,13 @@ section {
     color: var(--rouge);
     font-weight: 900;
     font-size: 18px;
-
     margin-bottom: 18px;
 }
 
 .card h3 {
     font-size: 21px;
     margin-bottom: 15px;
+    color: var(--noir);
 }
 
 .card p {
@@ -583,19 +466,15 @@ section {
 
 .card a {
     display: inline-block;
-
     margin-top: 20px;
-
     color: var(--rouge);
     font-weight: 800;
-
     text-decoration: none;
 }
 
 .card a:hover {
     color: var(--rouge-fonce);
 }
-
 
 /* =========================================================
    À PROPOS
@@ -605,28 +484,24 @@ section {
     background:
         radial-gradient(
             circle at 10% 80%,
-            rgba(176, 0, 0, 0.30),
+            rgba(164, 0, 0, 0.30),
             transparent 30%
         ),
         var(--noir);
-
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 .about-grid {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 75px;
-
     align-items: center;
 }
 
 .about h2 {
     font-size: 45px;
     line-height: 1.15;
-    color: #ffffff;
+    color: var(--blanc);
 }
 
 .about p {
@@ -645,7 +520,6 @@ section {
     margin-right: 8px;
 }
 
-
 /* =========================================================
    MÉTHODE
 ========================================================= */
@@ -661,15 +535,10 @@ section {
 }
 
 .step {
-    background: #ffffff;
-
+    background: var(--blanc);
     padding: 30px;
-
     border-top: 5px solid var(--rouge);
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.05);
-
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
 }
 
@@ -686,37 +555,32 @@ section {
 
 .step h3 {
     margin: 10px 0;
+    color: var(--noir);
 }
 
 .step p {
     color: var(--gris);
 }
 
-
 /* =========================================================
    DOCUMENTS
 ========================================================= */
 
 .documents {
-    background: #ffffff;
+    background: var(--blanc);
 }
 
 .documents-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 22px;
 }
 
 .document {
     padding: 30px;
-
     background: #fafafa;
-
-    border: 1px solid var(--gris-border);
-    border-left: 5px solid #111111;
-
+    border: 1px solid var(--bordure);
+    border-left: 5px solid var(--noir);
     transition: var(--transition);
 }
 
@@ -728,6 +592,7 @@ section {
 
 .document h3 {
     margin-bottom: 12px;
+    color: var(--noir);
 }
 
 .document p {
@@ -736,34 +601,32 @@ section {
     margin-bottom: 20px;
 }
 
-
 /* =========================================================
    PAGES INTERNES
 ========================================================= */
 
 .content-section {
-    background: #ffffff;
+    background: var(--blanc);
 }
 
 .content-grid {
     display: grid;
-
     grid-template-columns: 2fr 1fr;
-
     gap: 50px;
-
     align-items: start;
 }
 
 .content-main h2 {
     font-size: 34px;
     margin-bottom: 18px;
+    color: var(--noir);
 }
 
 .content-main h3 {
     font-size: 23px;
     margin-top: 30px;
     margin-bottom: 12px;
+    color: var(--noir);
 }
 
 .content-main p {
@@ -782,30 +645,22 @@ section {
 
 .sidebar {
     background: #f7f7f7;
-
     border-top: 5px solid var(--rouge);
-
     padding: 30px;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .sidebar h3 {
     margin-bottom: 20px;
+    color: var(--noir);
 }
 
 .sidebar a {
     display: block;
-
     color: var(--rouge);
-
     text-decoration: none;
-
     font-weight: 800;
-
     padding: 10px 0;
-
     border-bottom: 1px solid #dddddd;
 }
 
@@ -813,9 +668,8 @@ section {
     color: var(--rouge-fonce);
 }
 
-
 /* =========================================================
-   DEVIS / BESOIN
+   DEVIS
 ========================================================= */
 
 .devis {
@@ -824,23 +678,18 @@ section {
 
 .devis-box {
     max-width: 850px;
-
     margin: auto;
-
     padding: 55px;
-
-    background: #ffffff;
-
+    background: var(--blanc);
     border-left: 6px solid var(--rouge);
-
     text-align: center;
-
     box-shadow: var(--ombre);
 }
 
 .devis-box h2 {
     font-size: 36px;
     margin-bottom: 15px;
+    color: var(--noir);
 }
 
 .devis-box p {
@@ -851,12 +700,9 @@ section {
 .no-price {
     font-weight: 900;
     color: var(--rouge);
-
     margin-bottom: 25px;
-
     letter-spacing: 1px;
 }
-
 
 /* =========================================================
    CTA
@@ -866,15 +712,12 @@ section {
     background:
         radial-gradient(
             circle at center,
-            rgba(176, 0, 0, 0.28),
-            transparent 40%
+            rgba(164, 0, 0, 0.32),
+            transparent 42%
         ),
-        #050505;
-
-    color: #ffffff;
-
+        var(--noir);
+    color: var(--blanc);
     text-align: center;
-
     border-top: 5px solid var(--rouge);
     border-bottom: 5px solid var(--rouge);
 }
@@ -889,7 +732,6 @@ section {
     margin-bottom: 30px;
 }
 
-
 /* =========================================================
    CONTACT
 ========================================================= */
@@ -898,26 +740,23 @@ section {
     background:
         linear-gradient(
             135deg,
-            #f8f8f8 0%,
+            #f5f5f5 0%,
             #ffffff 50%,
-            #f5f5f5 100%
+            #eeeeee 100%
         );
 }
 
 .contact-grid {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 70px;
-
     align-items: start;
 }
 
 .contact h2 {
     font-size: 43px;
     margin-bottom: 20px;
-    color: #111111;
+    color: var(--noir);
 }
 
 .contact-intro {
@@ -929,6 +768,18 @@ section {
     margin-top: 30px;
 }
 
+.contact-details a {
+    display: block;
+    color: var(--rouge);
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.contact-details a:hover {
+    color: var(--rouge-fonce);
+}
 
 /* =========================================================
    INFORMATIONS SOCIÉTÉ
@@ -936,22 +787,15 @@ section {
 
 .company-info {
     margin-top: 30px;
-
     padding: 28px 30px;
-
-    background: #ffffff;
-
+    background: var(--blanc);
     border: 1px solid #e3e3e3;
-
     border-left: 5px solid var(--rouge);
-
-    box-shadow: var(--ombre-legere);
-
-    border-radius: 4px;
+    box-shadow: var(--ombre);
 }
 
 .company-info h3 {
-    color: #111111;
+    color: var(--noir);
     font-size: 21px;
     margin-bottom: 15px;
 }
@@ -960,11 +804,10 @@ section {
     color: #222222;
     font-size: 15px;
     margin: 7px 0;
-    line-height: 1.6;
 }
 
 .company-info strong {
-    color: #111111;
+    color: var(--noir);
 }
 
 .company-info a {
@@ -978,78 +821,36 @@ section {
     text-decoration: underline;
 }
 
-
 /* =========================================================
    POINTS CONTACT
 ========================================================= */
 
 .contact-points {
     margin-top: 25px;
-
     padding: 23px 27px;
-
-    background: #ffffff;
-
+    background: var(--blanc);
     border: 1px solid #e5e5e5;
-
     border-left: 4px solid var(--rouge);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
 .contact-points p {
-    color: #111111 !important;
-
+    color: var(--noir) !important;
     font-size: 16px;
-
     font-weight: 600;
-
     margin: 10px 0;
-
-    line-height: 1.6;
 }
-
-
-/* =========================================================
-   EMAIL
-========================================================= */
-
-.contact-details a {
-    display: block;
-
-    color: var(--rouge);
-
-    font-weight: 800;
-
-    font-size: 18px;
-
-    text-decoration: none;
-
-    margin-bottom: 15px;
-}
-
-.contact-details a:hover {
-    color: var(--rouge-fonce);
-}
-
 
 /* =========================================================
    FORMULAIRE
 ========================================================= */
 
 form {
-    background: #ffffff;
-
+    background: var(--blanc);
     padding: 38px;
-
     border: 1px solid #dddddd;
-
     border-top: 5px solid var(--rouge);
-
     box-shadow: var(--ombre);
-
-    border-radius: 4px;
 }
 
 .form-group {
@@ -1058,13 +859,9 @@ form {
 
 label {
     display: block;
-
     font-weight: 800;
-
     font-size: 14px;
-
     margin-bottom: 7px;
-
     color: #222222;
 }
 
@@ -1072,23 +869,13 @@ input,
 textarea,
 select {
     width: 100%;
-
     padding: 14px;
-
     border: 1px solid #cccccc;
-
-    font-family: inherit;
-
     font-size: 15px;
-
     outline: none;
-
     transition: var(--transition);
-
-    background: #ffffff;
-
-    color: #111111;
-
+    background: var(--blanc);
+    color: var(--noir);
     border-radius: 3px;
 }
 
@@ -1096,9 +883,7 @@ input:focus,
 textarea:focus,
 select:focus {
     border-color: var(--rouge);
-
-    box-shadow:
-        0 0 0 3px rgba(176, 0, 0, 0.10);
+    box-shadow: 0 0 0 3px rgba(164, 0, 0, 0.10);
 }
 
 textarea {
@@ -1118,70 +903,28 @@ button {
     margin-top: 10px;
 }
 
-
 /* =========================================================
    FOOTER
 ========================================================= */
 
 footer {
-    background: #050505;
-
+    background: var(--noir);
     color: #aaaaaa;
-
-    border-top: 4px solid var(--rouge);
+    border-top: 5px solid var(--rouge);
 }
 
 .footer-main {
     padding: 60px 0;
-
     display: grid;
-
-    grid-template-columns:
-        1.5fr
-        1fr
-        1fr;
-
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 50px;
 }
 
-.footer-main h3 {
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-
-.footer-main p {
-    margin-top: 10px;
-}
-
-.footer-main a {
-    display: block;
-
-    color: #aaaaaa;
-
-    text-decoration: none;
-
-    margin-bottom: 9px;
-}
-
-.footer-main a:hover {
-    color: var(--rouge-clair);
-}
-
-
-/* =========================================================
-   FOOTER LOGO
-========================================================= */
-
 .footer-logo {
-    color: #ffffff;
-
-    font-size: 26px;
-
+    color: var(--blanc);
+    font-size: 25px;
     font-weight: 900;
-
     letter-spacing: 2px;
-
-    margin-bottom: 15px;
 }
 
 .footer-logo span {
@@ -1189,33 +932,35 @@ footer {
 }
 
 .footer-line {
-    width: 55px;
-    height: 3px;
-
+    width: 60px;
+    height: 4px;
     background: var(--rouge);
+    margin: 18px 0;
+}
 
-    margin-bottom: 20px;
+.footer-main h3 {
+    color: var(--blanc);
+    margin-bottom: 15px;
 }
 
 .footer-description {
-    color: #aaaaaa;
-
-    max-width: 400px;
-
+    color: #bbbbbb;
     margin-bottom: 20px;
 }
 
-.footer-email {
-    color: #ffffff !important;
-
-    font-weight: 700;
-
+.footer-main a {
+    display: block;
+    color: #aaaaaa;
     text-decoration: none;
+    margin-bottom: 9px;
 }
 
+.footer-main a:hover {
+    color: var(--rouge-clair);
+}
 
 /* =========================================================
-   INFORMATIONS ENTREPRISE
+   FOOTER ENTREPRISE
 ========================================================= */
 
 .footer-company {
@@ -1224,155 +969,86 @@ footer {
 }
 
 .footer-company strong {
-    color: #ffffff;
+    color: var(--blanc);
 }
-
-.footer-company a {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.footer-company a:hover {
-    color: var(--rouge-clair);
-}
-
-
-/* =========================================================
-   ADRESSE BS GESTION
-========================================================= */
 
 .footer-address {
     margin-top: 18px;
-
     padding: 15px 18px;
-
     border-left: 3px solid var(--rouge);
-
-    background: rgba(255, 255, 255, 0.03);
-
+    background: rgba(255, 255, 255, 0.04);
     color: #cccccc;
-
-    line-height: 1.7;
-}
-
-.footer-address strong {
-    color: #ffffff;
 }
 
 .footer-siret {
-    color: #cccccc;
+    margin-top: 15px;
 }
-
 
 /* =========================================================
    FOOTER HIGHLIGHT
 ========================================================= */
 
 .footer-highlight {
-    background:
-        linear-gradient(
-            135deg,
-            #120000,
-            #080808
-        );
-
-    border-top: 1px solid #2a2a2a;
-    border-bottom: 1px solid #2a2a2a;
+    background: var(--rouge);
+    color: var(--blanc);
 }
 
 .footer-highlight-inner {
-    min-height: 110px;
-
+    min-height: 105px;
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 30px;
 }
 
 .footer-highlight-label {
     display: block;
-
-    color: var(--rouge-clair);
-
     font-size: 12px;
-
     font-weight: 900;
-
     letter-spacing: 3px;
-
     margin-bottom: 5px;
 }
 
 .footer-highlight strong {
-    display: block;
-
-    color: #ffffff;
-
-    font-size: 22px;
+    font-size: 20px;
 }
-
-
-/* =========================================================
-   BOUTON FOOTER
-========================================================= */
 
 .footer-contact-btn {
     display: inline-block;
-
-    padding: 13px 24px;
-
-    color: #ffffff !important;
-
-    background: var(--rouge);
-
-    border: 1px solid var(--rouge);
-
+    background: var(--blanc);
+    color: var(--rouge) !important;
     text-decoration: none;
-
-    font-weight: 800;
-
+    font-weight: 900;
+    padding: 13px 22px;
     border-radius: 4px;
 }
 
 .footer-contact-btn:hover {
-    background: var(--rouge-clair);
-
-    border-color: var(--rouge-clair);
-
-    transform: translateY(-2px);
+    background: var(--noir);
+    color: var(--blanc) !important;
 }
 
-
 /* =========================================================
-   BAS DU FOOTER
+   BAS FOOTER
 ========================================================= */
 
 .footer-bottom {
     border-top: 1px solid #292929;
-
     text-align: center;
-
     padding: 20px;
-
     font-size: 12px;
-
     color: #999999;
 }
 
 .footer-bottom strong {
-    color: #ffffff;
+    color: var(--blanc);
 }
-
 
 /* =========================================================
    ANIMATION
 ========================================================= */
 
 @keyframes apparition {
-
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -1382,9 +1058,7 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
-
 
 /* =========================================================
    TABLETTES
@@ -1394,27 +1068,16 @@ footer {
 
     nav {
         display: none;
-
         position: absolute;
-
         top: 82px;
         left: 0;
         right: 0;
-
-        background: #080808;
-
+        background: var(--noir);
         flex-direction: column;
-
         align-items: flex-start;
-
         padding: 25px;
-
         gap: 15px;
-
         border-bottom: 3px solid var(--rouge);
-
-        box-shadow:
-            0 15px 30px rgba(0, 0, 0, 0.30);
     }
 
     nav.active {
@@ -1446,9 +1109,7 @@ footer {
     .footer-main {
         grid-template-columns: 1fr 1fr;
     }
-
 }
-
 
 /* =========================================================
    MOBILES
@@ -1525,7 +1186,6 @@ footer {
 
     .buttons .btn {
         width: 100%;
-        text-align: center;
     }
 
     .devis-box {
@@ -1541,40 +1201,15 @@ footer {
     }
 
     .footer-highlight-inner {
-        padding: 30px 0;
-
+        padding: 25px 0;
         flex-direction: column;
-
         align-items: flex-start;
-    }
-
-    .footer-contact-btn {
-        width: 100%;
-        text-align: center;
     }
 
     .content-main h2 {
         font-size: 29px;
     }
-
-    .company-info {
-        padding: 22px;
-    }
-
-    .company-info p {
-        font-size: 14px;
-    }
-
-    .contact-points {
-        padding: 20px;
-    }
-
-    .contact-points p {
-        font-size: 15px;
-    }
-
 }
-
 
 /* =========================================================
    PETITS TÉLÉPHONES
@@ -1599,6 +1234,5 @@ footer {
         padding: 13px 20px;
         font-size: 14px;
     }
-
 }
 ```
