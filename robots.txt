@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brahimsamirasb-creator.github.io/bs-gestion-site/sitemap.xml
