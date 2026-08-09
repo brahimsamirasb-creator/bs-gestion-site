@@ -1,39 +1,24 @@
 ```javascript
-/* =========================================================
-   BS GESTION - SCRIPT.JS
-========================================================= */
-
 function toggleMenu() {
     const nav = document.getElementById("mainNav");
 
-    if (!nav) {
-        return;
+    if (nav) {
+        nav.classList.toggle("active");
     }
-
-    nav.classList.toggle("active");
 }
-
-
-/* Ferme le menu après avoir cliqué sur un lien */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const nav = document.getElementById("mainNav");
-
-    if (!nav) {
-        return;
-    }
-
-    const links = nav.querySelectorAll("a");
+    const links = document.querySelectorAll("#mainNav a");
 
     links.forEach(function (link) {
-
         link.addEventListener("click", function () {
+            const nav = document.getElementById("mainNav");
 
-            nav.classList.remove("active");
-
+            if (nav) {
+                nav.classList.remove("active");
+            }
         });
-
     });
 
 });
